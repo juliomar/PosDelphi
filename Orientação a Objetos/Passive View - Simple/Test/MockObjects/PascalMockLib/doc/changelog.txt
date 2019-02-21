@@ -1,0 +1,15 @@
+Pascal Mock
+http://sourceforge.net/projects/pascalmock/
+
+Version 1.1
+
+- Mocked functions now checks if their return value was set and raise an easy to understand exception otherwise
+- Mock verification failure message is easier to read: the method which doesn't match expectations is marked
+- Minimal integration with DUnit through TMockObjectTestCase
+- Information on a called method can now be retrieved with CalledMethodByName before calling Verify.
+- Added ability to specify out parameters values for mock methods
+- Support for Int64 parameters
+
+Version 1.0
+
+Initial version on sf.net

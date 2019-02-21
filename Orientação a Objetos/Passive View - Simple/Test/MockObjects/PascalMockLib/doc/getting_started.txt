@@ -1,0 +1,38 @@
+Pascal Mock
+http://sourceforge.net/projects/pascalmock/
+
+*** How to use ***
+
+Look at the file tests\PascalMockExampleTest.pas for usage examples.
+
+*** Third Party ***
+
+In order to compile the tests project, you need the DUnit library:
+https://sourceforge.net/projects/dunit/
+
+However you can use Pascal Mock without DUnit or with another testing framework.
+
+*** Optional ***
+
+You can use FastMM for memory leak reporting:
+http://sourceforge.net/projects/fastmm/
+
+To do this make the following changes in PascalMockTestPrj.dpr:
+
+change:
+
+uses
+//  FastMM4,
+  Forms,
+  ...
+
+to:
+
+uses
+  FastMM4,
+  Forms,
+  ...
+
+
+--
+Courtesy of Tixeo http://www.tixeo.com

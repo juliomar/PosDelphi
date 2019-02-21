@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{F67A415B-8954-49FC-BCCE-2107BD4F4C73}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="PassiveViewSimple.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Test\PassiveViewSimpleTests.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="PassiveViewSimple">
+			<MSBuild Projects="PassiveViewSimple.dproj"/>
+		</Target>
+		<Target Name="PassiveViewSimple:Clean">
+			<MSBuild Targets="Clean" Projects="PassiveViewSimple.dproj"/>
+		</Target>
+		<Target Name="PassiveViewSimple:Make">
+			<MSBuild Targets="Make" Projects="PassiveViewSimple.dproj"/>
+		</Target>
+		<Target Name="PassiveViewSimpleTests">
+			<MSBuild Projects="Test\PassiveViewSimpleTests.dproj"/>
+		</Target>
+		<Target Name="PassiveViewSimpleTests:Clean">
+			<MSBuild Targets="Clean" Projects="Test\PassiveViewSimpleTests.dproj"/>
+		</Target>
+		<Target Name="PassiveViewSimpleTests:Make">
+			<MSBuild Targets="Make" Projects="Test\PassiveViewSimpleTests.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="PassiveViewSimple;PassiveViewSimpleTests"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="PassiveViewSimple:Clean;PassiveViewSimpleTests:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="PassiveViewSimple:Make;PassiveViewSimpleTests:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
