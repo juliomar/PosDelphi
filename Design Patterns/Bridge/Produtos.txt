@@ -1,0 +1,33 @@
+Código|Descrição|Estoque
+
+1
+Roteador Wireless
+18
+
+2
+Pendrive 8GB
+35
+
+3
+Headset com microfone
+10
+
+4
+Mouse Óptico
+27
+
+5
+Notebook i5 6GB
+15
+
+6
+Teclado Multimídia
+12
+
+7
+Monitor 20 polegadas
+7
+
+8
+Webcam 30 Megapixels
+4
