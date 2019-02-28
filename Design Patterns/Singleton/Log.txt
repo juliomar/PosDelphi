@@ -1,0 +1,7 @@
+[25/02/2019 21:02:31] Usuário iniciou a aplicação.
+[25/02/2019 21:02:32] Usuário abriu a tela de Cadastro de Participantes.
+[25/02/2019 21:02:37] Usuário abriu a tela de Sorteio.
+[25/02/2019 21:04:53] Usuário abriu a tela de Cadastro de Participantes.
+[25/02/2019 21:04:55] Usuário abriu a tela de Sorteio.
+[25/02/2019 21:05:40] Usuário abriu a tela de Cadastro de Participantes.
+[25/02/2019 21:06:12] Usuário abriu a tela de Sorteio.
