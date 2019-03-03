@@ -8,7 +8,8 @@ uses
   entity.professor in 'Model\Entity\entity.professor.pas',
   entity.curso in 'Model\Entity\entity.curso.pas',
   entity.titulo in 'Model\Entity\entity.titulo.pas',
-  entity.formacao in 'Model\Entity\entity.formacao.pas';
+  entity.formacao in 'Model\Entity\entity.formacao.pas',
+  Model.Conexao in 'Model\Conexao\Model.Conexao.pas';
 
 {$R *.res}
 

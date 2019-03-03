@@ -18,24 +18,29 @@ uses
   ormbr.mapping.attributes;
 
 type
-  [Entity]
-  [Table('formacao','Tipo de formação do profission')]
-  [PrimaryKey()]
+
+  [entity]
+  [Table('formacao', 'Tipo de formação do profission')]
+  [PrimaryKey('id', 'chave primaria')]
   TFormacao = class
   private
     fdescricao: string;
     fid: integer;
   public
-    property id  : integer read fid write fid;
-    property descricao : string read fdescricao write fdescricao;
-  end;
+    [Restrictions([NoUpdate, NotNull])]
+    [Column('id', ftInteger)]
+    [Dictionary('Código', 'Mensagem validação', '', '', '', '', tacenter)]
+    property id: integer read fid write fid;
 
+    [Column('descricao', ftString, 60)]
+    [Dictionary('Descrição', 'Mensagem validação', '', '', '', '', tacenter)]
+    property descricao: string read fdescricao write fdescricao;
+  end;
 
 implementation
 
-
 initialization
-  TRegisterClass.RegisterEntity(TFormacao);
 
+TRegisterClass.RegisterEntity(TFormacao);
 
 end.
