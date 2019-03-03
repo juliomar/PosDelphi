@@ -37,7 +37,6 @@ procedure TfTela.BitBtnAbrirLogClick(Sender: TObject);
 var
   DiretorioAplicacao: string;
 begin
-  //Athauã
   // abre o arquivo de log gerado pelo Singleton (Logger)
   DiretorioAplicacao := ExtractFilePath(Application.ExeName);
   ShellExecute(Handle, 'open', PWideChar(DiretorioAplicacao + 'Log.txt'), nil, nil, SW_SHOWNORMAL);
