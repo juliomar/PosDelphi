@@ -10,8 +10,10 @@ uses
 {$R *.res}
 
 begin
+  ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.Title := 'Exemplo de Singleton';
   Application.CreateForm(TfTela, fTela);
   Application.Run;
+
 end.

@@ -5,19 +5,19 @@ interface
 type
   TLoggerSingleton = class
   private
-    // variável que aponta para o arquivo de log
+    // variï¿½vel que aponta para o arquivo de log
     ArquivoLog: TextFile;
 
-    // o construtor é declarado como privado
+    // o construtor ï¿½ declarado como privado
     // para evitar que seja chamado por outras classes
     constructor Create;
   public
-    // método principal do Singleton
+    // mï¿½todo principal do Singleton
     class function ObterInstancia: TLoggerSingleton;
 
     class function NewInstance: TObject; override;
 
-    // método para registrar o texto do parâmetro no arquivo de log
+    // mï¿½todo para registrar o texto do parï¿½metro no arquivo de log
     procedure RegistrarLog(const Texto: string);
 
     destructor Destroy; override;
@@ -37,11 +37,11 @@ constructor TLoggerSingleton.Create;
 var
   DiretorioAplicacao: string;
 begin
-  // associa o aquivo "Log.txt" que está na pasta do projeto
+  // associa o aquivo "Log.txt" que estï¿½ na pasta do projeto
   DiretorioAplicacao := ExtractFilePath(Application.ExeName);
   AssignFile(ArquivoLog, DiretorioAplicacao + 'Log.txt');
 
-  // se o arquivo não existir, é criado
+  // se o arquivo nï¿½o existir, ï¿½ criado
   if not FileExists(DiretorioAplicacao + 'Log.txt') then
   begin
     Rewrite(ArquivoLog);
@@ -51,20 +51,19 @@ end;
 
 destructor TLoggerSingleton.Destroy;
 begin
-  // libera o Singleton da memória
-  FreeAndNil(Instancia);
+  // libera o Singleton da memï¿½ria
 
   inherited;
 end;
 
 class function TLoggerSingleton.NewInstance: TObject;
 begin
-  // se já houver uma instância, ela é retornada
-  // caso contrário, o objeto é instanciado antes de ser retornado
+  // se jï¿½ houver uma instï¿½ncia, ela ï¿½ retornada
+  // caso contrï¿½rio, o objeto ï¿½ instanciado antes de ser retornado
  
   if not Assigned(Instancia) then
   begin
-    // chama a função "NewInstance" da herança (TObject)
+    // chama a funï¿½ï¿½o "NewInstance" da heranï¿½a (TObject)
     Instancia := TLoggerSingleton(inherited NewInstance);
   end;
  
@@ -73,7 +72,7 @@ end;
 
 class function TLoggerSingleton.ObterInstancia: TLoggerSingleton;
 begin
-  // chama o método Create, que cria (uma única vez) e retorna a instância
+  // chama o mï¿½todo Create, que cria (uma ï¿½nica vez) e retorna a instï¿½ncia
   result := TLoggerSingleton.Create;
 end;
 
@@ -81,7 +80,7 @@ procedure TLoggerSingleton.RegistrarLog(const Texto: string);
 var
   sDataHora: string;
 begin
-  // abre o arquivo de log para edição
+  // abre o arquivo de log para ediï¿½ï¿½o
   Append(ArquivoLog);
 
   // escreve a data, hora e texto no arquivo de log
@@ -91,5 +90,10 @@ begin
   // fecha o arquivo
   CloseFile(ArquivoLog);
 end;
+
+initialization
+//
+finalization
+  FreeAndNil(Instancia);
 
 end.
