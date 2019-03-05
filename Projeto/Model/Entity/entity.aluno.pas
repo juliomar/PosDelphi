@@ -1,3 +1,10 @@
+{*******************************************************}
+{                                                       }
+{       Projeto Teste Pós-Delphi                        }
+{                                                       }
+{       Copyright (C) 2019 Unoesc                       }
+{                                                       }
+{*******************************************************}
 unit entity.aluno;
 
 interface
@@ -13,20 +20,45 @@ uses
   ormbr.types.lazy,
   ormbr.types.mapping,
   ormbr.types.nullable,
-  ormbr.mapping.classes,
+  ormbr.mapping.Classes,
   ormbr.mapping.register,
   ormbr.mapping.attributes,
 
-  entity.pessoa;
-
+  entity.pessoa,
+  entity.curso;
 
 type
-  TAluno = class(TPessoa)
+  [Entity]
+  [Table('aluno','dados de alunos ')]
+  [Sequence('aluno')]
+  TAluno = class(
+    TPessoa)
   private
+    fCursos: TObjectList<TCurso>;
   public
-    property Cursos : TCursos read fCursos write fCursos;
+    constructor Create;
+    destructor Destroy; override;
+
+    property Cursos: TObjectList<TCurso> read fCursos write fCursos;
   end;
 
 implementation
+
+{ TAluno }
+
+constructor TAluno.Create;
+begin
+  fCursos := TObjectList<TCurso>.Create;
+end;
+
+destructor TAluno.Destroy;
+begin
+  fCursos.Free;
+  inherited;
+end;
+
+//initialization
+//
+//TRegisterClass.RegisterEntity (TAluno);
 
 end.

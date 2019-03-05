@@ -1,3 +1,10 @@
+{*******************************************************}
+{                                                       }
+{       Projeto Teste Pós-Delphi                        }
+{                                                       }
+{       Copyright (C) 2019 Unoesc                       }
+{                                                       }
+{*******************************************************}
 unit entity.titulo;
 
 interface
@@ -20,11 +27,13 @@ uses
   entity.formacao;
 
 type
+
+  [ Entity ]
   TTitulo = class
   private
     fdescricao: string;
-    fformacao: TObjectList<TFormacao>;
-    fid: integer;
+    fformacao : TObjectList<TFormacao>;
+    fid       : integer;
   public
     constructor Create;
     destructor Destroy; override;
@@ -49,4 +58,7 @@ begin
   inherited;
 end;
 
+//initialization
+//
+//TRegisterClass.RegisterEntity (TTitulo);
 end.

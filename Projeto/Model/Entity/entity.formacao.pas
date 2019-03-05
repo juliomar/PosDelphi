@@ -1,3 +1,10 @@
+{*******************************************************}
+{                                                       }
+{       Projeto Teste Pós-Delphi                        }
+{                                                       }
+{       Copyright (C) 2019 Unoesc                       }
+{                                                       }
+{*******************************************************}
 unit entity.formacao;
 
 interface
@@ -19,21 +26,24 @@ uses
 
 type
 
-  [entity]
-  [Table('formacao', 'Tipo de formação do profission')]
-  [PrimaryKey('id', 'chave primaria')]
+  [ Entity ]
+  [ Table('formacao', 'Tipo de formação do profission') ]
+  [ PrimaryKey('id', AutoInc, Ascending, True, 'Chave primria') ]
+//  [ Indexe('pk_formacao','id', '')]
+  [ Sequence('formacao') ]
+  [ OrderBy('descricao') ]
   TFormacao = class
   private
     fdescricao: string;
-    fid: integer;
+    fid       : integer;
   public
-    [Restrictions([NoUpdate, NotNull])]
-    [Column('id', ftInteger)]
-    [Dictionary('Código', 'Mensagem validação', '', '', '', '', tacenter)]
+    [ Restrictions([ NoUpdate, NotNull ]) ]
+    [ Column('id', ftInteger) ]
+    [ Dictionary('Código', 'Mensagem validação', '', '', '', tacenter) ]
     property id: integer read fid write fid;
 
-    [Column('descricao', ftString, 60)]
-    [Dictionary('Descrição', 'Mensagem validação', '', '', '', '', tacenter)]
+    [ Column('descricao', ftString, 60) ]
+    [ Dictionary('Descrição', 'Mensagem validação', '', '', '', tacenter) ]
     property descricao: string read fdescricao write fdescricao;
   end;
 
@@ -41,6 +51,6 @@ implementation
 
 initialization
 
-TRegisterClass.RegisterEntity(TFormacao);
+TRegisterClass.RegisterEntity (TFormacao);
 
 end.

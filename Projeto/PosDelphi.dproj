@@ -47,7 +47,6 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
-        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
         <DCC_N>false</DCC_N>
         <DCC_S>false</DCC_S>
@@ -58,6 +57,8 @@
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <SanitizedProjectName>PosDelphi</SanitizedProjectName>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>DBXSqliteDriver;dxFlowChartRS26;dxPSdxMapControlLnkRS26;DBXDb2Driver;vclactnband;dxBarRS26;vclFireDAC;dxFireDACEMFRS26;tethering;dxSpreadSheetInplaceRichEditRS26;FireDACADSDriver;ACBr_BPeDabpeESCPOS;JvPluginSystem;ACBr_BPe;dxRichEditCoreRS26;dxPSdxSpreadSheetLnkRS26;FireDACMSSQLDriver;vcltouch;JvBands;ACBr_NFe;vcldb;ACBr_NFeDanfeFR;svn;JvJans;dxPSTeeChartRS26;ACBr_NFeDanfeESCPOS;JvDotNetCtrls;dxGDIPlusRS26;dxPSdxFCLnkRS26;vclib;frxTee26;dxCloudServiceLibraryRS26;dxPSLnksRS26;FireDACDBXDriver;cxGridRS26;dxPDFViewerRS26;dxPsPrVwAdvRS26;ACBr_NFSeDanfseFR;vclx;dxPScxTLLnkRS26;ACBr_SATExtratoRL;RESTBackendComponents;ACBr_Reinf;VCLRESTComponents;fsTee26;vclie;bindengine;CloudService;dxmdsRS26;JvHMI;FireDACMySQLDriver;ACBr_PAF;fsIBX26;ACBr_SATECFVirtual;frx26;dxdborRS26;DataSnapClient;dxFireDACServerModeRS26;bindcompdbx;ACBr_CTeDacteRL;ACBr_TCP;IndyIPServer;DBXSybaseASEDriver;ACBr_CTe;sparkle;tmsbcl;IndySystem;frxDBX26;fsADO26;cxPivotGridRS26;cxTreeListdxBarPopupMenuRS26;dsnapcon;cxTreeListRS26;dxPScxPivotGridLnkRS26;ACBr_synapse;cxSchedulerRibbonStyleEventEditorRS26;dxPSCoreRS26;ACBre_Social;FireDACMSAccDriver;fmxFireDAC;FireDACInfxDriver;vclimg;dxSpreadSheetRS26;Jcl;dxBarExtItemsRS26;dxPSdxGaugeControlLnkRS26;ACBr_SPED;ACBr_SPEDImportar;emshosting;ACBr_MDFe;ACBr_BoletoRL;ACBr_LFD;DBXOdbcDriver;FireDACTDataDriver;FMXTee;dxdbtrRS26;dxRichEditControlCoreRS26;soaprtl;DbxCommonDriver;dxFlowChartAdvancedCustomizeFormRS26;JvManagedThreads;ACBr_NFSeDanfseRL;dxDockingRS26;xmlrtl;soapmidas;DataSnapNativeClient;fmxobj;JvTimeFramework;cxLibraryRS26;rtl;emsserverresource;DbxClientDriver;DBXSybaseASADriver;dxPScxSchedulerLnkRS26;JvSystem;JvStdCtrls;dxSpreadSheetConditionalFormattingDialogsRS26;ACBr_Convenio115;appanalytics;dxRibbonCustomizationFormRS26;cxSchedulerGridRS26;IndyIPClient;bindcompvcl;ORMBrLibrary;TeeUI;dxADOEMFRS26;JvDocking;JvPascalInterpreter;VclSmp;FireDACODBCDriver;JclVcl;DataSnapIndy10ServerTransport;aurelius;dxRibbonRS26;dxRichEditDocumentModelRS26;dxPScxCommonRS26;ACBr_Boleto;DataSnapProviderClient;ACBr_SEF2;FireDACMongoDBDriver;dxFlowChartDesignerRS26;JvControls;dxPScxGridLnkRS26;JvPrintPreview;ACBr_MDFeDamdfeFR;ACBr_NFSe;dxSpreadSheetCoreRS26;DataSnapServerMidas;RESTComponents;ZComponent;DBXInterBaseDriver;dxPScxExtCommonRS26;ZCore;ACBr_TEFD;emsclientfiredac;ACBr_SATWS;DataSnapFireDAC;svnui;JvGlobus;DBXMSSQLDriver;JvMM;ACBr_MDFeDamdfeRL;dxRichEditControlRS26;DatasnapConnectorsFreePascal;dxGaugeControlRS26;dxorgcRS26;dxPScxVGridLnkRS26;ACBrDFeReportRL;bindcompfmx;JvNet;DBXOracleDriver;inetdb;JvAppFrm;ACBr_Diversos;dxBarDBNavRS26;dxDBXServerModeRS26;ACBr_TXTComum;ACBr_GNREGuiaFR;FmxTeeUI;emsedge;fmx;FireDACIBDriver;fmxdae;dxServerModeRS26;dxWizardControlRS26;ACBr_CTeDacteFR;JvWizards;dxTabbedMDIRS26;ACBr_Ponto;fs26;dxEMFRS26;dbexpress;IndyCore;dxComnRS26;xdata;ZParseSql;frxIntIO26;JvPageComps;dsnap;emsclient;DataSnapCommon;FireDACCommon;JvDB;ACBr_PCNComum;frxcs26;DataSnapConnectors;cxSchedulerTreeBrowserRS26;dxADOServerModeRS26;ACBR_DeSTDA;soapserver;ACBr_SAT;JclDeveloperTools;cxPivotGridOLAPRS26;cxVerticalGridRS26;dxtrmdRS26;FireDACOracleDriver;DBXMySQLDriver;JvCmp;cxSchedulerRS26;cxSchedulerWebServiceStorageRS26;DBXFirebirdDriver;dxPSdxLCLnkRS26;ACBr_Sintegra;FireDACCommonODBC;FireDACCommonDriver;dxMapControlRS26;ACBr_GNRE;frxIntIOIndy26;inet;dxSpellCheckerRS26;IndyIPCommon;JvCustom;dxSpreadSheetCoreConditionalFormattingDialogsRS26;vcl;dxPSdxDBOCLnkRS26;ACBr_NFeDanfeRL;JvXPCtrls;frxDB26;ACBr_SATExtratoESCPOS;FireDACDb2Driver;dxSpreadSheetReportDesignerRS26;ACBr_Integrador;dxPScxPCProdRS26;dxNavBarRS26;fsDB26;dxCoreRS26;ZDbc;TeeDB;FireDAC;dxHttpIndyRequestRS26;cxExportRS26;JvCore;dxPSPrVwRibbonRS26;ACBr_Comum;frxe26;JvCrypt;FireDACSqliteDriver;FireDACPgDriver;ibmonitor;FireDACASADriver;dxPSRichEditControlLnkRS26;cxPivotGridChartRS26;ACBr_GNREGuiaRL;frxIBX26;JvDlgs;JvRuntimeDesign;dxPSDBTeeChartRS26;ibxpress;Tee;DataSnapServer;ibxbindings;dxPSdxDBTVLnkRS26;vclwinx;FireDACDSDriver;ACBr_OpenSSL;frxADO26;dxTileControlRS26;dxSkinsCoreRS26;CustomIPTransport;vcldsnap;ACBr_DFeComum;bindcomp;ZPlain;dxPSdxOCLnkRS26;DBXInformixDriver;ACBr_Serial;frce;ACBr_BlocoX;vclribbon;dbxcds;ACBr_NFCeECFVirtual;adortl;ACBr_BoletoFR;dxSpreadSheetCoreDialogsRS26;ACBr_ANe;dxBarExtDBItemsRS26;dsnapxml;dbrtl;IndyProtocols;inetdbxpress;dxPSdxPDFViewerLnkRS26;dxRichEditInplaceRS26;JclContainers;ACBr_MTER;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
@@ -83,6 +84,8 @@
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -98,7 +101,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="View.Principal.pas">
+        <DCCReference Include="View\View.Principal.pas">
             <Form>Principal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
@@ -108,7 +111,14 @@
         <DCCReference Include="Model\Entity\entity.curso.pas"/>
         <DCCReference Include="Model\Entity\entity.titulo.pas"/>
         <DCCReference Include="Model\Entity\entity.formacao.pas"/>
-        <DCCReference Include="Model\Conexao\Model.Conexao.pas"/>
+        <DCCReference Include="Model\Conexao\Model.Conexao.Interfaces.pas"/>
+        <DCCReference Include="Model\Conexao\Model.Conexao.pas">
+            <Form>dmConexao</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Model\Model.Interfaces.pas"/>
+        <DCCReference Include="Controller\Controller.Interfaces.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -129,9 +139,15 @@
                 <Source>
                     <Source Name="MainSource">PosDelphi.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k260.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp260.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="Win32\Debug\PosDelphi.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="PosDelphi.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>PosDelphi.exe</RemoteName>
                         <Overwrite>true</Overwrite>

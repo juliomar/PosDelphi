@@ -1,3 +1,10 @@
+{*******************************************************}
+{                                                       }
+{       Projeto Teste Pós-Delphi                        }
+{                                                       }
+{       Copyright (C) 2019 Unoesc                       }
+{                                                       }
+{*******************************************************}
 unit entity.professor;
 
 interface
@@ -9,27 +16,47 @@ uses
   Generics.Collections,
 
   /// orm
-  ormbr.types.blob,
-  ormbr.types.lazy,
-  ormbr.types.mapping,
-  ormbr.types.nullable,
-  ormbr.mapping.Classes,
-  ormbr.mapping.register,
-  ormbr.mapping.attributes,
+  Ormbr.Types.Blob,
+  Ormbr.Types.Lazy,
+  Ormbr.Types.Mapping,
+  Ormbr.Types.Nullable,
+  Ormbr.Mapping.Classes,
+  Ormbr.Mapping.Register,
+  Ormbr.Mapping.Attributes,
 
-  entity.pessoa,
-  entity.titulo;
+  entity.Pessoa,
+  entity.Titulo;
 
 type
 
-  TProfessor = class(TPessoa)
+  [ Entity ]
+  TProfessor = class(
+    TPessoa)
+  private
+    Ftitulos: TObjectList<TTitulo>;
   public
+    constructor Create;
+    destructor Destroy; override;
 
-
-    property titulos: TTitulo read ftitulos write ftitulos;
-
+    property Titulos: TObjectList<TTitulo> read Ftitulos write Ftitulos;
   end;
 
 implementation
 
+{ TProfessor }
+
+constructor TProfessor.Create;
+begin
+  Ftitulos := TObjectList<TTitulo>.Create;
+end;
+
+destructor TProfessor.Destroy;
+begin
+  Ftitulos.Free;
+  inherited;
+end;
+
+//initialization
+//
+//TRegisterClass.RegisterEntity (TProfessor);
 end.
