@@ -28,6 +28,7 @@ uses
   entity.curso;
 
 type
+  // teste do GIT
   [Entity]
   [Table('aluno','dados de alunos ')]
   [Sequence('aluno')]
