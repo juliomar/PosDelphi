@@ -11,6 +11,7 @@ interface
 
 uses
   system.classes, // Douglas
+  system.sysutils, // Douglas 2
   ormbr.container.objectset.interfaces;
 
 // type
