@@ -10,6 +10,7 @@ unit Model.Interfaces;
 interface
 
 uses
+  system.classes, // Douglas
   ormbr.container.objectset.interfaces;
 
 // type
