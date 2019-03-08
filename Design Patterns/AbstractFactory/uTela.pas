@@ -72,6 +72,7 @@ var
   Notebook: INotebook;
   Desktop: IDesktop;
 begin
+  ShowMessage('Teste');
   Notebook := Marca.ConsultarNotebook;
   Desktop := Marca.ConsultarDesktop;
 
