@@ -1,6 +1,6 @@
 {*******************************************************}
 {                                                       }
-{       Projeto Teste Pós-Delphi                        }
+{       Projeto Teste Pï¿½s-Delphi                        }
 {                                                       }
 {       Copyright (C) 2019 Unoesc                       }
 {                                                       }
@@ -39,6 +39,8 @@ type
     constructor Create;
     destructor Destroy; override;
 
+    [Association(OneToMany, 'aluno_id', 'curso', 'curso_id')]
+    [CascadeActions([CascadeAutoInc, CascadeInsert, CascadeUpdate, CascadeDelete])]
     property Cursos: TObjectList<TCurso> read fCursos write fCursos;
   end;
 
