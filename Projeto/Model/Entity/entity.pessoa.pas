@@ -44,12 +44,12 @@ type
   public
     [ Restrictions([ NoUpdate, NotNull ]) ]
     [ Column('id', ftInteger) ]
-    [ Dictionary('Código', 'Mensagem validação', '', '', '', tacenter) ]
+    [ Dictionary('C?digo', 'Mensagem validação', '', '', '', tacenter) ]
     property id: integer read fid write fid;
 
     [ Restrictions([ Unique ]) ]
     [ Column('matricula', ftInteger) ]
-    [ Dictionary('Matrícula', 'Mensagem validação', '', '', '', tacenter) ]
+    [ Dictionary('Matr?cula', 'Mensagem validação', '', '', '', tacenter) ]
     property matricula: integer read fmatricula write fmatricula;
 
     [ Column('nome', ftString, 60) ]
