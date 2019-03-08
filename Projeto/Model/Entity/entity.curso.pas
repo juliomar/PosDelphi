@@ -1,6 +1,6 @@
 {*******************************************************}
 {                                                       }
-{       Projeto Teste Pós-Delphi                        }
+{       Projeto Teste P?s-Delphi                        }
 {                                                       }
 {       Copyright (C) 2019 Unoesc                       }
 {                                                       }
@@ -25,7 +25,12 @@ uses
   ormbr.mapping.attributes;
 
 type
-  [Entity]
+  [ Entity ]
+  [ Table('Curso', 'Tipo de cursos') ]
+  [ PrimaryKey('id', AutoInc, Ascending, True, 'Chave primária') ]
+//  [ Indexe('pk_formacao','id', '')]
+  [ Sequence('Curso') ]
+  [ OrderBy('descricao') ]
 
   TCurso = class
   private
@@ -34,10 +39,24 @@ type
     fnotaenad        : double;
     fareaconhecimento: string;
   public
-    property id              : integer read fid write fid;
-    property descricao       : string read fdescricao write fdescricao;
-    property areaconhecimento: string read fareaconhecimento
-      write fareaconhecimento;
+
+
+    [ Restrictions([ NoUpdate, NotNull ]) ]
+    [ Column('id', ftInteger) ]
+    [ Dictionary('Código', 'Mensagem validação', '', '', '', tacenter) ]
+    property id: integer read fid write fid;
+
+    [Restrictions([NotNull])]
+    [ Column('descricao', ftString, 60) ]
+    [ Dictionary('Descrição', 'Mensagem validação', '', '', '', tacenter) ]
+    property descricao: string read fdescricao write fdescricao;
+
+    [ Column('areaconhecimento', ftString, 60) ]
+    [ Dictionary('Área de Conhecimento', 'Mensagem validação', '', '', '', tacenter) ]
+    property areaconhecimento: string read fareaconhecimento write fareaconhecimento;
+
+    [ Column('notaenad', ftDouble, 2,2) ]
+    [ Dictionary('Nota ENAD', 'Mensagem validação', '', '', '', tacenter) ]
     property notaenad: double read fnotaenad write fnotaenad;
   end;
 
