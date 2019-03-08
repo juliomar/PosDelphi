@@ -1,6 +1,6 @@
 {*******************************************************}
 {                                                       }
-{       Projeto Teste P?s-Delphi                        }
+{       Projeto Teste Pós-Delphi                        }
 {                                                       }
 {       Copyright (C) 2019 Unoesc                       }
 {                                                       }
@@ -44,36 +44,36 @@ type
   public
     [ Restrictions([ NoUpdate, NotNull ]) ]
     [ Column('id', ftInteger) ]
-    [ Dictionary('C?digo', 'Mensagem valida??o', '', '', '', tacenter) ]
+    [ Dictionary('C?digo', 'Mensagem validação', '', '', '', tacenter) ]
     property id: integer read fid write fid;
 
     [ Restrictions([ Unique ]) ]
     [ Column('matricula', ftInteger) ]
-    [ Dictionary('Matr?cula', 'Mensagem valida??o', '', '', '', tacenter) ]
+    [ Dictionary('Matr?cula', 'Mensagem validação', '', '', '', tacenter) ]
     property matricula: integer read fmatricula write fmatricula;
 
     [ Column('nome', ftString, 60) ]
-    [ Dictionary('Nome', 'Mensagem valida??o', '', '', '', tacenter) ]
+    [ Dictionary('Nome', 'Mensagem validação', '', '', '', tacenter) ]
     property nome: string read Fnome write Fnome;
 
     [ Column('sobrenome', ftString, 60) ]
-    [ Dictionary('Sobrenome', 'Mensagem valida??o', '', '', '', tacenter) ]
+    [ Dictionary('Sobrenome', 'Mensagem validação', '', '', '', tacenter) ]
     property sobrenome: string read Fsobrenome write Fsobrenome;
 
     [ Column('email', ftString, 100) ]
-    [ Dictionary('E-mail', 'Mensagem valida??o', '', '', '', tacenter) ]
+    [ Dictionary('E-mail', 'Mensagem validação', '', '', '', tacenter) ]
     property email: string read Femail write Femail;
 
     [ Column('telefone', ftString, 15) ]
-    [ Dictionary('Telefone', 'Mensagem valida??o', '', '', '', tacenter) ]
+    [ Dictionary('Telefone', 'Mensagem validação', '', '', '', tacenter) ]
     property telefone: string read Ftelefone write Ftelefone;
 
     [ Column('sexo', ftString) ]
-    [ Dictionary('Sexo', 'Mensagem valida??o', '', '', '', tacenter) ]
+    [ Dictionary('Sexo', 'Mensagem validação', '', '', '', tacenter) ]
     property sexo: TSexo read fsexo write fsexo;
 
     [ Column('datanascimento', ftDate) ]
-    [ Dictionary('Nascimento', 'Mensagem valida??o', '', '', '', tacenter) ]
+    [ Dictionary('Nascimento', 'Mensagem validação', '', '', '', tacenter) ]
     property datanascimento: TDate read fdatanascimento write fdatanascimento;
   end;
 
