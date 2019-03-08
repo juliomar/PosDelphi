@@ -58,7 +58,6 @@ begin
   inherited;
 end;
 
-//initialization
-//
-//TRegisterClass.RegisterEntity (TTitulo);
+initialization
+TRegisterClass.RegisterEntity (TTitulo);
 end.

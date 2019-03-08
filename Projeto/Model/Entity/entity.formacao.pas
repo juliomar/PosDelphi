@@ -50,7 +50,6 @@ type
 implementation
 
 initialization
-
 TRegisterClass.RegisterEntity (TFormacao);
 
 end.

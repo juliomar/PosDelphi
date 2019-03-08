@@ -19,14 +19,17 @@ uses
   Model.Conexao.Interfaces in 'Model\Conexao\Model.Conexao.Interfaces.pas',
   Model.Conexao in 'Model\Conexao\Model.Conexao.pas' {dmConexao: TDataModule},
   Model.Interfaces in 'Model\Model.Interfaces.pas',
-  Controller.Interfaces in 'Controller\Controller.Interfaces.pas';
+  Controller.Interfaces in 'Controller\Controller.Interfaces.pas',
+  Model.Cadastro.Pessoa in 'Model\Cadastro\Model.Cadastro.Pessoa.pas',
+  Model.Cadastro.Interfaces in 'Model\Cadastro\Model.Cadastro.Interfaces.pas',
+  Controller.Cadastro.Pessoa in 'Controller\Controller.Cadastro.Pessoa.pas';
 
 {$R *.res}
 
 begin
+  ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TdmConexao, dmConexao);
   Application.CreateForm(TPrincipal, Principal);
   Application.Run;
 end.

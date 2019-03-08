@@ -25,22 +25,23 @@ uses
   ormbr.mapping.attributes;
 
 type
-  [Enumeration(etChar,'M, F')]
-  TSexo = (Masculino, Femenino);
+  [Enumeration(etChar,'M,F')]
+  TSexo = (Masculino, Feminino);
 
   [ Entity ]
+  [ PrimaryKey('id',AutoInc, nosort,true, 'chave primaria') ]
+  [Sequence('pessoaid')]
   [ Table('pessoa', 'pessoas do sistema') ]
-  [ PrimaryKey('id', 'chave primaria') ]
   TPessoa = class
   private
+    fid            : integer;
+    fmatricula     : integer;
+    Fnome          : string;
     Fsobrenome     : string;
     Femail         : string;
-    fid            : integer;
-    Fnome          : string;
     Ftelefone      : string;
-    fmatricula     : integer;
-    fdatanascimento: TDate;
     fsexo          : TSexo;
+    fdatanascimento: TDate;
   public
     [ Restrictions([ NoUpdate, NotNull ]) ]
     [ Column('id', ftInteger) ]
@@ -68,7 +69,7 @@ type
     [ Dictionary('Telefone', 'Mensagem validação', '', '', '', tacenter) ]
     property telefone: string read Ftelefone write Ftelefone;
 
-    [ Column('sexo', ftString) ]
+    [ Column('sexo', ftString, 1) ]
     [ Dictionary('Sexo', 'Mensagem validação', '', '', '', tacenter) ]
     property sexo: TSexo read fsexo write fsexo;
 
@@ -81,8 +82,7 @@ implementation
 
 { TPessoa }
 
-//initialization
-//
-//TRegisterClass.RegisterEntity (TPessoa);
+initialization
+TRegisterClass.RegisterEntity (TPessoa);
 
 end.

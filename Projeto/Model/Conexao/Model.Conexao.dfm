@@ -8,7 +8,7 @@ object dmConexao: TdmConexao
       'LockingMode=Normal'
       'Database=database.db3'
       'DriverID=SQLite')
-    ConnectedStoredUsage = [auDesignTime]
+    ConnectedStoredUsage = []
     LoginPrompt = False
     BeforeConnect = FDConnection1BeforeConnect
     Left = 60

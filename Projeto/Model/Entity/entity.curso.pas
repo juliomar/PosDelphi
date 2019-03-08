@@ -45,6 +45,5 @@ implementation
 
 
 initialization
-
 TRegisterClass.RegisterEntity (TCurso);
 end.
