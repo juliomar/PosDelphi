@@ -31,7 +31,7 @@ uses
 
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces;
+  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,View.Tabela.Professor;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -60,9 +60,11 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
+    BtnTelaProfessor: TButton;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure BtnTelaProfessorClick(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -109,6 +111,13 @@ begin
     Exportador := nil;
   end;
 end;
+
+procedure TPrincipal.BtnTelaProfessorClick(Sender: TObject);
+begin
+TFrmProfessor.Create(nil);
+
+end;
+
 
 procedure TPrincipal.DefinicaoStringGrid;
 var
