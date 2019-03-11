@@ -28,7 +28,7 @@ type
 
   [ Entity ]
   [ Table('formacao', 'Tipo de formação do profission') ]
-  [ PrimaryKey('id', AutoInc, Ascending, True, 'Chave primria') ]
+  [ PrimaryKey('id', AutoInc, Ascending, True, 'Chave primária') ]
 //  [ Indexe('pk_formacao','id', '')]
   [ Sequence('formacao') ]
   [ OrderBy('descricao') ]
@@ -42,6 +42,7 @@ type
     [ Dictionary('Código', 'Mensagem validação', '', '', '', tacenter) ]
     property id: integer read fid write fid;
 
+    [Restrictions([NotNull])]
     [ Column('descricao', ftString, 60) ]
     [ Dictionary('Descrição', 'Mensagem validação', '', '', '', tacenter) ]
     property descricao: string read fdescricao write fdescricao;
@@ -50,7 +51,6 @@ type
 implementation
 
 initialization
-
 TRegisterClass.RegisterEntity (TFormacao);
 
 end.

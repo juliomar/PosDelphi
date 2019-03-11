@@ -56,7 +56,6 @@ begin
   inherited;
 end;
 
-//initialization
-//
-//TRegisterClass.RegisterEntity (TProfessor);
+initialization
+TRegisterClass.RegisterEntity (TProfessor);
 end.

@@ -11,6 +11,18 @@ object Principal: TPrincipal
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object STGridPessoa: TStringGrid
+    Left = 24
+    Top = 80
+    Width = 841
+    Height = 377
+    ColCount = 1
+    FixedCols = 0
+    RowCount = 1
+    FixedRows = 0
+    TabOrder = 0
+  end
 end

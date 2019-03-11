@@ -25,31 +25,32 @@ uses
   ormbr.mapping.attributes;
 
 type
-  [Enumeration(etChar,'M, F')]
-  TSexo = (Masculino, Femenino);
+  [Enumeration(etChar,'M,F')]
+  TSexo = (Masculino, Feminino);
 
   [ Entity ]
+  [ PrimaryKey('id',AutoInc, nosort,true, 'chave primaria') ]
+  [Sequence('pessoaid')]
   [ Table('pessoa', 'pessoas do sistema') ]
-  [ PrimaryKey('id', 'chave primaria') ]
   TPessoa = class
   private
+    fid            : integer;
+    fmatricula     : integer;
+    Fnome          : string;
     Fsobrenome     : string;
     Femail         : string;
-    fid            : integer;
-    Fnome          : string;
     Ftelefone      : string;
-    fmatricula     : integer;
-    fdatanascimento: TDate;
     fsexo          : TSexo;
+    fdatanascimento: TDate;
   public
     [ Restrictions([ NoUpdate, NotNull ]) ]
     [ Column('id', ftInteger) ]
-    [ Dictionary('Código', 'Mensagem validação', '', '', '', tacenter) ]
+    [ Dictionary('C?digo', 'Mensagem validação', '', '', '', tacenter) ]
     property id: integer read fid write fid;
 
     [ Restrictions([ Unique ]) ]
     [ Column('matricula', ftInteger) ]
-    [ Dictionary('Matrícula', 'Mensagem validação', '', '', '', tacenter) ]
+    [ Dictionary('Matr?cula', 'Mensagem validação', '', '', '', tacenter) ]
     property matricula: integer read fmatricula write fmatricula;
 
     [ Column('nome', ftString, 60) ]
@@ -68,7 +69,7 @@ type
     [ Dictionary('Telefone', 'Mensagem validação', '', '', '', tacenter) ]
     property telefone: string read Ftelefone write Ftelefone;
 
-    [ Column('sexo', ftString) ]
+    [ Column('sexo', ftString, 1) ]
     [ Dictionary('Sexo', 'Mensagem validação', '', '', '', tacenter) ]
     property sexo: TSexo read fsexo write fsexo;
 
@@ -81,8 +82,7 @@ implementation
 
 { TPessoa }
 
-//initialization
-//
-//TRegisterClass.RegisterEntity (TPessoa);
+initialization
+TRegisterClass.RegisterEntity (TPessoa);
 
 end.

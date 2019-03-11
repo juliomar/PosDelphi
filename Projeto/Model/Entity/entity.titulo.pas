@@ -1,6 +1,6 @@
 {*******************************************************}
 {                                                       }
-{       Projeto Teste P�s-Delphi                        }
+{       Projeto Teste Pós-Delphi                        }
 {                                                       }
 {       Copyright (C) 2019 Unoesc                       }
 {                                                       }
@@ -29,6 +29,11 @@ uses
 type
 
   [ Entity ]
+  [ Table('titulo', 'Título') ]
+  [ PrimaryKey('id', AutoInc, Ascending, True, 'Chave primária') ]
+  [ Sequence('titulo') ]
+  [ OrderBy('descricao') ]
+
   TTitulo = class
   private
     fdescricao: string;
@@ -38,8 +43,18 @@ type
     constructor Create;
     destructor Destroy; override;
 
+    [ Restrictions([ NoUpdate, NotNull ]) ]
+    [ Column('id', ftInteger) ]
+    [ Dictionary('Código', 'Mensagem validação', '', '', '', tacenter) ]
     property id: integer read fid write fid;
+
+    [ Restrictions([ NotNull ]) ]
+    [ Column('descricao', ftString, 60) ]
+    [ Dictionary('Descrição', 'Mensagem validação', '', '', '', tacenter) ]
     property descricao: string read fdescricao write fdescricao;
+
+    [Association(OneToMany, 'titulo_id', 'formacao', 'formacao_id')]
+    [CascadeActions([CascadeAutoInc, CascadeInsert, CascadeUpdate, CascadeDelete])]
     property formacao: TObjectList<TFormacao> read fformacao write fformacao;
   end;
 
@@ -58,7 +73,6 @@ begin
   inherited;
 end;
 
-//initialization
-//
-//TRegisterClass.RegisterEntity (TTitulo);
+initialization
+TRegisterClass.RegisterEntity (TTitulo);
 end.
