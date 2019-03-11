@@ -26,9 +26,10 @@ uses
   FireDAC.Phys.SQLiteDef,
   FireDAC.Phys.SQLite,
   FireDAC.Comp.UI,
-  Data.DB,
   FireDAC.Comp.Client,
   firedac.Comp.ScriptCommands,
+
+  Data.DB,
 
   Model.Conexao.Interfaces,
 
@@ -50,9 +51,7 @@ uses
   ormbr.metadata.sqlite;
 
 type
-  TdmConexao = class(
-    TDataModule,
-    iModelConexao)
+  TdmConexao = class(TDataModule)
     FDConnection1: TFDConnection;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
@@ -60,13 +59,15 @@ type
     procedure FDConnection1BeforeConnect (Sender: TObject);
   private
     { Private declarations }
-    FConn   : IDBConnection;
+
+    class var FConn : IDBConnection;
     oManager: TModelDbCompare;
     function Builder: boolean;
-    function Conn: IDBConnection;
+    function ArquivoVazio(ANomeArquivo : string) : Boolean;
   public
     { Public declarations }
-    class function New: iModelConexao;
+    class function New: TdmConexao;
+    class function Conn: IDBConnection;
   end;
 
 var
@@ -75,20 +76,24 @@ var
 implementation
 
 uses
-  dialogs;
+  dialogs, System.Generics.Defaults;
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 {$R *.dfm}
 { TdmConexao }
 
 function TdmConexao.Builder: boolean;
-var
-  cDDL    : TDDLCommand;
-  lComados: TStringBuilder;
+//var
+//  cDDL    : TDDLCommand;
+//  lComados: TStringBuilder;
 begin
+try
   oManager := TModelDbCompare.Create (FConn);
-  // oManager.CommandsAutoExecute := False;
-  oManager.BuildDatabase;
-
+//  oManager.CommandsAutoExecute := False;
+  if (ArquivoVazio('database.db3')) then
+    oManager.BuildDatabase;
+finally
+  FreeAndNil(oManager);
+end;
 //  lComados := TStringBuilder.Create;
 //  for cDDL in oManager.GetCommandList do
 //    lComados.AppendLine (cDDL.Command);
@@ -96,18 +101,18 @@ begin
 
 end;
 
-function TdmConexao.Conn: IDBConnection;
+class function TdmConexao.Conn: IDBConnection;
 begin
   Result := FConn;
 end;
 
 procedure TdmConexao.DataModuleCreate (Sender: TObject);
 begin
-  FConn := TFactoryFireDac.Create (FDConnection1,
+  FConn := TFactoryFireDac.Create (FDConnection1,dnSQLite);
     // dnMSSQL, dnMySQL, dnFirebird, dnSQLite, dnInterbase, dnDB2,
     // dnOracle, dnInformix, dnPostgreSQL, dnADS, dnASA,
     // dnAbsoluteDB, dnMongoDB
-    dnSQLite);
+
 
   Builder;
 end;
@@ -117,9 +122,34 @@ begin
   // FDConnection1.Params.Values['Database'] := ExtractFilePath(ParamStr(0))+ 'database.db3';
 end;
 
-class function TdmConexao.New: iModelConexao;
+class function TdmConexao.New: TdmConexao;
 begin
-  Result := Self.Create (nil);
+if not assigned(dmConexao) then
+  dmconexao := Self.Create(nil);
+Result := dmconexao;
 end;
+
+function TdmConexao.ArquivoVazio(ANomeArquivo: string): Boolean;
+var
+myFile : File;
+begin
+  AssignFile(myFile, ANomeArquivo);
+  Reset(myFile);
+
+  // Se arquivo for vazio
+  if EOF(myFile) then
+    Result := true
+  else
+    Result := false;
+
+  // Close the file
+  CloseFile(myFile);
+end;
+
+initialization
+//
+finalization
+FreeAndNil(dmConexao);
+
 
 end.
