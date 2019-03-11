@@ -1,6 +1,6 @@
 {*******************************************************}
 {                                                       }
-{       Projeto Teste P�s-Delphi                        }
+{       Projeto Teste Pós-Delphi                        }
 {                                                       }
 {       Copyright (C) 2019 Unoesc                       }
 {                                                       }
@@ -28,6 +28,7 @@ uses
   entity.curso;
 
 type
+  // teste do GIT
   [Entity]
   [Table('aluno','dados de alunos ')]
   [Sequence('aluno')]
@@ -39,6 +40,8 @@ type
     constructor Create;
     destructor Destroy; override;
 
+    [Association(OneToMany, 'aluno_id', 'curso', 'curso_id')]
+    [CascadeActions([CascadeAutoInc, CascadeInsert, CascadeUpdate, CascadeDelete])]
     property Cursos: TObjectList<TCurso> read fCursos write fCursos;
   end;
 
