@@ -1,0 +1,19 @@
+Abstract Factory
+adapter
+bridge
+Builder
+singleton
+
+Composite não completo eu creio
+
+Observer
+visitor
+template method
+strategy
+state
+memento
+mediator
+Interator
+interpreter
+command
+chains of resposability
