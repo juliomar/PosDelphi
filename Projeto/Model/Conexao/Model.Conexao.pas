@@ -31,8 +31,6 @@ uses
 
   Data.DB,
 
-  Model.Conexao.Interfaces,
-
   ormbr.factory.Interfaces,
   ormbr.factory.FireDAC,
 

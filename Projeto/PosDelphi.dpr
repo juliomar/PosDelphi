@@ -16,13 +16,16 @@ uses
   entity.curso in 'Model\Entity\entity.curso.pas',
   entity.titulo in 'Model\Entity\entity.titulo.pas',
   entity.formacao in 'Model\Entity\entity.formacao.pas',
-  Model.Conexao.Interfaces in 'Model\Conexao\Model.Conexao.Interfaces.pas',
   Model.Conexao in 'Model\Conexao\Model.Conexao.pas' {dmConexao: TDataModule},
   Model.Interfaces in 'Model\Model.Interfaces.pas',
   Controller.Interfaces in 'Controller\Controller.Interfaces.pas',
-  Model.Cadastro.Pessoa in 'Model\Cadastro\Model.Cadastro.Pessoa.pas',
+  Model.Cadastro in 'Model\Cadastro\Model.Cadastro.pas',
   Model.Cadastro.Interfaces in 'Model\Cadastro\Model.Cadastro.Interfaces.pas',
-  Controller.Cadastro.Pessoa in 'Controller\Controller.Cadastro.Pessoa.pas';
+  Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
+  Model.Iterator.Interfaces in 'Model\Iterator\Model.Iterator.Interfaces.pas',
+  Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
+  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
+  Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas';
 
 {$R *.res}
 
