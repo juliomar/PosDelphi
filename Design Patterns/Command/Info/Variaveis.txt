@@ -1,0 +1,122 @@
+=::=::\
+
+ALLUSERSPROFILE=C:\ProgramData
+
+APPDATA=C:\Users\juliomar\AppData\Roaming
+
+BDS=c:\program files (x86)\embarcadero\studio\20.0
+
+BDSAppDataBaseDir=BDS
+
+BDSBIN=c:\program files (x86)\embarcadero\studio\20.0\bin
+
+BDSCatalogRepository=C:\Users\juliomar\Documents\Embarcadero\Studio\20.0\CatalogRepository
+
+BDSCatalogRepositoryAllUsers=C:\Users\Public\Documents\Embarcadero\Studio\20.0\CatalogRepository
+
+BDSCOMMONDIR=C:\Users\Public\Documents\Embarcadero\Studio\20.0
+
+BDSINCLUDE=c:\program files (x86)\embarcadero\studio\20.0\include
+
+BDSLIB=c:\program files (x86)\embarcadero\studio\20.0\lib
+
+BDSPLATFORMSDKSDIR=C:\Users\juliomar\Documents\Embarcadero\Studio\SDKs
+
+BDSPROFILESDIR=C:\Users\juliomar\Documents\Embarcadero\Studio\Profiles
+
+BDSPROJECTSDIR=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects
+
+BDSUSERDIR=C:\Users\juliomar\Documents\Embarcadero\Studio\20.0
+
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+
+CommonProgramW6432=C:\Program Files\Common Files
+
+COMPUTERNAME=JULIOMAR-RAZER
+
+ComSpec=C:\WINDOWS\system32\cmd.exe
+
+DELPHI=c:\program files (x86)\embarcadero\studio\20.0
+
+DEMOSDIR=C:\Users\Public\Documents\Embarcadero\Studio\20.0\Samples
+
+DriverData=C:\Windows\System32\Drivers\DriverData
+
+DXVCL=C:\Program Files (x86)\DevExpress\VCL\
+
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+
+FPS_BROWSER_USER_PROFILE_STRING=Default
+
+HOMEDRIVE=C:
+
+HOMEPATH=\Users\juliomar
+
+IBREDISTDIR=C:\Users\Public\Documents\Embarcadero\InterBase\redist\InterBase2017
+
+IB_PROTOCOL=gds_db
+
+LOCALAPPDATA=C:\Users\juliomar\AppData\Local
+
+LOGONSERVER=\\JULIOMAR-RAZER
+
+MOZ_PLUGIN_PATH=C:\PROGRAM FILES (X86)\FOXIT SOFTWARE\FOXIT READER\plugins\
+
+NUMBER_OF_PROCESSORS=4
+
+OneDrive=C:\Users\juliomar\OneDrive
+
+OS=Windows_NT
+
+Path=C:\Users\Public\Documents\Embarcadero\InterBase\redist\InterBase2017\IDE_spoof;C:\Program Files (x86)\Embarcadero\Studio\20.0\bin;C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl;C:\Program Files (x86)\Embarcadero\Studio\20.0\bin64;C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\Win64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Embarcadero\Studio\19.0\bin;C:\Users\Public\Documents\Embarcadero\Studio\19.0\Bpl;C:\Program Files (x86)\Embarcadero\Studio\19.0\bin64;C:\Users\Public\Documents\Embarcadero\Studio\19.0\Bpl\Win64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Embarcadero\Studio\18.0\bin;C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl;C:\Program Files (x86)\Embarcadero\Studio\18.0\bin64;C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\Win64;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\PuTTY\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseGit\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Brackets\command;C:\Program Files\WinMerge;C:\Users\juliomar\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Microsoft VS Code\bin;C:\Users\juliomar\AppData\Local\Programs\Microsoft VS Code\bin;D:\Programas\fortesreport-ce\Binary\LibD26;C:\Program Files (x86)\DevExpress\VCL\Library\RS26;C:\Program Files (x86)\DevExpress\VCL\Library\RS26\Win64;D:\Programas\ACBr\trunk2\Lib\Delphi\LibD26;D:\Programas\ormbr\Lib\Delphi\LibD26
+
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+
+PROCESSOR_ARCHITECTURE=x86
+
+PROCESSOR_ARCHITEW6432=AMD64
+
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+
+PROCESSOR_LEVEL=6
+
+PROCESSOR_REVISION=8e09
+
+ProductVersion=20.0
+
+ProgramData=C:\ProgramData
+
+ProgramFiles=C:\Program Files (x86)
+
+ProgramFiles(x86)=C:\Program Files (x86)
+
+ProgramW6432=C:\Program Files
+
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+
+PUBLIC=C:\Users\Public
+
+SESSIONNAME=Console
+
+SystemDrive=C:
+
+SystemRoot=C:\WINDOWS
+
+TEMP=C:\Users\juliomar\AppData\Local\Temp
+
+TMP=C:\Users\juliomar\AppData\Local\Temp
+
+TMS=C:\Users\juliomar\Documents\tmssoftware
+
+USERDOMAIN=JULIOMAR-RAZER
+
+USERDOMAIN_ROAMINGPROFILE=JULIOMAR-RAZER
+
+USERNAME=juliomar
+
+USERPROFILE=C:\Users\juliomar
+
+windir=C:\WINDOWS
+

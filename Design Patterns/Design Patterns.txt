@@ -3,9 +3,7 @@ adapter
 bridge
 Builder
 singleton
-
-Composite não completo eu creio
-
+Composite
 Observer
 visitor
 template method
@@ -15,5 +13,12 @@ memento
 mediator
 Interator
 interpreter
+
 command
 chains of resposability
+proxy
+Flyweight
+Façade
+Decorator
+Prototype
+Factory Method
