@@ -1,0 +1,14 @@
+Data/Hora.........: 14/03/2019 - 20:21:27
+Cotação do Dólar..: 3,83
+Conversão em R$...: 594,07
+Fidelidade........: Desconto de 6%
+Margem de venda...: 35%
+Preço final.......: 753,87
+
+Data/Hora.........: 14/03/2019 - 20:21:53
+Cotação do Dólar..: 3,83
+Conversão em R$...: 594,07
+Fidelidade........: Desconto de 18%
+Margem de venda...: 35%
+Preço final.......: 657,63
+

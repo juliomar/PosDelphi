@@ -1,0 +1,24 @@
+Abstract Factory
+adapter
+bridge
+Builder
+singleton
+Composite
+Observer
+visitor
+template method
+strategy
+state
+memento
+mediator
+Interator
+interpreter
+
+command
+chains of resposability
+proxy
+Flyweight
+Façade
+Decorator
+Prototype
+Factory Method
