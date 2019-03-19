@@ -16,9 +16,9 @@ object Principal: TPrincipal
   TextHeight = 13
   object STGridPessoa: TStringGrid
     Left = 24
-    Top = 80
+    Top = 136
     Width = 841
-    Height = 377
+    Height = 321
     ColCount = 1
     FixedCols = 0
     RowCount = 1

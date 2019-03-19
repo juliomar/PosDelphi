@@ -2,14 +2,13 @@ unit Model.Cadastro.Interfaces;
 
 interface
 uses
-  System.Generics.Collections,
-  entity.pessoa;
+  entity.pessoa,
+  Model.Iterator.Interfaces;
 
 type
-  iModelCadastroPessoa = interface
+  iModelCadastro<T> = interface
     ['{8C4F7201-54A9-4016-9457-CEF7F190EC40}']
-    function Pessoa: iModelCadastroPessoa;
-    function GetListaPessoa : TObjectList<TPessoa>;
+    function getLista: iIterator<T>;
   end;
 
 implementation
