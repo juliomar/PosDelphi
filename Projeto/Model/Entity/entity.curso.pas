@@ -55,7 +55,7 @@ type
     [ Dictionary('Área de Conhecimento', 'Mensagem validação', '', '', '', tacenter) ]
     property areaconhecimento: string read fareaconhecimento write fareaconhecimento;
 
-    [ Column('notaenad', ftDouble, 2,2) ]
+    [ Column('notaenad', ftFloat, 2,2) ]
     [ Dictionary('Nota ENAD', 'Mensagem validação', '', '', '', tacenter) ]
     property notaenad: double read fnotaenad write fnotaenad;
   end;
