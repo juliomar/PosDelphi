@@ -22,7 +22,12 @@ uses
   Controller.Interfaces in 'Controller\Controller.Interfaces.pas',
   Model.Cadastro.Pessoa in 'Model\Cadastro\Model.Cadastro.Pessoa.pas',
   Model.Cadastro.Interfaces in 'Model\Cadastro\Model.Cadastro.Interfaces.pas',
-  Controller.Cadastro.Pessoa in 'Controller\Controller.Cadastro.Pessoa.pas';
+  Controller.Cadastro.Pessoa in 'Controller\Controller.Cadastro.Pessoa.pas',
+  Model.Exportador.Interfaces in 'Model\Exportador\Model.Exportador.Interfaces.pas',
+  Model.Exportador.InterfaceFormato in 'Model\Exportador\Model.Exportador.InterfaceFormato.pas',
+  Model.Exportador.Alunos in 'Model\Exportador\Model.Exportador.Alunos.pas',
+  Model.Exportador.FormatoHTML in 'Model\Exportador\Model.Exportador.FormatoHTML.pas',
+  Model.Exportador.FormatoXLS in 'Model\Exportador\Model.Exportador.FormatoXLS.pas';
 
 {$R *.res}
 

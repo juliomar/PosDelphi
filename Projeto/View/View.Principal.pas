@@ -26,8 +26,13 @@ uses
 
   Entity.Pessoa,
 
+
+ ExtCtrls,
+
+
   Controller.Interfaces,
-  Controller.Cadastro.Pessoa;
+  Controller.Cadastro.Pessoa, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Datasnap.DBClient, Vcl.DBGrids;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -38,7 +43,18 @@ type
 
   TPrincipal = class(TForm)
     STGridPessoa: TStringGrid;
+    BitBtnExportarAlunosXLS: TBitBtn;
+    BitBtnExportarAlunosHTML: TBitBtn;
+    LabelClientes: TLabel;
+    DBGridClientes: TDBGrid;
+    ClientDataSetClientes: TClientDataSet;
+    ClientDataSetClientesId: TIntegerField;
+    ClientDataSetClientesNome: TStringField;
+    ClientDataSetClientesMatricula: TStringField;
+    DataSourceClientes: TDataSource;
     procedure FormCreate(Sender: TObject);
+    procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
+    procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: TObjectList<TPessoa>; AIndex: Integer = 0);
@@ -55,8 +71,34 @@ var
 
 implementation
 
+uses
+  Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML;
 
 {$R *.dfm}
+
+procedure TPrincipal.BitBtnExportarAlunosHTMLClick(Sender: TObject);
+var
+  Exportador: IExportador;
+begin
+  Exportador := TExportadorAlunos.Create(TFormatoHTML.Create);
+  try
+    Exportador.ExportarDados(ClientDataSetClientes.Data);
+  finally
+    Exportador := nil;
+  end;
+end;
+
+procedure TPrincipal.BitBtnExportarAlunosXLSClick(Sender: TObject);
+var
+  Exportador: IExportador;
+begin
+  Exportador := TExportadorAlunos.Create(TFormatoXLS.Create);
+  try
+    Exportador.ExportarDados(ClientDataSetClientes.Data);
+  finally
+    Exportador := nil;
+  end;
+end;
 
 procedure TPrincipal.DefinicaoStringGrid;
 var
@@ -100,7 +142,11 @@ end;
 end;
 
 procedure TPrincipal.FormCreate(Sender: TObject);
+var
+  CaminhoAplicacao: string;
 begin
+  CaminhoAplicacao := ExtractFilePath(Application.ExeName);
+  ClientDataSetClientes.LoadFromFile(CaminhoAplicacao + 'Clientes.xml');
   FControllerPessoa := TControllerCadastroPessoa.New;
   if Assigned(FControllerPessoa) then
   begin
