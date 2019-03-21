@@ -1,4 +1,4 @@
-{*******************************************************}
+﻿{*******************************************************}
 {                                                       }
 {       Projeto Teste P�s-Delphi                        }
 {                                                       }
@@ -43,18 +43,28 @@ type
 
   TPrincipal = class(TForm)
     STGridPessoa: TStringGrid;
-    BitBtnExportarAlunosXLS: TBitBtn;
-    BitBtnExportarAlunosHTML: TBitBtn;
-    LabelClientes: TLabel;
     DBGridClientes: TDBGrid;
     ClientDataSetClientes: TClientDataSet;
     ClientDataSetClientesId: TIntegerField;
     ClientDataSetClientesNome: TStringField;
     ClientDataSetClientesMatricula: TStringField;
     DataSourceClientes: TDataSource;
+    pnConsulta: TPanel;
+    cbCampo: TComboBox;
+    editTextoPesquisa: TEdit;
+    ComboBox1: TComboBox;
+    btnPesquisar: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    pnAcoes: TPanel;
+    BitBtnExportarAlunosXLS: TBitBtn;
+    BitBtnExportarAlunosHTML: TBitBtn;
+    btnEditar: TButton;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure GridPanel1Click(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -160,7 +170,12 @@ begin
   end;
 end;
 
-procedure TPrincipal.AdicionarLinhaStringGrid(AObject: TPessoa);
+pprocedure TPrincipal.GridPanel1Click(Sender: TObject);
+begin
+
+end;
+
+rocedure TPrincipal.AdicionarLinhaStringGrid(AObject: TPessoa);
 begin
   STGridPessoa.Cells[0, STGridPessoa.RowCount] := inttostr(AObject.id);
   STGridPessoa.Cells[1, STGridPessoa.RowCount] := AObject.nome;
