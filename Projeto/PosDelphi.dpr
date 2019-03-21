@@ -1,6 +1,6 @@
-{*******************************************************}
+ï»¿{*******************************************************}
 {                                                       }
-{       Projeto Teste Pós-Delphi                        }
+{       Projeto Teste Pï¿½s-Delphi                        }
 {                                                       }
 {       Copyright (C) 2019 Unoesc                       }
 {                                                       }
@@ -21,7 +21,14 @@ uses
   Controller.Interfaces in 'Controller\Controller.Interfaces.pas',
   Model.Cadastro in 'Model\Cadastro\Model.Cadastro.pas',
   Model.Cadastro.Interfaces in 'Model\Cadastro\Model.Cadastro.Interfaces.pas',
-  Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
+  Model.Exportador.Interfaces in 'Model\Exportador\Model.Exportador.Interfaces.pas',
+  Model.Exportador.InterfaceFormato in 'Model\Exportador\Model.Exportador.InterfaceFormato.pas',
+  Model.Exportador.Alunos in 'Model\Exportador\Model.Exportador.Alunos.pas',
+  Model.Exportador.FormatoHTML in 'Model\Exportador\Model.Exportador.FormatoHTML.pas',
+  Model.Exportador.FormatoXLS in 'Model\Exportador\Model.Exportador.FormatoXLS.pas',
+  Model.Iterator.Interfaces in 'Model\Iterator\Model.Iterator.Interfaces.pas';
+
+Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
   Model.Iterator.Interfaces in 'Model\Iterator\Model.Iterator.Interfaces.pas',
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
   Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',

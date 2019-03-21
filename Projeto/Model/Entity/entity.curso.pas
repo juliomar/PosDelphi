@@ -1,6 +1,6 @@
 {*******************************************************}
 {                                                       }
-{       Projeto Teste Pós-Delphi                        }
+{       Projeto Teste Pï¿½s-Delphi                        }
 {                                                       }
 {       Copyright (C) 2019 Unoesc                       }
 {                                                       }
@@ -27,7 +27,7 @@ uses
 type
   [ Entity ]
   [ Table('Curso', 'Tipo de cursos') ]
-  [ PrimaryKey('id', AutoInc, Ascending, True, 'Chave primária') ]
+  [ PrimaryKey('id', AutoInc, Ascending, True, 'Chave primï¿½ria') ]
 //  [ Indexe('pk_formacao','id', '')]
   [ Sequence('Curso') ]
   [ OrderBy('descricao') ]
@@ -43,20 +43,20 @@ type
 
     [ Restrictions([ NoUpdate, NotNull ]) ]
     [ Column('id', ftInteger) ]
-    [ Dictionary('Código', 'Mensagem validação', '', '', '', tacenter) ]
+    [ Dictionary('Cï¿½digo', 'Mensagem validaï¿½ï¿½o', '', '', '', tacenter) ]
     property id: integer read fid write fid;
 
     [Restrictions([NotNull])]
     [ Column('descricao', ftString, 60) ]
-    [ Dictionary('Descrição', 'Mensagem validação', '', '', '', tacenter) ]
+    [ Dictionary('Descriï¿½ï¿½o', 'Mensagem validaï¿½ï¿½o', '', '', '', tacenter) ]
     property descricao: string read fdescricao write fdescricao;
 
     [ Column('areaconhecimento', ftString, 60) ]
-    [ Dictionary('Área de Conhecimento', 'Mensagem validação', '', '', '', tacenter) ]
+    [ Dictionary('ï¿½rea de Conhecimento', 'Mensagem validaï¿½ï¿½o', '', '', '', tacenter) ]
     property areaconhecimento: string read fareaconhecimento write fareaconhecimento;
 
     [ Column('notaenad', ftFloat, 2,2) ]
-    [ Dictionary('Nota ENAD', 'Mensagem validação', '', '', '', tacenter) ]
+    [ Dictionary('Nota ENAD', 'Mensagem validaï¿½ï¿½o', '', '', '', tacenter) ]
     property notaenad: double read fnotaenad write fnotaenad;
   end;
 
