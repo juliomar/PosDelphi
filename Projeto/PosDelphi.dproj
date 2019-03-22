@@ -112,6 +112,12 @@
         <DCCReference Include="Controller\Controller.Interfaces.pas"/>
         <DCCReference Include="Model\Cadastro\Model.Cadastro.pas"/>
         <DCCReference Include="Model\Cadastro\Model.Cadastro.Interfaces.pas"/>
+        <DCCReference Include="Controller\Controller.Cadastro.Pessoa.pas"/>
+        <DCCReference Include="Model\Exportador\Model.Exportador.Interfaces.pas"/>
+        <DCCReference Include="Model\Exportador\Model.Exportador.InterfaceFormato.pas"/>
+        <DCCReference Include="Model\Exportador\Model.Exportador.Alunos.pas"/>
+        <DCCReference Include="Model\Exportador\Model.Exportador.FormatoHTML.pas"/>
+        <DCCReference Include="Model\Exportador\Model.Exportador.FormatoXLS.pas"/>
         <DCCReference Include="Controller\Controller.Cadastro.pas"/>
         <DCCReference Include="Model\Iterator\Model.Iterator.Interfaces.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.Factory.pas"/>
