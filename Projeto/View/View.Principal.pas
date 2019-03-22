@@ -1,10 +1,10 @@
-{*******************************************************}
-{                                                       }
-{       Projeto Teste P�s-Delphi                        }
-{                                                       }
-{       Copyright (C) 2019 Unoesc                       }
-{                                                       }
-{*******************************************************}
+﻿{ ******************************************************* }
+{ }
+{ Projeto Teste P�s-Delphi }
+{ }
+{ Copyright (C) 2019 Unoesc }
+{ }
+{ ******************************************************* }
 unit View.Principal;
 
 interface
@@ -26,13 +26,11 @@ uses
 
   Entity.Pessoa,
 
-
- ExtCtrls,
-
+  ExtCtrls,
 
   Controller.Interfaces,
   Controller.Cadastro.Pessoa, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids;
+  Datasnap.DBClient, Vcl.DBGrids, Vcl.ComCtrls;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -52,18 +50,22 @@ type
     ClientDataSetClientesNome: TStringField;
     ClientDataSetClientesMatricula: TStringField;
     DataSourceClientes: TDataSource;
+    StaticText1: TStaticText;
+    StatusBar1: TStatusBar;
+    Timer1: TTimer;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
     procedure AdicionarLinhaStringGrid(AObject: TPessoa);
-    function RetornaSexo(ASelecao : TSexo): string;
+    function RetornaSexo(ASelecao: TSexo): string;
     { Private declarations }
   public
-    FControllerPessoa : iControllerCadastro<TPessoa>;
-    FIterator : iIterator<TPessoa>;
+    FControllerPessoa: iControllerCadastro<TPessoa>;
+    FIterator: iIterator<TPessoa>;
     { Public declarations }
   end;
 
@@ -73,7 +75,8 @@ var
 implementation
 
 uses
-  Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML;
+  Model.Exportador.Interfaces, Model.Exportador.Alunos,
+  Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML;
 
 {$R *.dfm}
 
@@ -124,7 +127,7 @@ procedure TPrincipal.PreencherStringGrid(ALista: iIterator<TPessoa>);
 var
   LFor: Integer;
 begin
-  //for LFor := AIndex to ALista.Count -1 do
+  // for LFor := AIndex to ALista.Count -1 do
   while ALista.temProximo do
   begin
     // Adiciona a lista de objetos geral.
@@ -137,10 +140,17 @@ end;
 
 function TPrincipal.RetornaSexo(ASelecao: TSexo): string;
 begin
-case ASelecao of
-  Masculino: Result := 'Masculino';
-  Feminino: Result := 'Feminino';
+  case ASelecao of
+    Masculino:
+      Result := 'Masculino';
+    Feminino:
+      Result := 'Feminino';
+  end;
 end;
+
+procedure TPrincipal.Timer1Timer(Sender: TObject);
+begin
+  StatusBar1.Panels.Items[0].Text := DateTimeToStr(now);
 end;
 
 procedure TPrincipal.FormCreate(Sender: TObject);
@@ -149,11 +159,11 @@ var
 begin
   CaminhoAplicacao := ExtractFilePath(Application.ExeName);
   ClientDataSetClientes.LoadFromFile(CaminhoAplicacao + 'Clientes.xml');
-  //FControllerPessoa := TControllerCadastroPessoa.New;
+  // FControllerPessoa := TControllerCadastroPessoa.New;
   FControllerPessoa := TControllerCadastro<TPessoa>.New;
   if Assigned(FControllerPessoa) then
   begin
-    FIterator  := FControllerPessoa.Entidade.getLista;
+    FIterator := FControllerPessoa.Entidade.getLista;
     DefinicaoStringGrid;
     if Assigned(FControllerPessoa.Entidade) then
       PreencherStringGrid(FIterator);
@@ -167,8 +177,9 @@ begin
   STGridPessoa.Cells[2, STGridPessoa.RowCount] := AObject.sobrenome;
   STGridPessoa.Cells[3, STGridPessoa.RowCount] := AObject.telefone;
   STGridPessoa.Cells[4, STGridPessoa.RowCount] := AObject.email;
-  STGridPessoa.Cells[5, STGridPessoa.RowCount] := IntToStr(AObject.matricula);
-  STGridPessoa.Cells[6, STGridPessoa.RowCount] := DateToStr(AObject.datanascimento);
+  STGridPessoa.Cells[5, STGridPessoa.RowCount] := inttostr(AObject.matricula);
+  STGridPessoa.Cells[6, STGridPessoa.RowCount] :=
+    DateToStr(AObject.datanascimento);
   STGridPessoa.Cells[7, STGridPessoa.RowCount] := RetornaSexo(AObject.sexo);
 end;
 
@@ -197,6 +208,3 @@ begin
 end;
 
 end.
-
-
-

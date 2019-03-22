@@ -2,9 +2,9 @@ object Principal: TPrincipal
   Left = 0
   Top = 0
   Caption = 'Principal'
-  ClientHeight = 354
-  ClientWidth = 848
-  Color = clBtnFace
+  ClientHeight = 384
+  ClientWidth = 853
+  Color = clInactiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -17,18 +17,18 @@ object Principal: TPrincipal
   object LabelClientes: TLabel
     Left = 8
     Top = 8
-    Width = 41
-    Height = 13
+    Width = 55
+    Height = 19
     Caption = 'Alunos:'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
+    Font.Height = -16
+    Font.Name = 'Cambria'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object STGridPessoa: TStringGrid
-    Left = 8
+    Left = 7
     Top = 264
     Width = 833
     Height = 82
@@ -92,6 +92,26 @@ object Principal: TPrincipal
         Visible = True
       end>
   end
+  object StaticText1: TStaticText
+    Left = 360
+    Top = 192
+    Width = 59
+    Height = 17
+    Caption = 'StaticText1'
+    TabOrder = 4
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 352
+    Width = 853
+    Height = 32
+    Panels = <
+      item
+        Width = 50
+      end>
+    ExplicitLeft = 8
+    ExplicitWidth = 840
+  end
   object ClientDataSetClientes: TClientDataSet
     Aggregates = <>
     FieldDefs = <
@@ -140,5 +160,10 @@ object Principal: TPrincipal
     DataSet = ClientDataSetClientes
     Left = 204
     Top = 166
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 520
+    Top = 352
   end
 end
