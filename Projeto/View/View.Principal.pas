@@ -30,7 +30,7 @@ uses
 
   Controller.Interfaces,
   Controller.Cadastro.Pessoa, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids, Vcl.ComCtrls;
+  Datasnap.DBClient, Vcl.DBGrids, Vcl.ComCtrls, Vcl.Imaging.pngimage;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -53,6 +53,7 @@ type
     StaticText1: TStaticText;
     StatusBar1: TStatusBar;
     Timer1: TTimer;
+    ImageAluno: TImage;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
