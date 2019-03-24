@@ -1,4 +1,4 @@
-{*******************************************************}
+﻿{*******************************************************}
 {                                                       }
 {       Projeto Teste P�s-Delphi                        }
 {                                                       }
@@ -31,7 +31,10 @@ uses
 
 
   Controller.Interfaces,
-  Controller.Cadastro.Pessoa, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+//  Controller.Cadastro.Pessoa,
+  Controller.Cadastro,
+  Model.Iterator.Interfaces,
+  Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids;
 
 type
