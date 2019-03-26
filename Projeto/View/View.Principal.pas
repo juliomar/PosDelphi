@@ -58,6 +58,7 @@ type
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -152,6 +153,16 @@ end;
 procedure TPrincipal.Timer1Timer(Sender: TObject);
 begin
   StatusBar1.Panels.Items[0].Text := DateTimeToStr(now);
+end;
+
+procedure TPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+if Application.MessageBox('Deseja Relamente Sair','informação', MB_YESNO+MB_ICONQUESTION) =mrYes then
+
+
+Application.Terminate
+else
+abort;
 end;
 
 procedure TPrincipal.FormCreate(Sender: TObject);

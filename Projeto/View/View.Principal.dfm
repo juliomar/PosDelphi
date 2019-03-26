@@ -2,7 +2,7 @@ object Principal: TPrincipal
   Left = 0
   Top = 0
   Caption = 'Principal'
-  ClientHeight = 421
+  ClientHeight = 423
   ClientWidth = 853
   Color = clInfoBk
   Font.Charset = DEFAULT_CHARSET
@@ -11,6 +11,7 @@ object Principal: TPrincipal
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -275,14 +276,14 @@ object Principal: TPrincipal
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 389
+    Top = 391
     Width = 853
     Height = 32
     Panels = <
       item
         Width = 50
       end>
-    ExplicitTop = 352
+    ExplicitTop = 389
   end
   object ClientDataSetClientes: TClientDataSet
     Aggregates = <>
