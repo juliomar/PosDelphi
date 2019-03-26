@@ -26,16 +26,13 @@ object Principal: TPrincipal
     FixedRows = 0
     TabOrder = 0
     Visible = False
-    ExplicitLeft = 8
-    ExplicitTop = 344
-    ExplicitWidth = 833
   end
   object DBGridClientes: TDBGrid
     Left = 0
-    Top = 79
+    Top = 104
     Width = 906
-    Height = 309
-    Align = alClient
+    Height = 284
+    Align = alBottom
     DataSource = DataSourceClientes
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
@@ -71,62 +68,114 @@ object Principal: TPrincipal
     Left = 3
     Top = 3
     Width = 900
-    Height = 73
+    Height = 95
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitLeft = 0
-    ExplicitTop = 0
-    ExplicitWidth = 848
     object Label1: TLabel
       Left = 8
-      Top = 21
+      Top = 14
       Width = 96
       Height = 13
       Caption = 'Campos p/ pesquisa'
     end
     object Label2: TLabel
       Left = 159
-      Top = 21
+      Top = 14
       Width = 73
       Height = 13
       Caption = 'Texto Pesquisa'
     end
     object Label3: TLabel
       Left = 375
-      Top = 21
+      Top = 14
       Width = 96
       Height = 13
       Caption = 'Op'#231#245'es de pesquisa'
     end
     object cbCampo: TComboBox
       Left = 8
-      Top = 39
+      Top = 32
       Width = 145
       Height = 21
       TabOrder = 0
     end
     object editTextoPesquisa: TEdit
       Left = 159
-      Top = 39
+      Top = 32
       Width = 210
       Height = 21
       TabOrder = 1
     end
     object ComboBox1: TComboBox
       Left = 375
-      Top = 39
+      Top = 32
       Width = 145
       Height = 21
       TabOrder = 2
     end
     object btnPesquisar: TButton
       Left = 526
-      Top = 37
+      Top = 30
       Width = 75
       Height = 25
       Caption = 'Pesquisar'
       TabOrder = 3
+    end
+    object edtNome: TLabeledEdit
+      Left = 8
+      Top = 74
+      Width = 121
+      Height = 21
+      CharCase = ecUpperCase
+      Color = clSkyBlue
+      EditLabel.Width = 29
+      EditLabel.Height = 13
+      EditLabel.Caption = 'NOME'
+      TabOrder = 4
+    end
+    object edtSobrenome: TLabeledEdit
+      Left = 135
+      Top = 74
+      Width = 121
+      Height = 21
+      CharCase = ecUpperCase
+      Color = clSkyBlue
+      EditLabel.Width = 62
+      EditLabel.Height = 13
+      EditLabel.Caption = 'SOBRENOME'
+      TabOrder = 5
+    end
+    object EdtMatricula: TLabeledEdit
+      Left = 262
+      Top = 74
+      Width = 121
+      Height = 21
+      CharCase = ecUpperCase
+      Color = clSkyBlue
+      EditLabel.Width = 58
+      EditLabel.Height = 13
+      EditLabel.Caption = 'MATR'#205'CULA'
+      TabOrder = 6
+    end
+    object Button1: TButton
+      Left = 389
+      Top = 74
+      Width = 217
+      Height = 21
+      Caption = 'SALVAR ESTADO (Pattern Memento)  ---->'
+      TabOrder = 7
+      OnClick = Button1Click
+    end
+    object ListBox1: TListBox
+      Left = 612
+      Top = 0
+      Width = 281
+      Height = 95
+      Color = clSkyBlue
+      ItemHeight = 13
+      TabOrder = 8
+      OnClick = ListBox1Click
     end
   end
   object pnAcoes: TPanel
@@ -137,8 +186,6 @@ object Principal: TPrincipal
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitTop = 359
-    ExplicitWidth = 848
     object BitBtnExportarAlunosXLS: TBitBtn
       Left = 77
       Top = 4

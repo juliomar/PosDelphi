@@ -31,7 +31,8 @@ uses
 
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces;
+  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,
+  Memento.Model.Interfaces,memento.model.aluno;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -60,10 +61,19 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
+    edtNome: TLabeledEdit;
+    edtSobrenome: TLabeledEdit;
+    EdtMatricula: TLabeledEdit;
+    Button1: TButton;
+    ListBox1: TListBox;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure ListBox1Click(Sender: TObject);
+
   private
+    FAluno : iAluno;
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
     procedure AdicionarLinhaStringGrid(AObject: TPessoa);
@@ -110,6 +120,23 @@ begin
   end;
 end;
 
+procedure TPrincipal.Button1Click(Sender: TObject);
+var
+  Key: string;
+begin
+  FAluno.Nome      := edtNome.Text;
+  FAluno.Sobrenome := edtSobrenome.Text;
+  FAluno.Matricula := edtMatricula.Text;
+  Key := 'Backup - '+datetimetostr(now);
+  FAluno.Memento.Save(Key);
+  ListBox1.Items.Add(Key);
+  edtNome.Text:='';
+  edtSobrenome.Text:='';
+  edtMatricula.Text:='';
+
+end;
+
+
 procedure TPrincipal.DefinicaoStringGrid;
 var
   iFor: Integer;
@@ -128,6 +155,8 @@ begin
   STGridPessoa.Cols[6].Text := 'Nascimento';
   STGridPessoa.Cols[7].Text := 'Sexo';
 end;
+
+
 
 procedure TPrincipal.PreencherStringGrid(ALista: iIterator<TPessoa>);
 var
@@ -167,6 +196,15 @@ begin
     if Assigned(FControllerPessoa.Entidade) then
       PreencherStringGrid(FIterator);
   end;
+  FAluno := TModelAluno.new;
+end;
+
+procedure TPrincipal.ListBox1Click(Sender: TObject);
+begin
+  FAluno := FAluno.Memento.Restore(ListBox1.Items[ListBox1.ItemIndex]);
+  edtNome.Text      := FAluno.Nome;
+  edtSobrenome.Text := FAluno.Sobrenome;
+  edtMatricula.Text := FAluno.Matricula;
 end;
 
 procedure TPrincipal.AdicionarLinhaStringGrid(AObject: TPessoa);
