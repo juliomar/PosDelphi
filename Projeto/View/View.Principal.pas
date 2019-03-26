@@ -1,4 +1,4 @@
-{*******************************************************}
+﻿{*******************************************************}
 {                                                       }
 {       Projeto Teste P�s-Delphi                        }
 {                                                       }
@@ -27,11 +27,12 @@ uses
   Entity.Pessoa,
 
 
- ExtCtrls,
+  ExtCtrls,
 
+  Model.Iterator.Interfaces,
 
   Controller.Interfaces,
-  Controller.Cadastro.Pessoa, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Controller.Cadastro, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids;
 
 type
@@ -73,7 +74,10 @@ var
 implementation
 
 uses
-  Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML;
+  Model.Exportador.Interfaces,
+  Model.Exportador.Alunos,
+  Model.Exportador.FormatoXLS,
+  Model.Exportador.FormatoHTML;
 
 {$R *.dfm}
 

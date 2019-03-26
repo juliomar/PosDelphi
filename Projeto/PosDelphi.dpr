@@ -26,11 +26,10 @@ uses
   Model.Exportador.Alunos in 'Model\Exportador\Model.Exportador.Alunos.pas',
   Model.Exportador.FormatoHTML in 'Model\Exportador\Model.Exportador.FormatoHTML.pas',
   Model.Exportador.FormatoXLS in 'Model\Exportador\Model.Exportador.FormatoXLS.pas',
-  Model.Iterator.Interfaces in 'Model\Iterator\Model.Iterator.Interfaces.pas';
-
-Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
   Model.Iterator.Interfaces in 'Model\Iterator\Model.Iterator.Interfaces.pas',
+  Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
+  Model.Iterator in 'Model\Iterator\Model.Iterator.pas',
   Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas';
 
