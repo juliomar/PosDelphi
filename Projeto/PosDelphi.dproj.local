@@ -1,2 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019/03/25 21:10:03.546,=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/03/25 21:11:32.005,D:\AULAS UNOESC\PosDelphi\Projeto\Memento\memento.model.interfaces.pas=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/03/25 21:20:37.556,=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/03/25 21:20:53.746,D:\AULAS UNOESC\PosDelphi\Projeto\Memento\memento.model.memento.pas=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/03/25 21:24:24.684,=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/03/25 21:24:36.811,D:\AULAS UNOESC\PosDelphi\Projeto\Memento\memento.model.aluno.pas=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
