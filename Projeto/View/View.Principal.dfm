@@ -167,7 +167,7 @@ object Principal: TPrincipal
       Top = 3
       Width = 138
       Height = 25
-      Caption = 'tabela Professor'
+      Caption = 'tabela Cursos'
       TabOrder = 3
       OnClick = BtnTelaProfessorClick
     end

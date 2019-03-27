@@ -1,7 +1,7 @@
-object FrmProfessor: TFrmProfessor
+object FrmCurso: TFrmCurso
   Left = 0
   Top = 0
-  Caption = 'Tabela Professor'
+  Caption = 'Tabela Curso'
   ClientHeight = 369
   ClientWidth = 800
   Color = clBtnFace
@@ -16,9 +16,9 @@ object FrmProfessor: TFrmProfessor
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 195
+    Width = 163
     Height = 29
-    Caption = 'Tabela  Professor:'
+    Caption = 'Tabela  cursos:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
@@ -50,7 +50,7 @@ object FrmProfessor: TFrmProfessor
         Width = 50
       end>
   end
-  object DataSourceProfessor: TDataSource
+  object DataSourceCursos: TDataSource
     DataSet = ClientDataSet1
     Left = 64
     Top = 176

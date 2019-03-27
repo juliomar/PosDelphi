@@ -1,4 +1,4 @@
-unit View.Tabela.Professor;
+unit View.Tabela.Cursos;
 
 interface
 
@@ -9,9 +9,9 @@ uses
   Model.Iterator.Interfaces;
 
 type
-  TFrmProfessor = class(TForm)
+  TFrmCurso = class(TForm)
     DBGridProfessor: TDBGrid;
-    DataSourceProfessor: TDataSource;
+    DataSourceCursos: TDataSource;
     ClientDataSet1: TClientDataSet;
     StatusBar1: TStatusBar;
     Timer1: TTimer;
@@ -30,10 +30,7 @@ implementation
 
 {$R *.dfm}
 
-procedure TForFrmProfessormer1Timer(Sender: TObject);
-begin
 
-end;
 
 
 end.

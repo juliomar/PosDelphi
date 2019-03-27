@@ -2,8 +2,10 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2019/03/26 16:04:03.000.390,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/03/26 16:04:49.000.775,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
     <Transaction>2019/03/26 16:04:49.000.776,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.dfm</Transaction>
+    <Transaction>2019/03/26 16:04:49.000.775,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/03/27 16:33:46.589,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Cursos.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.pas</Transaction>
+    <Transaction>2019/03/27 16:33:46.589,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Cursos.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.dfm</Transaction>
   </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Controller"/>
     <File Path="Controller\Controller.Cadastro.pas"/>
@@ -37,7 +39,7 @@
     <File Path="View"/>
     <File Path="View\View.Principal.pas"/>
     <File Path="View\View.Principal.dfm"/>
-    <File Path="View\View.Tabela.Professor.pas"/>
-    <File Path="View\View.Tabela.Professor.dfm"/>
+    <File Path="View\View.Tabela.Cursos.pas"/>
+    <File Path="View\View.Tabela.Cursos.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

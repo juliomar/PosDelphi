@@ -31,7 +31,7 @@ uses
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
   Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
-  View.Tabela.Professor in 'View\View.Tabela.Professor.pas' {FrmProfessor};
+  View.Tabela.Cursos in 'View\View.Tabela.Cursos.pas' {FrmCurso};
 
 {$R *.res}
 

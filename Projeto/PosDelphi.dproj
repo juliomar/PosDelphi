@@ -122,8 +122,8 @@
         <DCCReference Include="Model\Iterator\Model.Lista.Factory.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
-        <DCCReference Include="View\View.Tabela.Professor.pas">
-            <Form>FrmProfessor</Form>
+        <DCCReference Include="View\View.Tabela.Cursos.pas">
+            <Form>FrmCurso</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
