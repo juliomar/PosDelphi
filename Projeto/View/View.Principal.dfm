@@ -26,9 +26,6 @@ object Principal: TPrincipal
     FixedRows = 0
     TabOrder = 0
     Visible = False
-    ExplicitLeft = 8
-    ExplicitTop = 344
-    ExplicitWidth = 833
   end
   object DBGridClientes: TDBGrid
     Left = 0
@@ -75,9 +72,6 @@ object Principal: TPrincipal
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitLeft = 0
-    ExplicitTop = 0
-    ExplicitWidth = 848
     object Label1: TLabel
       Left = 8
       Top = 21
@@ -137,8 +131,6 @@ object Principal: TPrincipal
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitTop = 359
-    ExplicitWidth = 848
     object BitBtnExportarAlunosXLS: TBitBtn
       Left = 77
       Top = 4
@@ -164,6 +156,15 @@ object Principal: TPrincipal
       Height = 25
       Caption = 'Editar'
       TabOrder = 2
+    end
+    object BtnFacadeAndersonFurtilho: TButton
+      Left = 318
+      Top = 3
+      Width = 145
+      Height = 25
+      Caption = 'Exportar XLS/HTML'
+      TabOrder = 3
+      OnClick = ExecutaFacadeAndersonFurtilho
     end
   end
   object ClientDataSetClientes: TClientDataSet

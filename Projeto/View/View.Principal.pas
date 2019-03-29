@@ -60,9 +60,11 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
+    BtnFacadeAndersonFurtilho: TButton;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure ExecutaFacadeAndersonFurtilho(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -82,7 +84,7 @@ implementation
 
 uses
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
-  Controller.Cadastro;
+  Controller.Cadastro, Pattern.Facade.Exportar.Alunos;
 
 {$R *.dfm}
 
@@ -127,6 +129,18 @@ begin
   STGridPessoa.Cols[5].Text := 'Matricula';
   STGridPessoa.Cols[6].Text := 'Nascimento';
   STGridPessoa.Cols[7].Text := 'Sexo';
+end;
+
+procedure TPrincipal.ExecutaFacadeAndersonFurtilho(Sender: TObject);
+var
+  F: TFacadeExportarAlunos;
+begin
+    F := TFacadeExportarAlunos.Create;
+  try
+    F.ExportaTodosAlunosTodosFormatos(ClientDataSetClientes);
+  finally
+    F.Free;
+  end;
 end;
 
 procedure TPrincipal.PreencherStringGrid(ALista: iIterator<TPessoa>);
