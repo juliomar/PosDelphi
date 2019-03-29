@@ -78,6 +78,7 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <Icon_MainIcon>PosDelphi_Icon.ico</Icon_MainIcon>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -112,16 +113,6 @@
         <DCCReference Include="Controller\Controller.Interfaces.pas"/>
         <DCCReference Include="Model\Cadastro\Model.Cadastro.pas"/>
         <DCCReference Include="Model\Cadastro\Model.Cadastro.Interfaces.pas"/>
-        <DCCReference Include="Model\Exportador\Model.Exportador.Interfaces.pas"/>
-        <DCCReference Include="Model\Exportador\Model.Exportador.InterfaceFormato.pas"/>
-        <DCCReference Include="Model\Exportador\Model.Exportador.Alunos.pas"/>
-        <DCCReference Include="Model\Exportador\Model.Exportador.FormatoHTML.pas"/>
-        <DCCReference Include="Model\Exportador\Model.Exportador.FormatoXLS.pas"/>
-        <DCCReference Include="Model\Iterator\Model.Iterator.Interfaces.pas"/>
-        <DCCReference Include="Controller\Controller.Cadastro.pas"/>
-        <DCCReference Include="Model\Iterator\Model.Lista.Factory.pas"/>
-        <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
-        <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -143,8 +134,6 @@
                     <Source Name="MainSource">PosDelphi.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
@@ -194,12 +183,6 @@
                 <DeployClass Name="AndroidLibnativeMipsFile">
                     <Platform Name="Android">
                         <RemoteDir>library\lib\mips</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="AndroidLibnativeX86File">
-                    <Platform Name="Android">
-                        <RemoteDir>library\lib\x86</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
@@ -588,12 +571,6 @@
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="iOSDevice" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
-                <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
-                <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
-                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
             </Deployment>
             <Platforms>
