@@ -1,6 +1,6 @@
-{*******************************************************}
+ï»¿{*******************************************************}
 {                                                       }
-{       Projeto Teste Pós-Delphi                        }
+{       Projeto Teste Pï¿½s-Delphi                        }
 {                                                       }
 {       Copyright (C) 2019 Unoesc                       }
 {                                                       }
@@ -26,9 +26,12 @@ uses
 
   Entity.Pessoa,
 
-  Controller.Interfaces,
-  Controller.Cadastro,
-  Model.Iterator.Interfaces;
+
+ ExtCtrls,
+
+
+  Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -39,7 +42,27 @@ type
 
   TPrincipal = class(TForm)
     STGridPessoa: TStringGrid;
+    DBGridClientes: TDBGrid;
+    ClientDataSetClientes: TClientDataSet;
+    ClientDataSetClientesId: TIntegerField;
+    ClientDataSetClientesNome: TStringField;
+    ClientDataSetClientesMatricula: TStringField;
+    DataSourceClientes: TDataSource;
+    pnConsulta: TPanel;
+    cbCampo: TComboBox;
+    editTextoPesquisa: TEdit;
+    ComboBox1: TComboBox;
+    btnPesquisar: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    pnAcoes: TPanel;
+    BitBtnExportarAlunosXLS: TBitBtn;
+    BitBtnExportarAlunosHTML: TBitBtn;
+    btnEditar: TButton;
     procedure FormCreate(Sender: TObject);
+    procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
+    procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -57,7 +80,35 @@ var
 
 implementation
 
+uses
+  Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
+  Controller.Cadastro;
+
 {$R *.dfm}
+
+procedure TPrincipal.BitBtnExportarAlunosHTMLClick(Sender: TObject);
+var
+  Exportador: IExportador;
+begin
+  Exportador := TExportadorAlunos.Create(TFormatoHTML.Create);
+  try
+    Exportador.ExportarDados(ClientDataSetClientes.Data);
+  finally
+    Exportador := nil;
+  end;
+end;
+
+procedure TPrincipal.BitBtnExportarAlunosXLSClick(Sender: TObject);
+var
+  Exportador: IExportador;
+begin
+  Exportador := TExportadorAlunos.Create(TFormatoXLS.Create);
+  try
+    Exportador.ExportarDados(ClientDataSetClientes.Data);
+  finally
+    Exportador := nil;
+  end;
+end;
 
 procedure TPrincipal.DefinicaoStringGrid;
 var
@@ -102,7 +153,12 @@ end;
 end;
 
 procedure TPrincipal.FormCreate(Sender: TObject);
+var
+  CaminhoAplicacao: string;
 begin
+  CaminhoAplicacao := ExtractFilePath(Application.ExeName);
+  ClientDataSetClientes.LoadFromFile(CaminhoAplicacao + 'Clientes.xml');
+  //FControllerPessoa := TControllerCadastroPessoa.New;
   FControllerPessoa := TControllerCadastro<TPessoa>.New;
   if Assigned(FControllerPessoa) then
   begin
