@@ -31,7 +31,7 @@ uses
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
   Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
-  View.Tabela.Cursos in 'View\View.Tabela.Cursos.pas' {FrmCurso};
+  View.Tabela.Cursos in 'View\View.Tabela.Cursos.pas' {frmCurso};
 
 {$R *.res}
 
@@ -39,5 +39,7 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TPrincipal, Principal);
+  Application.CreateForm(TdmConexao, dmConexao);
   Application.Run;
   end.

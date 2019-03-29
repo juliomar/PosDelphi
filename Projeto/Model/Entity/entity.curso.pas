@@ -1,4 +1,4 @@
-{*******************************************************}
+﻿{*******************************************************}
 {                                                       }
 {       Projeto Teste P�s-Delphi                        }
 {                                                       }
@@ -53,7 +53,7 @@ type
 
     [ Column('areaconhecimento', ftString, 60) ]
     [ Dictionary('�rea de Conhecimento', 'Mensagem valida��o', '', '', '', tacenter) ]
-    property areaconhecimento: string read fareaconhecimento write fareaconhecimento;
+    property areaconhecimento : string read fareaconhecimento write fareaconhecimento;
 
     [ Column('notaenad', ftFloat, 2,2) ]
     [ Dictionary('Nota ENAD', 'Mensagem valida��o', '', '', '', tacenter) ]

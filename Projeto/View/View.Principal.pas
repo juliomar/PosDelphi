@@ -31,7 +31,7 @@ uses
 
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,View.Tabela.Professor;
+  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,View.Tabela.Cursos;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -60,11 +60,13 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
-    BtnTelaProfessor: TButton;
+    BtnTelaCurso: TButton;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
-    procedure BtnTelaProfessorClick(Sender: TObject);
+    procedure BtnTelaCursoClick(Sender: TObject);
+
+
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -112,11 +114,19 @@ begin
   end;
 end;
 
-procedure TPrincipal.BtnTelaProfessorClick(Sender: TObject);
+procedure TPrincipal.BtnTelaCursoClick(Sender: TObject);
 begin
-TFrmProfessor.Create(nil);
+ frmCurso := TFrmcurso.Create(nil);
+  try
+     frmCurso.ShowModal;
+  finally
+     FreeAndNil(frmCurso);
+  end;
 
-end;
+ end;
+
+
+
 
 
 procedure TPrincipal.DefinicaoStringGrid;
@@ -160,6 +170,8 @@ case ASelecao of
   Feminino: Result := 'Feminino';
 end;
 end;
+
+
 
 procedure TPrincipal.FormCreate(Sender: TObject);
 var

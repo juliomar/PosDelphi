@@ -162,14 +162,14 @@ object Principal: TPrincipal
       Caption = 'Editar'
       TabOrder = 2
     end
-    object BtnTelaProfessor: TButton
+    object BtnTelaCurso: TButton
       Left = 336
       Top = 3
       Width = 138
       Height = 25
       Caption = 'tabela Cursos'
       TabOrder = 3
-      OnClick = BtnTelaProfessorClick
+      OnClick = BtnTelaCursoClick
     end
   end
   object ClientDataSetClientes: TClientDataSet
