@@ -5,9 +5,11 @@ interface
 uses
   Classes, Model.Exportador.InterfaceFormato;
 
+  var contadorDeRegistrosGlobalHTML : Integer;
 type
   { Concrete Implementor }
   TFormatoHTML = class(TInterfacedObject, IFormato)
+
   private
     HTML: TStringList;
 
@@ -22,10 +24,14 @@ type
     procedure SalvarArquivo(const NomeArquivo: string);
   end;
 
+
+
 implementation
 
 uses
   SysUtils, Forms, Windows, ShellAPI;
+
+
 
 { TFormatoHTML }
 
@@ -48,6 +54,7 @@ begin
   HTML.Add('<head>');
   HTML.Add('</head>');
   HTML.Add('<body>');
+  HTML.Add(' </br><p class="text-center"> <b> Trabalho Pós Graduação em Delphi.</p>  </b>');
   HTML.Add('<table class="table table-striped">');
   HTML.Add('<tr>');
 end;
@@ -80,6 +87,9 @@ var
 begin
   HTML.Add('</tr>');
   HTML.Add('</table>');
+  HTML.Add('<p class="text-center"> Total de Registros:');
+  HTML.Add('<b>' + contadorDeRegistrosGlobalHTML.ToString() + '</b>');
+  HTML.Add('</p>');
   HTML.Add('</body>');
   HTML.Add('</html>');
 
