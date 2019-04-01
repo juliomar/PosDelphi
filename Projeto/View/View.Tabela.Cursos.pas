@@ -7,7 +7,8 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.ExtCtrls, Vcl.ComCtrls,
   Datasnap.DBClient, Vcl.Grids, Vcl.DBGrids, Model.Conexao, Vcl.StdCtrls,
-  Model.Iterator.Interfaces, entity.curso,Controller.Interfaces;
+  Model.Iterator.Interfaces, entity.curso,Controller.Interfaces,
+  Vcl.Imaging.pngimage;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -34,6 +35,9 @@ type
     ClientDataSetCursoDescricaoDoCurso: TStringField;
     ClientDataSetCursoNotaEnad: TFloatField;
     ClientDataSetCursoAreaDoConhecimento: TStringField;
+    ImageCursos: TImage;
+    procedure Timer1Timer(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
  
   private
     { Private declarations }
@@ -70,6 +74,16 @@ begin
 
 end;
 
+procedure TfrmCurso.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+if Application.MessageBox('Deseja Relamente Sair','informação', MB_YESNO+MB_ICONQUESTION) =mrYes then
+
+
+Application.Terminate
+else
+abort;
+end;
+
 procedure TfrmCurso.PreencherStringGrid(ALista: iIterator<TCurso>);
 var
   LFor: Integer;
@@ -83,6 +97,11 @@ begin
   end;
   if STGridCurso.RowCount > 1 then
     STGridCurso.FixedRows := 1;
+end;
+
+procedure TfrmCurso.Timer1Timer(Sender: TObject);
+begin
+StatusBar1.Panels.Items[0].Text := DateTimeToStr(now);
 end;
 
 procedure TfrmCurso.AdicionarLinhaStringGrid(AObject: TCurso);
