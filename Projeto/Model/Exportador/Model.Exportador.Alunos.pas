@@ -46,6 +46,7 @@ var
 begin
   EscreverCabecalho;
   cdsDados := TClientDataSet.Create(nil);
+  contadorDeRegistrosGlobalHTML :=0;
   try
     cdsDados.Data := Dados;
     cdsDados.First;
