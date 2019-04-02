@@ -7,7 +7,7 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.ExtCtrls, Vcl.ComCtrls,
   Datasnap.DBClient, Vcl.Grids, Vcl.DBGrids, Model.Conexao, Vcl.StdCtrls,
-  Model.Iterator.Interfaces, entity.curso,Controller.Interfaces,
+  Model.Iterator.Interfaces, entity.curso, Controller.Interfaces,
   Vcl.Imaging.pngimage;
 
 type
@@ -20,12 +20,7 @@ type
 
   TfrmCurso = class(TForm)
     DBGridCurso: TDBGrid;
-
     DataSourceCursos: TDataSource;
-
-
-
-
     StatusBar1: TStatusBar;
     Timer1: TTimer;
     Label1: TLabel;
@@ -37,8 +32,7 @@ type
     ClientDataSetCursoAreaDoConhecimento: TStringField;
     ImageCursos: TImage;
     procedure Timer1Timer(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
- 
+
   private
     { Private declarations }
 
@@ -48,8 +42,8 @@ type
 
   public
     { Public declarations }
-    FControllerCurso : iControllerCadastro<TCurso>;
-    FIterator : iIterator<TCurso>;
+    FControllerCurso: iControllerCadastro<TCurso>;
+    FIterator: iIterator<TCurso>;
   end;
 
 var
@@ -64,24 +58,12 @@ var
   iFor: Integer;
 begin
   STGridCurso.ColCount := 3;
-
   for iFor := 0 to pred(STGridCurso.ColCount) do
     STGridCurso.ColWidths[iFor] := 150;
-
   STGridCurso.Cols[0].Text := 'ID';
   STGridCurso.Cols[1].Text := 'Descricao';
   STGridCurso.Cols[2].Text := 'Area de Conhecimento';
 
-end;
-
-procedure TfrmCurso.FormClose(Sender: TObject; var Action: TCloseAction);
-begin
-if Application.MessageBox('Deseja Relamente Sair','informação', MB_YESNO+MB_ICONQUESTION) =mrYes then
-
-
-Application.Terminate
-else
-abort;
 end;
 
 procedure TfrmCurso.PreencherStringGrid(ALista: iIterator<TCurso>);
@@ -101,7 +83,7 @@ end;
 
 procedure TfrmCurso.Timer1Timer(Sender: TObject);
 begin
-StatusBar1.Panels.Items[0].Text := DateTimeToStr(now);
+  StatusBar1.Panels.Items[0].Text := DateTimeToStr(now);
 end;
 
 procedure TfrmCurso.AdicionarLinhaStringGrid(AObject: TCurso);

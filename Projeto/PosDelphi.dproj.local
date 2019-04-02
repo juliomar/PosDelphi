@@ -2,10 +2,13 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2019/03/26 16:04:03.000.390,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/03/26 16:04:49.000.776,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.dfm</Transaction>
-    <Transaction>2019/03/26 16:04:49.000.775,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/03/27 16:33:46.000.589,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Cursos.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.pas</Transaction>
-    <Transaction>2019/03/27 16:33:46.000.589,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Cursos.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.dfm</Transaction>
+    <Transaction>2019/03/26 16:04:49.000.776,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.dfm</Transaction>
+    <Transaction>2019/03/26 16:04:49.000.775,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.pas</Transaction>
+    <Transaction>2019/03/27 16:33:46.000.589,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Cursos.dfm</Transaction>
+    <Transaction>2019/03/27 16:33:46.000.589,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Cursos.pas</Transaction>
+    <Transaction>2019/04/01 15:28:45.000.245,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/01 15:29:14.000.162,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Inicial.dfm</Transaction>
+    <Transaction>2019/04/01 15:29:14.000.162,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Inicial.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Controller"/>
@@ -42,5 +45,7 @@
     <File Path="View\View.Principal.dfm"/>
     <File Path="View\View.Tabela.Cursos.pas"/>
     <File Path="View\View.Tabela.Cursos.dfm"/>
+    <File Path="View\View.Inicial.pas"/>
+    <File Path="View\View.Inicial.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>
