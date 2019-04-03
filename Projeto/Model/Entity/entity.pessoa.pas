@@ -42,6 +42,7 @@ type
     Ftelefone      : string;
     fsexo          : TSexo;
     fdatanascimento: TDate;
+    FSenha         : string;
   public
     [ Restrictions([ NoUpdate, NotNull ]) ]
     [ Column('id', ftInteger) ]
@@ -76,6 +77,10 @@ type
     [ Column('datanascimento', ftDate) ]
     [ Dictionary('Nascimento', 'Mensagem validação', '', '', '', tacenter) ]
     property datanascimento: TDate read fdatanascimento write fdatanascimento;
+
+    [ Column('senha', ftString, 60) ]
+    [ Dictionary('Senha', 'Mensagem validação', '', '', '', tacenter) ]
+    property senha: string read FSenha write FSenha;
   end;
 
 implementation
