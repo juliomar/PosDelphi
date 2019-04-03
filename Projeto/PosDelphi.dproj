@@ -123,6 +123,10 @@
         <DCCReference Include="Model\Iterator\Model.Iterator.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
+        <DCCReference Include="Model\Builder\Model.Builder.Product.pas"/>
+        <DCCReference Include="Model\Builder\Model.Builder.Interfaces.pas"/>
+        <DCCReference Include="Model\Builder\Model.Builder.ConcretBuilder.pas"/>
+        <DCCReference Include="Model\Builder\Model.Builder.Director.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -531,7 +535,7 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
@@ -539,8 +543,8 @@
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
             </Deployment>
             <Platforms>
                 <Platform value="Win32">True</Platform>

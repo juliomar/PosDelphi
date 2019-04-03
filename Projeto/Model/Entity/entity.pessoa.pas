@@ -74,7 +74,7 @@ type
     property sexo: TSexo read fsexo write fsexo;
 
     [ Column('datanascimento', ftDate) ]
-    [ Dictionary('Nascimento', 'Mensagem validação', '', '', '', tacenter) ]
+    [ Dictionary('Nascimento', 'Mensagem validação', 'Date', '', '!##/##/####;1;_', tacenter) ]
     property datanascimento: TDate read fdatanascimento write fdatanascimento;
   end;
 

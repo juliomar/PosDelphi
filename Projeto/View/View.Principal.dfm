@@ -2,7 +2,7 @@ object Principal: TPrincipal
   Left = 0
   Top = 0
   Caption = 'Principal'
-  ClientHeight = 354
+  ClientHeight = 446
   ClientWidth = 848
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -31,13 +31,12 @@ object Principal: TPrincipal
     Left = 8
     Top = 264
     Width = 833
-    Height = 82
+    Height = 174
     ColCount = 1
     FixedCols = 0
     RowCount = 1
     FixedRows = 0
     TabOrder = 0
-    Visible = False
   end
   object BitBtnExportarAlunosXLS: TBitBtn
     Left = 8
@@ -61,7 +60,7 @@ object Principal: TPrincipal
     Left = 8
     Top = 27
     Width = 832
-    Height = 200
+    Height = 190
     DataSource = DataSourceClientes
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 3
@@ -91,6 +90,15 @@ object Principal: TPrincipal
         FieldName = 'Matricula'
         Visible = True
       end>
+  end
+  object Button1: TButton
+    Left = 260
+    Top = 233
+    Width = 133
+    Height = 25
+    Caption = 'Gerar Relatorio'
+    TabOrder = 4
+    OnClick = Button1Click
   end
   object ClientDataSetClientes: TClientDataSet
     Aggregates = <>

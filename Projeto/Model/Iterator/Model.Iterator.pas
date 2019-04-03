@@ -28,7 +28,7 @@ implementation
 function TModelIterator<T>.Adicionar(Value : TObject): iIterator<T>;
 begin
   Result := Self;
-  //FLista := Value;
+  FLista := TList<T>(Value);
   FIndice := 0;
 end;
 
@@ -36,8 +36,8 @@ constructor TModelIterator<T>.Create(aTipoLista : TTipoLista);
 begin
   FIndice := 0;
   case aTipoLista of
-    tpLista: ;
-    tpListaObjetos: ;
+    tpLista: TList<T>.Create;
+    tpListaObjetos: TObjectList<T>.Create;
   end;
 end;
 

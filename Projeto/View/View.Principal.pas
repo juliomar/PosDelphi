@@ -25,6 +25,7 @@ uses
   Vcl.Grids,
 
   Entity.Pessoa,
+  Entity.Aluno,
 
 
   ExtCtrls,
@@ -53,9 +54,11 @@ type
     ClientDataSetClientesNome: TStringField;
     ClientDataSetClientesMatricula: TStringField;
     DataSourceClientes: TDataSource;
+    Button1: TButton;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -77,7 +80,12 @@ uses
   Model.Exportador.Interfaces,
   Model.Exportador.Alunos,
   Model.Exportador.FormatoXLS,
-  Model.Exportador.FormatoHTML;
+  Model.Exportador.FormatoHTML,
+
+  Model.Builder.Interfaces,
+  Model.Builder.Product,
+  Model.Builder.Director,
+  Model.Builder.ConcretBuilder;
 
 {$R *.dfm}
 
@@ -102,6 +110,28 @@ begin
     Exportador.ExportarDados(ClientDataSetClientes.Data);
   finally
     Exportador := nil;
+  end;
+end;
+
+procedure TPrincipal.Button1Click(Sender: TObject);
+var
+  Director : TDirector;
+  ConcretBuilder : TConcretBuilder;
+  Product : TProduct;
+begin
+  Director := TDirector.Create;
+
+  ConcretBuilder := TConcretBuilder.Create(STGridPessoa);
+
+  try
+    Director.Construct(ConcretBuilder);
+
+    Product := ConcretBuilder.getRelatorio;
+
+    Product.SalvarArquivo;
+  finally
+    FreeAndNil(Director);
+    FreeAndNil(Product);
   end;
 end;
 
