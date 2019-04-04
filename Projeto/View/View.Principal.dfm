@@ -10,6 +10,7 @@ object Principal: TPrincipal
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  Menu = MainMenu1
   OldCreateOrder = False
   OnCreate = FormCreate
   PixelsPerInch = 96
@@ -26,15 +27,12 @@ object Principal: TPrincipal
     FixedRows = 0
     TabOrder = 0
     Visible = False
-    ExplicitLeft = 8
-    ExplicitTop = 344
-    ExplicitWidth = 833
   end
   object DBGridClientes: TDBGrid
     Left = 0
-    Top = 79
+    Top = 108
     Width = 906
-    Height = 309
+    Height = 280
     Align = alClient
     DataSource = DataSourceClientes
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -69,15 +67,12 @@ object Principal: TPrincipal
   object pnConsulta: TPanel
     AlignWithMargins = True
     Left = 3
-    Top = 3
+    Top = 32
     Width = 900
     Height = 73
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitLeft = 0
-    ExplicitTop = 0
-    ExplicitWidth = 848
     object Label1: TLabel
       Left = 8
       Top = 21
@@ -137,8 +132,6 @@ object Principal: TPrincipal
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitTop = 359
-    ExplicitWidth = 848
     object BitBtnExportarAlunosXLS: TBitBtn
       Left = 77
       Top = 4
@@ -165,6 +158,15 @@ object Principal: TPrincipal
       Caption = 'Editar'
       TabOrder = 2
     end
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Top = 0
+    Width = 906
+    Height = 29
+    ButtonWidth = 273
+    Caption = 'ToolBar1'
+    TabOrder = 4
   end
   object ClientDataSetClientes: TClientDataSet
     Aggregates = <>
@@ -214,5 +216,12 @@ object Principal: TPrincipal
     DataSet = ClientDataSetClientes
     Left = 204
     Top = 166
+  end
+  object MainMenu1: TMainMenu
+    Left = 712
+    object esste1: TMenuItem
+      Caption = ' Formas de pagamento'
+      OnClick = esste1Click
+    end
   end
 end

@@ -31,7 +31,8 @@ uses
 
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces;
+  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces, Vcl.Menus,
+  Vcl.ToolWin, Vcl.ComCtrls;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -60,9 +61,13 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
+    ToolBar1: TToolBar;
+    MainMenu1: TMainMenu;
+    esste1: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure esste1Click(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -82,7 +87,7 @@ implementation
 
 uses
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
-  Controller.Cadastro;
+  Controller.Cadastro, View.Pagamento;
 
 {$R *.dfm}
 
@@ -127,6 +132,18 @@ begin
   STGridPessoa.Cols[5].Text := 'Matricula';
   STGridPessoa.Cols[6].Text := 'Nascimento';
   STGridPessoa.Cols[7].Text := 'Sexo';
+end;
+
+procedure TPrincipal.esste1Click(Sender: TObject);
+var
+  LViewPagamento: TPagamento;
+begin
+  LViewPagamento:= TPagamento.Create(self);
+  try
+    LViewPagamento.ShowModal;
+  finally
+    LViewPagamento.Free;
+  end;
 end;
 
 procedure TPrincipal.PreencherStringGrid(ALista: iIterator<TPessoa>);
