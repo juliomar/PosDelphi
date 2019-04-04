@@ -30,7 +30,9 @@ uses
   Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
-  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas';
+  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
+  View.Tabela.Cursos in 'View\View.Tabela.Cursos.pas' {frmCurso},
+  View.Inicial in 'View\View.Inicial.pas' {frmTelaDeInicio};
 
 {$R *.res}
 
@@ -38,6 +40,7 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TPrincipal, Principal);
+  Application.CreateForm(TdmConexao, dmConexao);
+  Application.CreateForm(TfrmTelaDeInicio, frmTelaDeInicio);
   Application.Run;
-end.
+  end.
