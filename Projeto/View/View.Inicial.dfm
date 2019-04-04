@@ -221,15 +221,17 @@ object frmTelaDeInicio: TfrmTelaDeInicio
         6082}
     end
     object Label1: TLabel
-      Left = 15
-      Top = 24
-      Width = 730
-      Height = 29
-      Caption = 'Projeto desenvoldio pelo curso de P'#243's Gradua'#231#227'o Delphi'
-      Font.Charset = ANSI_CHARSET
+      Left = 144
+      Top = 32
+      Width = 474
+      Height = 18
+      Caption = 
+        'Projeto Desenvolvido em cojunto com os alunos de P'#243's Gradua'#231#227'o e' +
+        'm :'
+      Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -24
-      Font.Name = 'Stencil'
+      Font.Height = -15
+      Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
@@ -250,6 +252,15 @@ object frmTelaDeInicio: TfrmTelaDeInicio
       Caption = 'Cursos'
       TabOrder = 1
       OnClick = BtnCursosClick
+    end
+    object Button1: TButton
+      Left = 304
+      Top = 72
+      Width = 123
+      Height = 25
+      Caption = 'Exemplo Factroy.'
+      TabOrder = 2
+      OnClick = Button1Click
     end
   end
   object StatusBarTelaInicial: TStatusBar

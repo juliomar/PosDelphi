@@ -32,7 +32,10 @@ uses
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
   Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
   View.Tabela.Cursos in 'View\View.Tabela.Cursos.pas' {frmCurso},
-  View.Inicial in 'View\View.Inicial.pas' {frmTelaDeInicio};
+  View.Inicial in 'View\View.Inicial.pas' {frmTelaDeInicio},
+  Model.AbstractFactoy.Interfaces in 'AbstractFactory\Model.AbstractFactoy.Interfaces.pas',
+  Model.NomeCurso in 'AbstractFactory\Model.NomeCurso.pas',
+  Model.Ifactoy in 'AbstractFactory\Model.Ifactoy.pas';
 
 {$R *.res}
 

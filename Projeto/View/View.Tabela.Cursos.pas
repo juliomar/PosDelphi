@@ -31,6 +31,9 @@ type
     ClientDataSetCursoNotaEnad: TFloatField;
     ClientDataSetCursoAreaDoConhecimento: TStringField;
     ImageCursos: TImage;
+    ButnAdicionar: TButton;
+    BtnEditar: TButton;
+    BtnExcluir: TButton;
     procedure Timer1Timer(Sender: TObject);
 
   private
