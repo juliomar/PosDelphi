@@ -11,6 +11,7 @@ object frmCurso: TfrmCurso
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -249,7 +250,6 @@ object frmCurso: TfrmCurso
       item
         Width = 50
       end>
-    ExplicitTop = 336
   end
   object ButnAdicionar: TButton
     Left = 8

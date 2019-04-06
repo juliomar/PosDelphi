@@ -35,7 +35,12 @@ uses
   View.Inicial in 'View\View.Inicial.pas' {frmTelaDeInicio},
   Model.AbstractFactoy.Interfaces in 'AbstractFactory\Model.AbstractFactoy.Interfaces.pas',
   Model.NomeCurso in 'AbstractFactory\Model.NomeCurso.pas',
-  Model.Ifactoy in 'AbstractFactory\Model.Ifactoy.pas';
+  Model.Ifactoy in 'AbstractFactory\Model.Ifactoy.pas',
+  Visitor.Model.Interfaces in 'Visitor\Visitor.Model.Interfaces.pas',
+  Visitor.Model.ItemCurso in 'Visitor\Visitor.Model.ItemCurso.pas',
+  Visitor.Model.Venda.Simples in 'Visitor\Visitor.Model.Venda.Simples.pas',
+  Visitor.Model.Venda.Bolsa in 'Visitor\Visitor.Model.Venda.Bolsa.pas',
+  View.Calculo.Preco.Cursos in 'View\View.Calculo.Preco.Cursos.pas' {FrmPrecoDeCursos};
 
 {$R *.res}
 
@@ -43,7 +48,6 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TdmConexao, dmConexao);
   Application.CreateForm(TfrmTelaDeInicio, frmTelaDeInicio);
   Application.Run;
   end.
