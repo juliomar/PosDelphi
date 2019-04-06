@@ -20,7 +20,6 @@ uses
   Model.Interfaces in 'Model\Model.Interfaces.pas',
   Controller.Interfaces in 'Controller\Controller.Interfaces.pas',
   Model.Cadastro in 'Model\Cadastro\Model.Cadastro.pas',
-  Model.Cadastro.Interfaces in 'Model\Cadastro\Model.Cadastro.Interfaces.pas',
   Model.Exportador.Interfaces in 'Model\Exportador\Model.Exportador.Interfaces.pas',
   Model.Exportador.InterfaceFormato in 'Model\Exportador\Model.Exportador.InterfaceFormato.pas',
   Model.Exportador.Alunos in 'Model\Exportador\Model.Exportador.Alunos.pas',
@@ -28,9 +27,16 @@ uses
   Model.Exportador.FormatoXLS in 'Model\Exportador\Model.Exportador.FormatoXLS.pas',
   Model.Iterator.Interfaces in 'Model\Iterator\Model.Iterator.Interfaces.pas',
   Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
+  Model.Cadastro.Interfaces in 'Model\Cadastro\Model.Cadastro.Interfaces.pas',
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
+  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
-  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas';
+  Pattern.Component in 'Decorator\Pattern.Component.pas',
+  Pattern.Decorator in 'Decorator\Pattern.Decorator.pas',
+  Pattern.ConcreteComponent in 'Decorator\Pattern.ConcreteComponent.pas',
+  Pattern.Decorator.DataHora in 'Decorator\Pattern.Decorator.DataHora.pas',
+  Pattern.Decorator.NomeUsuario in 'Decorator\Pattern.Decorator.NomeUsuario.pas',
+  Pattern.Decorator.Executavel in 'Decorator\Pattern.Decorator.Executavel.pas';
 
 {$R *.res}
 

@@ -26,9 +26,6 @@ object Principal: TPrincipal
     FixedRows = 0
     TabOrder = 0
     Visible = False
-    ExplicitLeft = 8
-    ExplicitTop = 344
-    ExplicitWidth = 833
   end
   object DBGridClientes: TDBGrid
     Left = 0
@@ -66,105 +63,14 @@ object Principal: TPrincipal
         Visible = True
       end>
   end
-  object pnConsulta: TPanel
-    AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 900
-    Height = 73
-    Align = alTop
-    BevelOuter = bvNone
-    TabOrder = 2
-    ExplicitLeft = 0
-    ExplicitTop = 0
-    ExplicitWidth = 848
-    object Label1: TLabel
-      Left = 8
-      Top = 21
-      Width = 96
-      Height = 13
-      Caption = 'Campos p/ pesquisa'
-    end
-    object Label2: TLabel
-      Left = 159
-      Top = 21
-      Width = 73
-      Height = 13
-      Caption = 'Texto Pesquisa'
-    end
-    object Label3: TLabel
-      Left = 375
-      Top = 21
-      Width = 96
-      Height = 13
-      Caption = 'Op'#231#245'es de pesquisa'
-    end
-    object cbCampo: TComboBox
-      Left = 8
-      Top = 39
-      Width = 145
-      Height = 21
-      TabOrder = 0
-    end
-    object editTextoPesquisa: TEdit
-      Left = 159
-      Top = 39
-      Width = 210
-      Height = 21
-      TabOrder = 1
-    end
-    object ComboBox1: TComboBox
-      Left = 375
-      Top = 39
-      Width = 145
-      Height = 21
-      TabOrder = 2
-    end
-    object btnPesquisar: TButton
-      Left = 526
-      Top = 37
-      Width = 75
-      Height = 25
-      Caption = 'Pesquisar'
-      TabOrder = 3
-    end
-  end
-  object pnAcoes: TPanel
-    Left = 0
-    Top = 388
-    Width = 906
-    Height = 34
-    Align = alBottom
-    BevelOuter = bvNone
-    TabOrder = 3
-    ExplicitTop = 359
-    ExplicitWidth = 848
-    object BitBtnExportarAlunosXLS: TBitBtn
-      Left = 77
-      Top = 4
-      Width = 120
-      Height = 25
-      Caption = 'Exportar para XLS'
-      TabOrder = 0
-      OnClick = BitBtnExportarAlunosXLSClick
-    end
-    object BitBtnExportarAlunosHTML: TBitBtn
-      Left = 197
-      Top = 3
-      Width = 120
-      Height = 25
-      Caption = 'Exportar para HTML'
-      TabOrder = 1
-      OnClick = BitBtnExportarAlunosHTMLClick
-    end
-    object btnEditar: TButton
-      Left = 2
-      Top = 4
-      Width = 75
-      Height = 25
-      Caption = 'Editar'
-      TabOrder = 2
-    end
+  object Button1: TButton
+    Left = 368
+    Top = 233
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 4
+    OnClick = Button1Click
   end
   object ClientDataSetClientes: TClientDataSet
     Aggregates = <>
@@ -214,5 +120,10 @@ object Principal: TPrincipal
     DataSet = ClientDataSetClientes
     Left = 204
     Top = 166
+  end
+  object ApplicationEvents: TApplicationEvents
+    OnException = ApplicationEventsException
+    Left = 396
+    Top = 128
   end
 end
