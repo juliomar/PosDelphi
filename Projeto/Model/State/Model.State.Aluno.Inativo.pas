@@ -39,7 +39,6 @@ end;
 function TModelAlunoInativo.Ativar: iAlunoOperacaoes;
 begin
   Result := Self;
-  raise Exception.Create('Este aluno está inativo');
 end;
 
 destructor TModelAlunoInativo.Destroy;
