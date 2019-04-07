@@ -62,14 +62,14 @@ type
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
     btn_State: TButton;
-    strngfldClientDataSetClientesStatus: TStringField;
+    ClientDataSetClientesStatus: TStringField;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure btn_StateClick(Sender: TObject);
-    procedure strngfldClientDataSetClientesStatusGetText(Sender: TField;
+    procedure ClientDataSetClientesStatusGetText(Sender: TField;
       var Text: string; DisplayText: Boolean);
   private
     procedure DefinicaoStringGrid;
@@ -138,10 +138,21 @@ procedure TPrincipal.btn_StateClick(Sender: TObject);
 var
   sAux: string;
 begin
-  sAux:= ClientDataSetClientes
-  sAux:= Tfrm_ModelState.ShowModelState(sAux);
-  STGridPessoa.Cells[8, STGridPessoa.FixedRows]:= sAux;
+  sAux:= Tfrm_ModelState.ShowModelState(ClientDataSetClientesStatus.AsString);
+  if not (ClientDataSetClientes.State in dsEditModes) then
+    ClientDataSetClientes.Edit;
+  ClientDataSetClientesStatus.AsString := sAux;
+end;
 
+procedure TPrincipal.ClientDataSetClientesStatusGetText(Sender: TField;
+  var Text: string; DisplayText: Boolean);
+begin
+  if sender.AsString = 'A'  then
+    Text:= 'Ativo'
+  else if sender.AsString = 'I' then
+    Text:= 'Inativo'
+  else if sender.AsString = 'M' then
+    Text:= 'Matrículado';
 end;
 
 procedure TPrincipal.DefinicaoStringGrid;
@@ -194,17 +205,6 @@ begin
     Inativo     : Result:= 'I';
     Matriculado : Result:= 'M';
   end;
-end;
-
-procedure TPrincipal.strngfldClientDataSetClientesStatusGetText(Sender: TField;
-  var Text: string; DisplayText: Boolean);
-begin
-  if sender.AsString = 'A'  then
-    Text:= 'Ativo'
-  else if sender.AsString = 'I' then
-    Text:= 'Inativo'
-  else if sender.AsString = 'M' then
-    Text:= 'Matrículado';
 end;
 
 procedure TPrincipal.FormCreate(Sender: TObject);

@@ -26,7 +26,6 @@ object Principal: TPrincipal
     FixedRows = 0
     TabOrder = 0
     Visible = False
-    ExplicitTop = 422
   end
   object DBGridClientes: TDBGrid
     Left = 0
@@ -56,11 +55,18 @@ object Principal: TPrincipal
       item
         Expanded = False
         FieldName = 'Sobrenome'
+        Width = 243
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Matricula'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Status'
+        Width = 120
         Visible = True
       end>
   end
@@ -132,7 +138,6 @@ object Principal: TPrincipal
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitTop = 388
     object BitBtnExportarAlunosXLS: TBitBtn
       Left = 77
       Top = 4
@@ -223,10 +228,9 @@ object Principal: TPrincipal
     object ClientDataSetClientesMatricula: TStringField
       FieldName = 'Matricula'
     end
-    object strngfldClientDataSetClientesStatus: TStringField
+    object ClientDataSetClientesStatus: TStringField
       FieldName = 'Status'
-      ProviderFlags = [pfInUpdate]
-      OnGetText = strngfldClientDataSetClientesStatusGetText
+      OnGetText = ClientDataSetClientesStatusGetText
       Size = 1
     end
   end
