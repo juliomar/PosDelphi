@@ -30,7 +30,9 @@ uses
   Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
-  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas';
+  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
+  Unit1 in 'View\Unit1.pas' {Form1},
+  Unit2 in 'View\Unit2.pas';
 
 {$R *.res}
 
@@ -39,5 +41,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TPrincipal, Principal);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

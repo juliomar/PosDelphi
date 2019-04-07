@@ -25,6 +25,7 @@ uses
   Vcl.Grids,
 
   Entity.Pessoa,
+  Unit1,
 
 
  ExtCtrls,
@@ -60,9 +61,11 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
+    Button1: TButton;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -108,6 +111,12 @@ begin
   finally
     Exportador := nil;
   end;
+end;
+
+procedure TPrincipal.Button1Click(Sender: TObject);
+begin
+  Form1 := TForm1.Create(Application);
+  Form1.Show;
 end;
 
 procedure TPrincipal.DefinicaoStringGrid;

@@ -1,2 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/04/07 11:39:56.000.423,=C:\Users\mathe\Desktop\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/07 11:58:00.000.545,C:\Users\mathe\Desktop\PosDelphi\Projeto\View\Unit1.dfm=C:\Users\mathe\Desktop\PosDelphi\Projeto\Unit1.dfm</Transaction>
+    <Transaction>2019/04/07 11:58:00.000.545,C:\Users\mathe\Desktop\PosDelphi\Projeto\View\Unit1.pas=C:\Users\mathe\Desktop\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/07 12:00:03.000.937,=C:\Users\mathe\Desktop\PosDelphi\Projeto\Unit2.pas</Transaction>
+    <Transaction>2019/04/07 12:58:46.000.610,C:\Users\mathe\Desktop\PosDelphi\Projeto\View\Unit2.pas=C:\Users\mathe\Desktop\PosDelphi\Projeto\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>
