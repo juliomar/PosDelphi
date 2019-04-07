@@ -61,15 +61,16 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
     btn_State: TButton;
+    strngfldClientDataSetClientesStatus: TStringField;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure btn_StateClick(Sender: TObject);
+    procedure strngfldClientDataSetClientesStatusGetText(Sender: TField;
+      var Text: string; DisplayText: Boolean);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -137,8 +138,10 @@ procedure TPrincipal.btn_StateClick(Sender: TObject);
 var
   sAux: string;
 begin
-  sAux:= STGridPessoa.Cells[8, STGridPessoa.FixedRows];
+  sAux:= ClientDataSetClientes
   sAux:= Tfrm_ModelState.ShowModelState(sAux);
+  STGridPessoa.Cells[8, STGridPessoa.FixedRows]:= sAux;
+
 end;
 
 procedure TPrincipal.DefinicaoStringGrid;
@@ -191,6 +194,17 @@ begin
     Inativo     : Result:= 'I';
     Matriculado : Result:= 'M';
   end;
+end;
+
+procedure TPrincipal.strngfldClientDataSetClientesStatusGetText(Sender: TField;
+  var Text: string; DisplayText: Boolean);
+begin
+  if sender.AsString = 'A'  then
+    Text:= 'Ativo'
+  else if sender.AsString = 'I' then
+    Text:= 'Inativo'
+  else if sender.AsString = 'M' then
+    Text:= 'Matrículado';
 end;
 
 procedure TPrincipal.FormCreate(Sender: TObject);

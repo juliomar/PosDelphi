@@ -18,17 +18,19 @@ type
     btn_ativo: TButton;
     btn_inativo: TButton;
     btn_matriculado: TButton;
-    lbl_status: TLabel;
     btn_cancelar: TButton;
+    btn_sair: TButton;
+    lbl_status: TLabel;
     procedure btn_matriculadoClick(Sender: TObject);
     procedure btn_ativoClick(Sender: TObject);
     procedure btn_inativoClick(Sender: TObject);
     procedure btn_cancelarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
-
   public
     FState: iAlunoStatus;
     class function ShowModelState (AShow: String) :string;
+    function GetDescricao (AValues : String) : string;
   end;
 
 var
@@ -49,22 +51,41 @@ begin
 end;
 
 procedure Tfrm_ModelState.btn_cancelarClick(Sender: TObject);
+var
+  sStatus: string;
 begin
   FState.Operacoes.CancelarMatricula;
-  lbl_status.Caption := FState.Operacoes.Value;
+  lbl_status.Caption := GetDescricao(FState.Operacoes.Value);
 end;
 
 procedure Tfrm_ModelState.btn_inativoClick(Sender: TObject);
 begin
   FState.Operacoes.Inativar;
-  lbl_status.Caption := FState.Operacoes.Value;
+  lbl_status.Caption := GetDescricao(FState.Operacoes.Value);
 end;
 
 procedure Tfrm_ModelState.btn_matriculadoClick(Sender: TObject);
 begin
   FState.Operacoes.Matricular;
-  lbl_status.Caption := FState.Operacoes.Value;
+  lbl_status.Caption := GetDescricao(FState.Operacoes.Value);
 end;
+
+procedure Tfrm_ModelState.FormShow(Sender: TObject);
+begin
+  lbl_status.Caption := GetDescricao(FState.Operacoes.Value);
+end;
+
+function Tfrm_ModelState.GetDescricao(AValues: String): string;
+begin
+  Result:= '';
+  if AValues = 'A'  then
+    Result:= 'Ativo'
+  else if AValues = 'I' then
+    Result:= 'Inativo'
+  else if AValues = 'M' then
+    Result:= 'Matrículado';
+end;
+
 
 class function Tfrm_ModelState.ShowModelState(AShow: string): string;
 var

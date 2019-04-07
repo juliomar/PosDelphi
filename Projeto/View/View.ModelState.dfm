@@ -4,7 +4,7 @@ object frm_ModelState: Tfrm_ModelState
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Status do Aluno'
   ClientHeight = 143
-  ClientWidth = 401
+  ClientWidth = 395
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,12 +12,13 @@ object frm_ModelState: Tfrm_ModelState
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl_status: TLabel
     Left = 16
     Top = 80
-    Width = 89
+    Width = 74
     Height = 33
     Caption = 'Status'
     Font.Charset = DEFAULT_CHARSET
@@ -62,5 +63,14 @@ object frm_ModelState: Tfrm_ModelState
     Caption = 'Cancelar Matr'#237'cula'
     TabOrder = 3
     OnClick = btn_cancelarClick
+  end
+  object btn_sair: TButton
+    Left = 302
+    Top = 91
+    Width = 75
+    Height = 25
+    Caption = 'Sair'
+    ModalResult = 1
+    TabOrder = 4
   end
 end
