@@ -19,6 +19,7 @@ Type
     function SetState(Value : iAlunoOperacaoes) : iAlunoOperacaoes;
     function State : iState<iAlunoOperacaoes>;
     function Operacoes : iAlunoOperacaoes;
+    function Value : String;
   end;
 
 implementation
@@ -65,9 +66,9 @@ begin
   Result := Self.Create;
   //Status = 'A' Ativo é o Status default para Aluno.
   if Status = 'I' then
-    Result.State := TModelAlunoInativo.New
+    Result.State.SetState(TModelAlunoInativo.New)
   else if Status = 'M' then
-    Result.State := TModelAlunoMatriculado.New;
+    Result.State.SetState(TModelAlunoMatriculado.New);
 end;
 
 function TModelAlunoStatus.Operacoes: iAlunoOperacaoes;
@@ -84,6 +85,11 @@ end;
 function TModelAlunoStatus.State: iState<iAlunoOperacaoes>;
 begin
   Result := Self;
+end;
+
+function TModelAlunoStatus.Value: String;
+begin
+  Result := FState.Value;
 end;
 
 function TModelAlunoStatus.Matricular: iAlunoOperacaoes;
