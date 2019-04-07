@@ -31,7 +31,8 @@ uses
 
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces;
+  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,
+  Model.State.Aluno.Interfaces;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -60,9 +61,13 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -73,6 +78,7 @@ type
     FControllerPessoa : iControllerCadastro<TPessoa>;
     FIterator : iIterator<TPessoa>;
     { Public declarations }
+    FState: iAlunoStatus;
   end;
 
 var
@@ -82,9 +88,23 @@ implementation
 
 uses
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
-  Controller.Cadastro;
+  Controller.Cadastro, Model.State.Aluno;
 
 {$R *.dfm}
+
+procedure TPrincipal.BitBtn1Click(Sender: TObject);
+begin
+  ShowMessage(FState.Operacoes.Value);
+  FState.Operacoes.Matricular;
+  ShowMessage(FState.Operacoes.Value);
+end;
+
+procedure TPrincipal.BitBtn2Click(Sender: TObject);
+begin
+  ShowMessage(FState.Operacoes.Value);
+  FState.Operacoes.Ativar;
+  ShowMessage(FState.Operacoes.Value);
+end;
 
 procedure TPrincipal.BitBtnExportarAlunosHTMLClick(Sender: TObject);
 var
@@ -167,6 +187,7 @@ begin
     if Assigned(FControllerPessoa.Entidade) then
       PreencherStringGrid(FIterator);
   end;
+  FState := TModelAlunoStatus.New;
 end;
 
 procedure TPrincipal.AdicionarLinhaStringGrid(AObject: TPessoa);

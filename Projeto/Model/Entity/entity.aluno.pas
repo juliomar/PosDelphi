@@ -61,7 +61,7 @@ constructor TAluno.Create;
 begin
   fCursos := TObjectList<TCurso>.Create;
   fStatus := TObjectList<TPessoa>.Create;
-  FState := TModelAlunoStatus.New(fStatus.);
+//  FState := TModelAlunoStatus.New(fStatus.);
 end;
 
 destructor TAluno.Destroy;
