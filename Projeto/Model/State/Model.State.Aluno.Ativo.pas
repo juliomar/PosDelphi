@@ -15,6 +15,7 @@ Type
     function CancelarMatricula : iAlunoOperacaoes;
     function Ativar : iAlunoOperacaoes;
     function Inativar : iAlunoOperacaoes;
+    function Value : String;
   end;
 
 implementation
@@ -35,10 +36,9 @@ begin
 
 end;
 
-function TModelAlunoAtivo.Desconto: iAlunoOperacaoes;
+function TModelAlunoAtivo.Matricular: iAlunoOperacaoes;
 begin
   Result := Self;
-  raise Exception.Create('Este aluno ainda não foi vendido');
 end;
 
 destructor TModelAlunoAtivo.Destroy;
@@ -47,10 +47,10 @@ begin
   inherited;
 end;
 
-function TModelAlunoAtivo.Devolver: iAlunoOperacaoes;
+function TModelAlunoAtivo.Ativar: iAlunoOperacaoes;
 begin
   Result := Self;
-  raise Exception.Create('Este aluno ainda não foi vendido');
+  raise Exception.Create('Este aluno já está ativo');
 end;
 
 class function TModelAlunoAtivo.New : iAlunoOperacaoes;
@@ -58,7 +58,12 @@ begin
   Result := Self.Create;
 end;
 
-function TModelAlunoAtivo.Vender: iAlunoOperacaoes;
+function TModelAlunoAtivo.Value: String;
+begin
+  Result := 'A';
+end;
+
+function TModelAlunoAtivo.Inativar: iAlunoOperacaoes;
 begin
   Result := Self;
 end;

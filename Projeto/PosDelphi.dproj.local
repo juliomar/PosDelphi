@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <ProjectSortOrder AutoSort="0" SortType="0">
+	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Controller"/>
     <File Path="Controller\Controller.Cadastro.pas"/>
     <File Path="Controller\Controller.Interfaces.pas"/>

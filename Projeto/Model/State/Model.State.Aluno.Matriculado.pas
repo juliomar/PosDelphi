@@ -1,4 +1,4 @@
-unit State.Model.Item.Vendido;
+unit Model.State.Aluno.Matriculado;
 
 interface
 
@@ -15,6 +15,7 @@ Type
       function CancelarMatricula : iAlunoOperacaoes;
       function Ativar : iAlunoOperacaoes;
       function Inativar : iAlunoOperacaoes;
+      function Value : String;
   end;
 
 implementation
@@ -55,6 +56,11 @@ end;
 class function TModelAlunoMatriculado.New : iAlunoOperacaoes;
 begin
   Result := Self.Create;
+end;
+
+function TModelAlunoMatriculado.Value: String;
+begin
+  Result := 'M';
 end;
 
 function TModelAlunoMatriculado.Matricular: iAlunoOperacaoes;

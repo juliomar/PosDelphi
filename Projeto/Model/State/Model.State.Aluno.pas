@@ -1,4 +1,4 @@
-unit Model.State.Aluno.Matriculado;
+unit Model.State.Aluno;
 
 interface
 
@@ -11,7 +11,7 @@ Type
   public
     constructor Create;
     destructor Destroy; override;
-    class function New: iAlunoStatus;
+    class function New(Status: String=''): iAlunoStatus;
     function Matricular : iAlunoOperacaoes;
     function CancelarMatricula : iAlunoOperacaoes;
     function Ativar : iAlunoOperacaoes;
@@ -60,9 +60,14 @@ begin
   Result := Self;
 end;
 
-class function TModelAlunoStatus.New: iAlunoStatus;
+class function TModelAlunoStatus.New(Status: String=''): iAlunoStatus;
 begin
   Result := Self.Create;
+  //Status = 'A' Ativo é o Status default para Aluno.
+  if Status = 'I' then
+    Result.State := TModelAlunoInativo.New
+  else if Status = 'M' then
+    Result.State := TModelAlunoMatriculado.New;
 end;
 
 function TModelAlunoStatus.Operacoes: iAlunoOperacaoes;

@@ -15,6 +15,7 @@ Type
       function CancelarMatricula : iAlunoOperacaoes;
       function Ativar : iAlunoOperacaoes;
       function Inativar : iAlunoOperacaoes;
+      function Value : String;
   end;
 
 implementation
@@ -56,6 +57,11 @@ end;
 class function TModelAlunoInativo.New : iAlunoOperacaoes;
 begin
   Result := Self.Create;
+end;
+
+function TModelAlunoInativo.Value: String;
+begin
+  Result := 'I';
 end;
 
 function TModelAlunoInativo.Inativar: iAlunoOperacaoes;

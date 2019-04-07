@@ -18,6 +18,7 @@ type
     function CancelarMatricula : iAlunoOperacaoes;
     function Ativar : iAlunoOperacaoes;
     function Inativar : iAlunoOperacaoes;
+    function Value : String;
   end;
 
   iState<t> = interface
