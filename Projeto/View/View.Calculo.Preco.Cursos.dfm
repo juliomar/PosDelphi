@@ -12,6 +12,7 @@ object FrmPrecoDeCursos: TFrmPrecoDeCursos
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel

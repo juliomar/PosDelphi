@@ -107,7 +107,7 @@ object frmTelaDeInicio: TfrmTelaDeInicio
         7213A39D9D17C4070000000049454E44AE426082}
     end
     object Image2: TImage
-      Left = 160
+      Left = 152
       Top = 136
       Width = 105
       Height = 105
@@ -327,18 +327,18 @@ object frmTelaDeInicio: TfrmTelaDeInicio
         B60000000049454E44AE426082}
     end
     object BtnTelaPrincipal: TButton
-      Left = 160
+      Left = 136
       Top = 247
-      Width = 121
+      Width = 145
       Height = 81
       Caption = 'Alunos'
       TabOrder = 0
       OnClick = BtnTelaPrincipalClick
     end
     object BtnCursos: TButton
-      Left = 320
+      Left = 304
       Top = 247
-      Width = 121
+      Width = 153
       Height = 81
       Caption = 'Cursos'
       TabOrder = 1
@@ -354,11 +354,11 @@ object frmTelaDeInicio: TfrmTelaDeInicio
       OnClick = Button1Click
     end
     object BtnValorCursos: TButton
-      Left = 488
+      Left = 480
       Top = 247
-      Width = 113
+      Width = 138
       Height = 81
-      Caption = 'ValorCursos'
+      Caption = 'Calculo De Valor Cursos'
       TabOrder = 3
       OnClick = BtnValorCursosClick
     end

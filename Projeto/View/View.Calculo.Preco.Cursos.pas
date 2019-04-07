@@ -17,16 +17,18 @@ type
     Label2: TLabel;
     BtnValorSimples: TButton;
     BtnValorDesconto: TButton;
-    procedure FormCreate(Sender: TObject);
     procedure BtnValorDescontoClick(Sender: TObject);
     procedure BtnValorSimplesClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
 
   private
     { Private declarations }
     FItem: iItem;
     function TabelaPreco: ivisitor;
+
   public
     { Public declarations }
+
   end;
 
 var
@@ -39,33 +41,21 @@ implementation
 
 procedure TFrmPrecoDeCursos.BtnValorDescontoClick(Sender: TObject);
 begin
-  ShowMessage(
-FormatCurr
-('R$ #,##00.0',
-  FItem
-  .SetPrecoUnitario(StrToCurr(Edit1.Text))
-  .Regras
-  .Accept(TabelaPreco)
-  .PrecoDeVenda
-  ));
+  ShowMessage(FormatCurr('R$ #,##00.0',
+    FItem.SetPrecoUnitario(StrToCurr(Edit1.Text)).Regras.Accept(TabelaPreco)
+    .PrecoPromocao));
 end;
 
 procedure TFrmPrecoDeCursos.BtnValorSimplesClick(Sender: TObject);
 begin
-  ShowMessage(
-FormatCurr
-('R$ #,##00.0',
-  FItem
-  .SetPrecoUnitario(StrToCurr(Edit1.Text))
-  .Regras
-  .Accept(TabelaPreco)
-  .PrecoDeVenda
-  ));
+  ShowMessage(FormatCurr('R$ #,##00.0',
+    FItem.SetPrecoUnitario(StrToCurr(Edit1.Text)).Regras.Accept(TabelaPreco)
+    .PrecoDeVenda));
 end;
 
 procedure TFrmPrecoDeCursos.FormCreate(Sender: TObject);
 begin
-  FItem := TModelItem.New;
+       FItem := TModelItem.Create.New;
 end;
 
 function TFrmPrecoDeCursos.TabelaPreco: ivisitor;
