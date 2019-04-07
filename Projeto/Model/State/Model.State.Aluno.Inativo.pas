@@ -5,16 +5,16 @@ interface
 uses Model.State.Aluno.Interfaces;
 
 Type
-  TModelItemInativo = class(TInterfacedObject, iItemOperacaoes)
+  TModelAlunoInativo = class(TInterfacedObject, iAlunoOperacaoes)
     private
     public
       constructor Create;
       destructor Destroy; override;
-      class function New : iItemOperacaoes;
-      function Vender : iItemOperacaoes;
-      function Cancelar : iItemOperacaoes;
-      function Desconto : iItemOperacaoes;
-      function Devolver : iItemOperacaoes;
+      class function New : iAlunoOperacaoes;
+      function Matricular : iAlunoOperacaoes;
+      function CancelarMatricula : iAlunoOperacaoes;
+      function Ativar : iAlunoOperacaoes;
+      function Inativar : iAlunoOperacaoes;
   end;
 
 implementation
@@ -22,46 +22,46 @@ implementation
 uses
   System.SysUtils;
 
-{ TModelItemInativo }
+{ TModelAlunoInativo }
 
-function TModelItemInativo.Cancelar: iItemOperacaoes;
+function TModelAlunoInativo.CancelarMatricula: iAlunoOperacaoes;
 begin
   Result := Self;
-  raise Exception.Create('Este item está inativo');
+  raise Exception.Create('Este aluno está inativo');
 end;
 
-constructor TModelItemInativo.Create;
+constructor TModelAlunoInativo.Create;
 begin
 
 end;
 
-function TModelItemInativo.Desconto: iItemOperacaoes;
+function TModelAlunoInativo.Ativar: iAlunoOperacaoes;
 begin
   Result := Self;
-  raise Exception.Create('Este item está inativo');
+  raise Exception.Create('Este aluno está inativo');
 end;
 
-destructor TModelItemInativo.Destroy;
+destructor TModelAlunoInativo.Destroy;
 begin
 
   inherited;
 end;
 
-function TModelItemInativo.Devolver: iItemOperacaoes;
+function TModelAlunoInativo.Matricular: iAlunoOperacaoes;
 begin
   Result := Self;
-  raise Exception.Create('Este item está inativo');
+  raise Exception.Create('Este aluno está inativo');
 end;
 
-class function TModelItemInativo.New : iItemOperacaoes;
+class function TModelAlunoInativo.New : iAlunoOperacaoes;
 begin
   Result := Self.Create;
 end;
 
-function TModelItemInativo.Vender: iItemOperacaoes;
+function TModelAlunoInativo.Inativar: iAlunoOperacaoes;
 begin
   Result := Self;
-  raise Exception.Create('Este item está inativo');
+  raise Exception.Create('Aluno já está inativo');
 end;
 
 end.

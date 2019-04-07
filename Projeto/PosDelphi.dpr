@@ -33,7 +33,9 @@ uses
   Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
   Model.State.Aluno.Ativo in 'Model\State\Model.State.Aluno.Ativo.pas',
   Model.State.Aluno.Inativo in 'Model\State\Model.State.Aluno.Inativo.pas',
-  Model.State.Aluno.Interfaces in 'Model\State\Model.State.Aluno.Interfaces.pas';
+  Model.State.Aluno.Interfaces in 'Model\State\Model.State.Aluno.Interfaces.pas',
+  Model.State.Aluno.Matriculado in 'Model\State\Model.State.Aluno.Matriculado.pas',
+  Model.State.Aluno in 'Model\State\Model.State.Aluno.pas';
 
 {$R *.res}
 
@@ -41,6 +43,6 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TPrincipal, Principal);
-  Application.Run;
+  AApplication.CreateForm(TPrincipal, Principal);
+  pplication.Run;
 end.

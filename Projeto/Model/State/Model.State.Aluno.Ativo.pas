@@ -5,16 +5,16 @@ interface
 uses Model.State.Aluno.Interfaces;
 
 Type
-  TModelItemAtivo = class(TInterfacedObject, iItemOperacaoes)
+  TModelAlunoAtivo = class(TInterfacedObject, iAlunoOperacaoes)
     private
     public
       constructor Create;
       destructor Destroy; override;
-      class function New : iItemOperacaoes;
-      function Vender : iItemOperacaoes;
-      function Cancelar : iItemOperacaoes;
-      function Desconto : iItemOperacaoes;
-      function Devolver : iItemOperacaoes;
+      class function New : iAlunoOperacaoes;
+    function Matricular : iAlunoOperacaoes;
+    function CancelarMatricula : iAlunoOperacaoes;
+    function Ativar : iAlunoOperacaoes;
+    function Inativar : iAlunoOperacaoes;
   end;
 
 implementation
@@ -22,43 +22,43 @@ implementation
 uses
   System.SysUtils;
 
-{ TModelItemAtivo }
+{ TModelAlunoAtivo }
 
-function TModelItemAtivo.Cancelar: iItemOperacaoes;
+function TModelAlunoAtivo.CancelarMatricula: iAlunoOperacaoes;
 begin
   Result := Self;
-  raise Exception.Create('Este item ainda não foi vendido');
+  raise Exception.Create('Este aluno ainda não foi matriculado');
 end;
 
-constructor TModelItemAtivo.Create;
+constructor TModelAlunoAtivo.Create;
 begin
 
 end;
 
-function TModelItemAtivo.Desconto: iItemOperacaoes;
+function TModelAlunoAtivo.Desconto: iAlunoOperacaoes;
 begin
   Result := Self;
-  raise Exception.Create('Este item ainda não foi vendido');
+  raise Exception.Create('Este aluno ainda não foi vendido');
 end;
 
-destructor TModelItemAtivo.Destroy;
+destructor TModelAlunoAtivo.Destroy;
 begin
 
   inherited;
 end;
 
-function TModelItemAtivo.Devolver: iItemOperacaoes;
+function TModelAlunoAtivo.Devolver: iAlunoOperacaoes;
 begin
   Result := Self;
-  raise Exception.Create('Este item ainda não foi vendido');
+  raise Exception.Create('Este aluno ainda não foi vendido');
 end;
 
-class function TModelItemAtivo.New : iItemOperacaoes;
+class function TModelAlunoAtivo.New : iAlunoOperacaoes;
 begin
   Result := Self.Create;
 end;
 
-function TModelItemAtivo.Vender: iItemOperacaoes;
+function TModelAlunoAtivo.Vender: iAlunoOperacaoes;
 begin
   Result := Self;
 end;

@@ -126,6 +126,8 @@
         <DCCReference Include="Model\State\Model.State.Aluno.Ativo.pas"/>
         <DCCReference Include="Model\State\Model.State.Aluno.Inativo.pas"/>
         <DCCReference Include="Model\State\Model.State.Aluno.Interfaces.pas"/>
+        <DCCReference Include="Model\State\Model.State.Aluno.Matriculado.pas"/>
+        <DCCReference Include="Model\State\Model.State.Aluno.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -627,6 +629,7 @@
             <Platforms>
                 <Platform value="Win32">True</Platform>
             </Platforms>
+            <ModelSupport>False</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

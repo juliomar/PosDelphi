@@ -1,2 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Controller"/>
+    <File Path="Controller\Controller.Cadastro.pas"/>
+    <File Path="Controller\Controller.Interfaces.pas"/>
+    <File Path="Model"/>
+    <File Path="Model\Cadastro"/>
+    <File Path="Model\Cadastro\Model.Cadastro.Interfaces.pas"/>
+    <File Path="Model\Cadastro\Model.Cadastro.pas"/>
+    <File Path="Model\Conexao"/>
+    <File Path="Model\Conexao\Model.Conexao.pas"/>
+    <File Path="Model\Conexao\Model.Conexao.dfm"/>
+    <File Path="Model\Entity"/>
+    <File Path="Model\Entity\entity.aluno.pas"/>
+    <File Path="Model\Entity\entity.curso.pas"/>
+    <File Path="Model\Entity\entity.formacao.pas"/>
+    <File Path="Model\Entity\entity.pessoa.pas"/>
+    <File Path="Model\Entity\entity.professor.pas"/>
+    <File Path="Model\Entity\entity.titulo.pas"/>
+    <File Path="Model\Exportador"/>
+    <File Path="Model\Exportador\Model.Exportador.Alunos.pas"/>
+    <File Path="Model\Exportador\Model.Exportador.FormatoHTML.pas"/>
+    <File Path="Model\Exportador\Model.Exportador.FormatoXLS.pas"/>
+    <File Path="Model\Exportador\Model.Exportador.InterfaceFormato.pas"/>
+    <File Path="Model\Exportador\Model.Exportador.Interfaces.pas"/>
+    <File Path="Model\Iterator"/>
+    <File Path="Model\Iterator\Model.Iterator.Interfaces.pas"/>
+    <File Path="Model\Iterator\Model.Lista.Factory.pas"/>
+    <File Path="Model\Iterator\Model.Lista.List.pas"/>
+    <File Path="Model\Iterator\Model.Lista.ObjectList.pas"/>
+    <File Path="Model\State"/>
+    <File Path="Model\State\Model.State.Aluno.Ativo.pas"/>
+    <File Path="Model\State\Model.State.Aluno.Inativo.pas"/>
+    <File Path="Model\State\Model.State.Aluno.Interfaces.pas"/>
+    <File Path="Model\State\Model.State.Aluno.Matriculado.pas"/>
+    <File Path="Model\State\Model.State.Aluno.pas"/>
+    <File Path="Model\Model.Interfaces.pas"/>
+    <File Path="View"/>
+    <File Path="View\View.Principal.pas"/>
+    <File Path="View\View.Principal.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>
