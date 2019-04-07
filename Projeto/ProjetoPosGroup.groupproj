@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{EC487183-F47D-4BD5-9668-C8F0BCC59B64}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PosDelphi.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\PosDelphiTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PosDelphi">
+        <MSBuild Projects="PosDelphi.dproj"/>
+    </Target>
+    <Target Name="PosDelphi:Clean">
+        <MSBuild Projects="PosDelphi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PosDelphi:Make">
+        <MSBuild Projects="PosDelphi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PosDelphiTests">
+        <MSBuild Projects="Test\PosDelphiTests.dproj"/>
+    </Target>
+    <Target Name="PosDelphiTests:Clean">
+        <MSBuild Projects="Test\PosDelphiTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PosDelphiTests:Make">
+        <MSBuild Projects="Test\PosDelphiTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PosDelphi;PosDelphiTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PosDelphi:Clean;PosDelphiTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PosDelphi:Make;PosDelphiTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
