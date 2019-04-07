@@ -1,3 +1,9 @@
+{ Modelo de Projeto - State
+  Autores: Lucas Montemezzo
+           Pedro H. Wanot Chikoski
+           Anderson Possamai (Coxinha)
+}
+
 unit Model.State.Aluno.Ativo;
 
 interface

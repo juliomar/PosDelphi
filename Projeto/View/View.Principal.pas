@@ -63,16 +63,19 @@ type
     btnEditar: TButton;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
+    btn_State: TButton;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
+    procedure btn_StateClick(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
     procedure AdicionarLinhaStringGrid(AObject: TPessoa);
     function RetornaSexo(ASelecao : TSexo): string;
+    function RetornaStatus(AStatus : TStatus): string;
     { Private declarations }
   public
     FControllerPessoa : iControllerCadastro<TPessoa>;
@@ -88,7 +91,7 @@ implementation
 
 uses
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
-  Controller.Cadastro, Model.State.Aluno;
+  Controller.Cadastro, Model.State.Aluno, View.ModelState;
 
 {$R *.dfm}
 
@@ -130,11 +133,19 @@ begin
   end;
 end;
 
+procedure TPrincipal.btn_StateClick(Sender: TObject);
+var
+  sAux: string;
+begin
+  sAux:= STGridPessoa.Cells[8, STGridPessoa.FixedRows];
+  sAux:= Tfrm_ModelState.ShowModelState(sAux);
+end;
+
 procedure TPrincipal.DefinicaoStringGrid;
 var
   iFor: Integer;
 begin
-  STGridPessoa.ColCount := 8;
+  STGridPessoa.ColCount := 9;
 
   for iFor := 0 to pred(STGridPessoa.ColCount) do
     STGridPessoa.ColWidths[iFor] := 150;
@@ -147,6 +158,7 @@ begin
   STGridPessoa.Cols[5].Text := 'Matricula';
   STGridPessoa.Cols[6].Text := 'Nascimento';
   STGridPessoa.Cols[7].Text := 'Sexo';
+  STGridPessoa.Cols[8].Text := 'Status';
 end;
 
 procedure TPrincipal.PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -172,6 +184,15 @@ case ASelecao of
 end;
 end;
 
+function TPrincipal.RetornaStatus(AStatus: TStatus): string;
+begin
+  case AStatus of
+    Ativo       : Result:= 'A';
+    Inativo     : Result:= 'I';
+    Matriculado : Result:= 'M';
+  end;
+end;
+
 procedure TPrincipal.FormCreate(Sender: TObject);
 var
   CaminhoAplicacao: string;
@@ -187,7 +208,6 @@ begin
     if Assigned(FControllerPessoa.Entidade) then
       PreencherStringGrid(FIterator);
   end;
-  FState := TModelAlunoStatus.New;
 end;
 
 procedure TPrincipal.AdicionarLinhaStringGrid(AObject: TPessoa);
@@ -200,6 +220,7 @@ begin
   STGridPessoa.Cells[5, STGridPessoa.RowCount] := IntToStr(AObject.matricula);
   STGridPessoa.Cells[6, STGridPessoa.RowCount] := DateToStr(AObject.datanascimento);
   STGridPessoa.Cells[7, STGridPessoa.RowCount] := RetornaSexo(AObject.sexo);
+  STGridPessoa.Cells[8, STGridPessoa.RowCount] := RetornaStatus(AObject.status);
 end;
 
 procedure TStringGridHack.DeleteRow(ARow: Longint);

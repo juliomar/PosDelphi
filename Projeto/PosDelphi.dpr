@@ -35,7 +35,8 @@ uses
   Model.State.Aluno.Inativo in 'Model\State\Model.State.Aluno.Inativo.pas',
   Model.State.Aluno.Interfaces in 'Model\State\Model.State.Aluno.Interfaces.pas',
   Model.State.Aluno.Matriculado in 'Model\State\Model.State.Aluno.Matriculado.pas',
-  Model.State.Aluno in 'Model\State\Model.State.Aluno.pas';
+  Model.State.Aluno in 'Model\State\Model.State.Aluno.pas',
+  View.ModelState in 'View\View.ModelState.pas' {frm_ModelState};
 
 {$R *.res}
 
@@ -44,5 +45,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TPrincipal, Principal);
+  Application.CreateForm(Tfrm_ModelState, frm_ModelState);
   Application.Run;
 end.

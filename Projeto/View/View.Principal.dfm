@@ -158,7 +158,7 @@ object Principal: TPrincipal
       TabOrder = 2
     end
     object BitBtn1: TBitBtn
-      Left = 449
+      Left = 682
       Top = 3
       Width = 120
       Height = 25
@@ -167,7 +167,7 @@ object Principal: TPrincipal
       OnClick = BitBtn1Click
     end
     object BitBtn2: TBitBtn
-      Left = 323
+      Left = 515
       Top = 3
       Width = 120
       Height = 25
@@ -175,6 +175,15 @@ object Principal: TPrincipal
       TabOrder = 4
       OnClick = BitBtn2Click
     end
+  end
+  object btn_State: TButton
+    Left = 324
+    Top = 391
+    Width = 170
+    Height = 25
+    Caption = 'Padr'#227'o de Projeto - State'
+    TabOrder = 4
+    OnClick = btn_StateClick
   end
   object ClientDataSetClientes: TClientDataSet
     Aggregates = <>
