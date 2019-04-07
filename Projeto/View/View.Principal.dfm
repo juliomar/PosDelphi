@@ -11,6 +11,7 @@ object Principal: TPrincipal
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -138,8 +139,9 @@ object Principal: TPrincipal
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitTop = 362
     object BitBtnExportarAlunosXLS: TBitBtn
-      Left = 77
+      Left = 80
       Top = 4
       Width = 120
       Height = 25
@@ -148,8 +150,8 @@ object Principal: TPrincipal
       OnClick = BitBtnExportarAlunosXLSClick
     end
     object BitBtnExportarAlunosHTML: TBitBtn
-      Left = 197
-      Top = 3
+      Left = 203
+      Top = 4
       Width = 120
       Height = 25
       Caption = 'Exportar para HTML'
@@ -165,11 +167,11 @@ object Principal: TPrincipal
       TabOrder = 2
     end
     object btn_State: TButton
-      Left = 323
+      Left = 327
       Top = 4
       Width = 170
       Height = 25
-      Caption = 'Padr'#227'o de Projeto - State'
+      Caption = 'Padr'#227'o de Projeto - State '
       TabOrder = 3
       OnClick = btn_StateClick
     end

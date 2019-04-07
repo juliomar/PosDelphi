@@ -47,7 +47,7 @@ uses
 procedure Tfrm_ModelState.btn_ativoClick(Sender: TObject);
 begin
   FState.Operacoes.Ativar;
-  lbl_status.Caption := FState.Operacoes.Value;
+  lbl_status.Caption := GetDescricao(FState.Operacoes.Value);
 end;
 
 procedure Tfrm_ModelState.btn_cancelarClick(Sender: TObject);

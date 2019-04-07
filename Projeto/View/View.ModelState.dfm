@@ -12,6 +12,7 @@ object frm_ModelState: Tfrm_ModelState
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
