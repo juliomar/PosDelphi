@@ -30,7 +30,14 @@ uses
   Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
-  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas';
+  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
+  View.Login in 'View\View.Login.pas' {FLogin},
+  Login.AbstractFactory in 'Model\Login\Login.AbstractFactory.pas',
+  Login.Aluno in 'Model\Login\Login.Aluno.pas',
+  Login.Professor in 'Model\Login\Login.Professor.pas',
+  Login.ConcreteFactory in 'Model\Login\Login.ConcreteFactory.pas',
+  Login.Types in 'Model\Login\Login.Types.pas',
+  Login.UsuarioLogado in 'Model\Login\Login.UsuarioLogado.pas';
 
 {$R *.res}
 
@@ -38,6 +45,11 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TPrincipal, Principal);
-  Application.Run;
+  if TFLogin.SolicitarLogin then
+  begin
+    Application.CreateForm(TPrincipal, Principal);
+    Application.Run;
+  end
+  else
+    Application.Terminate;
 end.
