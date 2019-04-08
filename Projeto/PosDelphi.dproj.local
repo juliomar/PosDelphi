@@ -1,2 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019/04/07 22:32:56.685,=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\UCadCursos.pas</Transaction>
+    <Transaction>2019/04/07 22:33:27.748,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.pas=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\UCadCursos.pas</Transaction>
+    <Transaction>2019/04/07 22:33:27.748,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.dfm=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\UCadCursos.dfm</Transaction>
+    <Transaction>2019/04/07 22:34:24.283,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.CadCursos.CadCursos=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.CadCursos</Transaction>
+    <Transaction>2019/04/07 22:34:24.283,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.CadCursos.dfm=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

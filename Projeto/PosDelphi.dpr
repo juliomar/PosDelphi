@@ -9,7 +9,7 @@ program PosDelphi;
 
 uses
   Vcl.Forms,
-  View.Principal in 'View\View.Principal.pas' {Principal},
+  View.Principal in 'View\View.Principal.pas' {FrmCadCursos},
   entity.pessoa in 'Model\Entity\entity.pessoa.pas',
   entity.aluno in 'Model\Entity\entity.aluno.pas',
   entity.professor in 'Model\Entity\entity.professor.pas',
@@ -30,7 +30,8 @@ uses
   Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
-  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas';
+  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
+  View.CadCursos in 'View\View.CadCursos.pas' {FRMCADCURSO};
 
 {$R *.res}
 
@@ -38,6 +39,7 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TPrincipal, Principal);
-  Application.Run;
+  AApplication.CreateForm(TPrincipal, Principal);
+  AApplication.CreateForm(TFRMCADCURSO, FRMCADCURSO);
+  plication.Run;
 end.
