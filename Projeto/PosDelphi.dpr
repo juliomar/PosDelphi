@@ -30,7 +30,14 @@ uses
   Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
-  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas';
+  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
+  uAdapter in 'Adapter\uAdapter.pas',
+  uComunicador in 'Adapter\uComunicador.pas',
+  uInterfaceViaCEP in 'Adapter\uInterfaceViaCEP.pas',
+  uTela in 'Adapter\uTela.pas' {fTela},
+  uWebServiceCorreios in 'Adapter\uWebServiceCorreios.pas',
+  uWebServiceViaCEP in 'Adapter\uWebServiceViaCEP.pas',
+  uWSDL_Correios in 'Adapter\uWSDL_Correios.pas';
 
 {$R *.res}
 

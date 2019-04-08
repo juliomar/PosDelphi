@@ -60,9 +60,11 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
+    Button1: TButton;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -82,7 +84,7 @@ implementation
 
 uses
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
-  Controller.Cadastro;
+  Controller.Cadastro, uTela;
 
 {$R *.dfm}
 
@@ -107,6 +109,16 @@ begin
     Exportador.ExportarDados(ClientDataSetClientes.Data);
   finally
     Exportador := nil;
+  end;
+end;
+
+procedure TPrincipal.Button1Click(Sender: TObject);
+begin
+  fTela := TfTela.Create(application);
+  try
+    fTela.ShowModal;
+  finally
+    FreeAndNil(fTela);
   end;
 end;
 
