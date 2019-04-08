@@ -31,7 +31,9 @@ uses
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
   Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
-  View.CadCursos in 'View\View.CadCursos.pas' {FCadCursos};
+  View.CadCursos in 'View\View.CadCursos.pas' {FCadCursos},
+  Model.TemplateMethod.AbstractClass in 'Model\TemplateMethod\Model.TemplateMethod.AbstractClass.pas',
+  Model.TemplateMethod.ConcreteClassInsere in 'Model\TemplateMethod\Model.TemplateMethod.ConcreteClassInsere.pas';
 
 {$R *.res}
 
@@ -39,7 +41,6 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-//  AApplication.CreateForm(TPrincipal, Principal);
-  Application.CreateForm(TFrmCadCursos, FrmCadCursos);
+  Application.CreateForm(TPrincipal, Principal);
   Application.Run;
 end.
