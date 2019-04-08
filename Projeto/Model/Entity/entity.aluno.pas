@@ -1,4 +1,4 @@
-{*******************************************************}
+﻿{*******************************************************}
 {                                                       }
 {       Projeto Teste Pós-Delphi                        }
 {                                                       }
@@ -43,11 +43,32 @@ type
     [Association(OneToMany, 'aluno_id', 'curso', 'curso_id')]
     [CascadeActions([CascadeAutoInc, CascadeInsert, CascadeUpdate, CascadeDelete])]
     property Cursos: TObjectList<TCurso> read fCursos write fCursos;
+
+    //Padrão Prototype
+    function Clonar: TAluno;
   end;
 
 implementation
 
 { TAluno }
+
+function TAluno.Clonar: TAluno;
+var
+  CloneAluno: TAluno;
+begin
+  CloneAluno := TAluno.Create;
+
+  CloneAluno.Id        := Self.Id;
+  CloneAluno.Nome      := Self.Nome;
+  CloneAluno.Matricula := Self.Matricula;
+  CloneAluno.sobrenome := Self.sobrenome;
+  CloneAluno.email     := Self.email;
+  CloneAluno.telefone  := Self.telefone;
+  CloneAluno.sexo      := Self.sexo;
+  CloneAluno.datanascimento  := Self.datanascimento;
+  CloneAluno.Cursos := Self.Cursos;
+  result := CloneAluno;
+end;
 
 constructor TAluno.Create;
 begin
@@ -65,3 +86,4 @@ end;
 //TRegisterClass.RegisterEntity (TAluno);
 
 end.
+

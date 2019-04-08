@@ -39,11 +39,32 @@ type
     destructor Destroy; override;
 
     property Titulos: TObjectList<TTitulo> read Ftitulos write Ftitulos;
+
+    //Padrão Prototype
+    function Clonar: TProfessor;
   end;
 
 implementation
 
 { TProfessor }
+
+function TProfessor.Clonar: TProfessor;
+var
+  CloneProfessor: TProfessor;
+begin
+  CloneProfessor := TProfessor.Create;
+
+  CloneProfessor.Id        := Self.Id;
+  CloneProfessor.Nome      := Self.Nome;
+  CloneProfessor.Matricula := Self.Matricula;
+  CloneProfessor.sobrenome := Self.sobrenome;
+  CloneProfessor.email     := Self.email;
+  CloneProfessor.telefone  := Self.telefone;
+  CloneProfessor.sexo      := Self.sexo;
+  CloneProfessor.datanascimento  := Self.datanascimento;
+  CloneProfessor.Titulos  := Self.Titulos;
+  result := CloneProfessor;
+end;
 
 constructor TProfessor.Create;
 begin
