@@ -113,6 +113,19 @@
         <DCCReference Include="Controller\Controller.Interfaces.pas"/>
         <DCCReference Include="Model\Cadastro\Model.Cadastro.pas"/>
         <DCCReference Include="Model\Cadastro\Model.Cadastro.Interfaces.pas"/>
+        <DCCReference Include="Model\Exportador\Model.Exportador.Interfaces.pas"/>
+        <DCCReference Include="Model\Exportador\Model.Exportador.InterfaceFormato.pas"/>
+        <DCCReference Include="Model\Exportador\Model.Exportador.Alunos.pas"/>
+        <DCCReference Include="Model\Exportador\Model.Exportador.FormatoHTML.pas"/>
+        <DCCReference Include="Model\Exportador\Model.Exportador.FormatoXLS.pas"/>
+        <DCCReference Include="Model\Iterator\Model.Iterator.Interfaces.pas"/>
+        <DCCReference Include="Controller\Controller.Cadastro.pas"/>
+        <DCCReference Include="Model\Iterator\Model.Lista.Factory.pas"/>
+        <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
+        <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
+        <DCCReference Include="Model\Adapter\Adapter.Controller.Itens.pas"/>
+        <DCCReference Include="Model\Adapter\Adapter.Model.Interfaces.pas"/>
+        <DCCReference Include="Model\Adapter\Adapter.Model.Itens.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -133,8 +146,7 @@
                 <Source>
                     <Source Name="MainSource">PosDelphi.dpr</Source>
                 </Source>
-                <Excluded_Packages>
-                </Excluded_Packages>
+                <Excluded_Packages/>
             </Delphi.Personality>
             <Deployment Version="3">
                 <DeployFile LocalName="PosDelphi.exe" Configuration="Debug" Class="ProjectOutput">
@@ -571,6 +583,10 @@
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
             </Deployment>
             <Platforms>
