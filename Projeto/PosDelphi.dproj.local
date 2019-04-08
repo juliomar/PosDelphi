@@ -1,2 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019/04/08 00:54:09.626,=C:\Unoesc\posDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 00:54:44.309,C:\Unoesc\posDelphi\Projeto\Model\Observer\Model.Observer.pas=C:\Unoesc\posDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 00:54:56.142,=C:\Unoesc\posDelphi\Projeto\ModelSupport_PosDelphi\default.txaPackage</Transaction>
+    <Transaction>2019/04/08 00:55:01.713,=C:\Unoesc\posDelphi\Projeto\ModelSupport_PosDelphi\default.txvpck</Transaction>
+    <Transaction>2019/04/08 00:55:10.179,=C:\Unoesc\posDelphi\Projeto\ModelSupport_PosDelphi\Model\default.txvpck</Transaction>
+    <Transaction>2019/04/08 00:55:10.307,=C:\Unoesc\posDelphi\Projeto\ModelSupport_PosDelphi\PosDelphi\default.txvpck</Transaction>
+  </Transactions>
+</BorlandProject>

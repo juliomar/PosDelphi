@@ -31,9 +31,15 @@ uses
 
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces;
+  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,
+  Model.Observer, DateUtils;
 
 type
+  TConcreteObserver = class(TInterfacedObject, IObserver)
+  public
+    procedure Update(ASubject: TSubject);
+  end;
+
   TStringGridHack = class(TStringGrid)
   protected
     procedure DeleteRow(ARow: Longint); reintroduce;
@@ -60,9 +66,12 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
+    lblRelogio: TLabel;
+    Timer1: TTimer;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -72,6 +81,8 @@ type
   public
     FControllerPessoa : iControllerCadastro<TPessoa>;
     FIterator : iIterator<TPessoa>;
+    _observavel: TSubject;
+    _observador: IObserver;
     { Public declarations }
   end;
 
@@ -152,10 +163,21 @@ case ASelecao of
 end;
 end;
 
+procedure TPrincipal.Timer1Timer(Sender: TObject);
+begin
+  _observavel.Horario := IncSecond(_observavel.Horario, 1);
+end;
+
 procedure TPrincipal.FormCreate(Sender: TObject);
 var
   CaminhoAplicacao: string;
 begin
+  _observavel:= TSubject.Create;
+  _observador:= TConcreteObserver.Create;
+
+  _observavel.Attach(_observador);
+  Timer1.Enabled := True;
+
   CaminhoAplicacao := ExtractFilePath(Application.ExeName);
   ClientDataSetClientes.LoadFromFile(CaminhoAplicacao + 'Clientes.xml');
   //FControllerPessoa := TControllerCadastroPessoa.New;
@@ -203,6 +225,13 @@ begin
     Inc(ARow);
   RowCount := RowCount + 1;
   Row := GemRow;
+end;
+
+{ TConcreteObserver }
+
+procedure TConcreteObserver.Update(ASubject: TSubject);
+begin
+  Principal.lblRelogio.Caption := FormatDateTime('hh:mm:ss', ASubject.Horario);
 end;
 
 end.

@@ -26,9 +26,6 @@ object Principal: TPrincipal
     FixedRows = 0
     TabOrder = 0
     Visible = False
-    ExplicitLeft = 8
-    ExplicitTop = 344
-    ExplicitWidth = 833
   end
   object DBGridClientes: TDBGrid
     Left = 0
@@ -75,9 +72,6 @@ object Principal: TPrincipal
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitLeft = 0
-    ExplicitTop = 0
-    ExplicitWidth = 848
     object Label1: TLabel
       Left = 8
       Top = 21
@@ -98,6 +92,19 @@ object Principal: TPrincipal
       Width = 96
       Height = 13
       Caption = 'Op'#231#245'es de pesquisa'
+    end
+    object lblRelogio: TLabel
+      Left = 824
+      Top = 0
+      Width = 66
+      Height = 19
+      Caption = '00:00:00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object cbCampo: TComboBox
       Left = 8
@@ -137,8 +144,6 @@ object Principal: TPrincipal
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitTop = 359
-    ExplicitWidth = 848
     object BitBtnExportarAlunosXLS: TBitBtn
       Left = 77
       Top = 4
@@ -214,5 +219,10 @@ object Principal: TPrincipal
     DataSet = ClientDataSetClientes
     Left = 204
     Top = 166
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 851
+    Top = 27
   end
 end
