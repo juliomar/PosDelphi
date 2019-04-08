@@ -123,16 +123,6 @@
         <DCCReference Include="Model\Iterator\Model.Lista.Factory.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
-        <DCCReference Include="View\View.Login.pas">
-            <Form>FLogin</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="Model\Login\Login.AbstractFactory.pas"/>
-        <DCCReference Include="Model\Login\Login.Aluno.pas"/>
-        <DCCReference Include="Model\Login\Login.Professor.pas"/>
-        <DCCReference Include="Model\Login\Login.ConcreteFactory.pas"/>
-        <DCCReference Include="Model\Login\Login.Types.pas"/>
-        <DCCReference Include="Model\Login\Login.UsuarioLogado.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
