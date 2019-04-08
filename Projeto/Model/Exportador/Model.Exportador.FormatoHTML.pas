@@ -5,9 +5,11 @@ interface
 uses
   Classes, Model.Exportador.InterfaceFormato;
 
+  var contadorDeRegistrosGlobalHTML : Integer;
 type
   { Concrete Implementor }
   TFormatoHTML = class(TInterfacedObject, IFormato)
+
   private
     HTML: TStringList;
 
@@ -22,10 +24,14 @@ type
     procedure SalvarArquivo(const NomeArquivo: string);
   end;
 
+
+
 implementation
 
 uses
   SysUtils, Forms, Windows, ShellAPI;
+
+
 
 { TFormatoHTML }
 
@@ -39,6 +45,7 @@ procedure TFormatoHTML.CriarCabecalhoHTML;
 begin
   HTML.Add('<html>');
   HTML.Add('<head>');
+  HTML.Add('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">');
   HTML.Add('<style>');
   HTML.Add('body { font-family: Tahoma; }');
   HTML.Add('table, td, th { border: 1px solid #ddd; text-align: left; }');
@@ -47,7 +54,8 @@ begin
   HTML.Add('<head>');
   HTML.Add('</head>');
   HTML.Add('<body>');
-  HTML.Add('<table>');
+  HTML.Add(' </br><p class="text-center"> <b> Trabalho Pós Graduação em Delphi.</p>  </b>');
+  HTML.Add('<table class="table table-striped">');
   HTML.Add('<tr>');
 end;
 
@@ -79,6 +87,9 @@ var
 begin
   HTML.Add('</tr>');
   HTML.Add('</table>');
+  HTML.Add('<p class="text-center"> Total de Registros:');
+  HTML.Add('<b>' + contadorDeRegistrosGlobalHTML.ToString() + '</b>');
+  HTML.Add('</p>');
   HTML.Add('</body>');
   HTML.Add('</html>');
 

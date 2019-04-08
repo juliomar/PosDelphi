@@ -2,7 +2,7 @@ unit uTela;
 
 {
   Exemplo de Singleton com Delphi
-  Criado por André Luis Celestino: www.andrecelestino.com
+  Criado por Andrï¿½ Luis Celestino: www.andrecelestino.com
 }
 
 interface
@@ -22,7 +22,7 @@ type
     procedure BitBtnCadastrarParticipantesClick(Sender: TObject);
     procedure BitBtnRealizarSorteioClick(Sender: TObject);
   end;
-
+//Teste
 var
   fTela: TfTela;
 
@@ -46,9 +46,9 @@ procedure TfTela.FormShow(Sender: TObject);
 var
   Logger: TLoggerSingleton;
 begin
-  // obtém a instância do Singleton para registrar um log
+  // obtï¿½m a instï¿½ncia do Singleton para registrar um log
   Logger := TLoggerSingleton.ObterInstancia;
-  Logger.RegistrarLog('Usuário iniciou a aplicação.');
+  Logger.RegistrarLog('Usuï¿½rio iniciou a aplicaï¿½ï¿½o.');
 end;
 
 procedure TfTela.BitBtnCadastrarParticipantesClick(Sender: TObject);

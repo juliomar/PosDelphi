@@ -26,13 +26,12 @@ uses
 
   Entity.Pessoa,
 
-
- ExtCtrls,
-
-
+  ExtCtrls,
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,
-  Memento.Model.Interfaces,memento.model.aluno;
+  Memento.Model.Interfaces,memento.model.aluno,  Controller.Interfaces,
+  Controller.Cadastro.Pessoa, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Datasnap.DBClient, Vcl.DBGrids, Vcl.ComCtrls, Vcl.Imaging.pngimage;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -66,22 +65,31 @@ type
     EdtMatricula: TLabeledEdit;
     Button1: TButton;
     ListBox1: TListBox;
+    ToolBar1: TToolBar;
+    MainMenu1: TMainMenu;
+    esste1: TMenuItem;    
+    StaticText1: TStaticText;
+    StatusBar1: TStatusBar;
+    Timer1: TTimer;
+    ImageAluno: TImage;
     procedure FormCreate(Sender: TObject);
+    procedure esste1Click(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure ListBox1Click(Sender: TObject);
-
+    procedure Timer1Timer(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     FAluno : iAluno;
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
     procedure AdicionarLinhaStringGrid(AObject: TPessoa);
-    function RetornaSexo(ASelecao : TSexo): string;
+    function RetornaSexo(ASelecao: TSexo): string;
     { Private declarations }
   public
-    FControllerPessoa : iControllerCadastro<TPessoa>;
-    FIterator : iIterator<TPessoa>;
+    FControllerPessoa: iControllerCadastro<TPessoa>;
+    FIterator: iIterator<TPessoa>;
     { Public declarations }
   end;
 
@@ -92,7 +100,8 @@ implementation
 
 uses
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
-  Controller.Cadastro;
+  Controller.Cadastro, View.Pagamento;
+
 
 {$R *.dfm}
 
@@ -156,13 +165,23 @@ begin
   STGridPessoa.Cols[7].Text := 'Sexo';
 end;
 
-
+procedure TPrincipal.esste1Click(Sender: TObject);
+var
+  LViewPagamento: TPagamento;
+begin
+  LViewPagamento:= TPagamento.Create(self);
+  try
+    LViewPagamento.ShowModal;
+  finally
+    LViewPagamento.Free;
+  end;
+end;
 
 procedure TPrincipal.PreencherStringGrid(ALista: iIterator<TPessoa>);
 var
   LFor: Integer;
 begin
-  //for LFor := AIndex to ALista.Count -1 do
+  // for LFor := AIndex to ALista.Count -1 do
   while ALista.temProximo do
   begin
     // Adiciona a lista de objetos geral.
@@ -175,10 +194,27 @@ end;
 
 function TPrincipal.RetornaSexo(ASelecao: TSexo): string;
 begin
-case ASelecao of
-  Masculino: Result := 'Masculino';
-  Feminino: Result := 'Feminino';
+  case ASelecao of
+    Masculino:
+      Result := 'Masculino';
+    Feminino:
+      Result := 'Feminino';
+  end;
 end;
+
+procedure TPrincipal.Timer1Timer(Sender: TObject);
+begin
+  StatusBar1.Panels.Items[0].Text := DateTimeToStr(now);
+end;
+
+procedure TPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+if Application.MessageBox('Deseja Relamente Sair','informação', MB_YESNO+MB_ICONQUESTION) =mrYes then
+
+
+Application.Terminate
+else
+abort;
 end;
 
 procedure TPrincipal.FormCreate(Sender: TObject);
@@ -187,11 +223,11 @@ var
 begin
   CaminhoAplicacao := ExtractFilePath(Application.ExeName);
   ClientDataSetClientes.LoadFromFile(CaminhoAplicacao + 'Clientes.xml');
-  //FControllerPessoa := TControllerCadastroPessoa.New;
+  // FControllerPessoa := TControllerCadastroPessoa.New;
   FControllerPessoa := TControllerCadastro<TPessoa>.New;
   if Assigned(FControllerPessoa) then
   begin
-    FIterator  := FControllerPessoa.Entidade.getLista;
+    FIterator := FControllerPessoa.Entidade.getLista;
     DefinicaoStringGrid;
     if Assigned(FControllerPessoa.Entidade) then
       PreencherStringGrid(FIterator);
@@ -214,8 +250,9 @@ begin
   STGridPessoa.Cells[2, STGridPessoa.RowCount] := AObject.sobrenome;
   STGridPessoa.Cells[3, STGridPessoa.RowCount] := AObject.telefone;
   STGridPessoa.Cells[4, STGridPessoa.RowCount] := AObject.email;
-  STGridPessoa.Cells[5, STGridPessoa.RowCount] := IntToStr(AObject.matricula);
-  STGridPessoa.Cells[6, STGridPessoa.RowCount] := DateToStr(AObject.datanascimento);
+  STGridPessoa.Cells[5, STGridPessoa.RowCount] := inttostr(AObject.matricula);
+  STGridPessoa.Cells[6, STGridPessoa.RowCount] :=
+    DateToStr(AObject.datanascimento);
   STGridPessoa.Cells[7, STGridPessoa.RowCount] := RetornaSexo(AObject.sexo);
 end;
 
@@ -244,6 +281,3 @@ begin
 end;
 
 end.
-
-
-

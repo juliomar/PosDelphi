@@ -1,6 +1,6 @@
-﻿{*******************************************************}
+{*******************************************************}
 {                                                       }
-{       Projeto Teste P�s-Delphi                        }
+{       Projeto Teste Pós-Delphi                        }
 {                                                       }
 {       Copyright (C) 2019 Unoesc                       }
 {                                                       }
@@ -33,7 +33,14 @@ uses
   Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
   memento.model.interfaces in 'Memento\memento.model.interfaces.pas',
   memento.model.memento in 'Memento\memento.model.memento.pas',
-  memento.model.aluno in 'Memento\memento.model.aluno.pas';
+  memento.model.aluno in 'Memento\memento.model.aluno.pas',
+  View.Login in 'View\View.Login.pas' {FLogin},
+  Login.AbstractFactory in 'Model\Login\Login.AbstractFactory.pas',
+  Login.Aluno in 'Model\Login\Login.Aluno.pas',
+  Login.Professor in 'Model\Login\Login.Professor.pas',
+  Login.ConcreteFactory in 'Model\Login\Login.ConcreteFactory.pas',
+  Login.Types in 'Model\Login\Login.Types.pas',
+  Login.UsuarioLogado in 'Model\Login\Login.UsuarioLogado.pas';
 
 {$R *.res}
 
@@ -41,6 +48,12 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TPrincipal, Principal);
-  Application.Run;
+  if TFLogin.SolicitarLogin then
+  begin
+    Application.CreateForm(TPrincipal, Principal);
+    Application.Run;
+  end
+  else
+    Application.Terminate;
+
 end.

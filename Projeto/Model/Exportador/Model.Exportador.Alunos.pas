@@ -3,7 +3,7 @@ unit Model.Exportador.Alunos;
 interface
 
 uses
-  Model.Exportador.Interfaces, Model.Exportador.InterfaceFormato;
+  Model.Exportador.Interfaces, Model.Exportador.InterfaceFormato, Model.Exportador.FormatoHTML;
 
 type
   TExportadorAlunos = class(TInterfacedObject, IExportador)
@@ -46,6 +46,7 @@ var
 begin
   EscreverCabecalho;
   cdsDados := TClientDataSet.Create(nil);
+  contadorDeRegistrosGlobalHTML :=0;
   try
     cdsDados.Data := Dados;
     cdsDados.First;
@@ -55,12 +56,14 @@ begin
       Formato.PularLinha;
       for nContador := 0 to Pred(cdsDados.Fields.Count) do
         Formato.ExportarCampo(cdsDados.Fields[nContador].AsString);
-
-      cdsDados.Next;
+        contadorDeRegistrosGlobalHTML := contadorDeRegistrosGlobalHTML + 1;
+        cdsDados.Next;
     end;
     Formato.SalvarArquivo('Clientes');
   finally
+
     FreeAndNil(cdsDados);
+
   end;
 end;
 
