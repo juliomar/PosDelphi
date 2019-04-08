@@ -9,7 +9,7 @@ program PosDelphi;
 
 uses
   Vcl.Forms,
-  View.Principal in 'View\View.Principal.pas' {Principal},
+  View.Principal in 'View\View.Principal.pas' {FrmCadCursos},
   entity.pessoa in 'Model\Entity\entity.pessoa.pas',
   entity.aluno in 'Model\Entity\entity.aluno.pas',
   entity.professor in 'Model\Entity\entity.professor.pas',
@@ -26,13 +26,12 @@ uses
   Model.Exportador.Alunos in 'Model\Exportador\Model.Exportador.Alunos.pas',
   Model.Exportador.FormatoHTML in 'Model\Exportador\Model.Exportador.FormatoHTML.pas',
   Model.Exportador.FormatoXLS in 'Model\Exportador\Model.Exportador.FormatoXLS.pas',
-  Model.Iterator.Interfaces in 'Model\Iterator\Model.Iterator.Interfaces.pas';
-
-Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
   Model.Iterator.Interfaces in 'Model\Iterator\Model.Iterator.Interfaces.pas',
+  Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
+  Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
   Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
-  Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas';
+  View.CadCursos in 'View\View.CadCursos.pas' {FCadCursos};
 
 {$R *.res}
 
@@ -40,6 +39,7 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  AApplication.CreateForm(TPrincipal, Principal);
-  Aplication.Run;
+//  AApplication.CreateForm(TPrincipal, Principal);
+  Application.CreateForm(TFrmCadCursos, FrmCadCursos);
+  Application.Run;
 end.

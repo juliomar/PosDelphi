@@ -30,9 +30,8 @@ uses
  ExtCtrls,
 
 
-  Controller.Interfaces,
-  Controller.Cadastro.Pessoa, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids;
+  Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -64,7 +63,6 @@ type
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
-    procedure GridPanel1Click(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -83,7 +81,8 @@ var
 implementation
 
 uses
-  Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML;
+  Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
+  Controller.Cadastro;
 
 {$R *.dfm}
 
@@ -170,12 +169,7 @@ begin
   end;
 end;
 
-pprocedure TPrincipal.GridPanel1Click(Sender: TObject);
-begin
-
-end;
-
-rocedure TPrincipal.AdicionarLinhaStringGrid(AObject: TPessoa);
+procedure TPrincipal.AdicionarLinhaStringGrid(AObject: TPessoa);
 begin
   STGridPessoa.Cells[0, STGridPessoa.RowCount] := inttostr(AObject.id);
   STGridPessoa.Cells[1, STGridPessoa.RowCount] := AObject.nome;
