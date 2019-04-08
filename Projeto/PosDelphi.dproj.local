@@ -1,2 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019/04/08 20:24:52.518,=C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 20:27:56.067,C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Model\Log\Model.Log.pas=C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 20:29:06.251,C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Model\Log\Model.Log.Logger.pas=C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Model\Log\Model.Log.pas</Transaction>
+  </Transactions>
+</BorlandProject>

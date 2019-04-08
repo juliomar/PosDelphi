@@ -25,6 +25,7 @@ uses
   Vcl.Grids,
 
   Entity.Pessoa,
+  Model.Log.Logger,
 
 
  ExtCtrls,
@@ -63,6 +64,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -108,6 +110,15 @@ begin
   finally
     Exportador := nil;
   end;
+end;
+
+procedure TPrincipal.btnEditarClick(Sender: TObject);
+var
+  Logger: TLog;
+begin
+  // obtém a instância do Singleton para registrar um log
+  Logger := TLog.ObterInstancia;
+  Logger.RegistrarLog('Registro alterado!' + DateTimeToStr(Now));
 end;
 
 procedure TPrincipal.DefinicaoStringGrid;
