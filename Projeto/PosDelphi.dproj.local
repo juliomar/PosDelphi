@@ -46,10 +46,10 @@
     <Transaction>2019/04/06 14:50:27.000.908,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit3.pas</Transaction>
     <Transaction>2019/04/06 14:51:05.000.939,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit3.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Calculo.Curso.dfm</Transaction>
     <Transaction>2019/04/06 14:51:05.000.939,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit3.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Calculo.Curso.pas</Transaction>
-    <Transaction>2019/04/06 15:17:58.276,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Item.pas=</Transaction>
-    <Transaction>2019/04/06 15:18:05.417,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Venda.pas=</Transaction>
-    <Transaction>2019/04/06 15:18:12.476,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Bolsas.pas=</Transaction>
-    <Transaction>2019/04/06 15:18:27.887,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Calculo.Curso.pas=</Transaction>
+    <Transaction>2019/04/06 15:17:58.000.276,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Item.pas=</Transaction>
+    <Transaction>2019/04/06 15:18:05.000.417,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Venda.pas=</Transaction>
+    <Transaction>2019/04/06 15:18:12.000.476,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Bolsas.pas=</Transaction>
+    <Transaction>2019/04/06 15:18:27.000.887,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Calculo.Curso.pas=</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="AbstractFactory"/>
