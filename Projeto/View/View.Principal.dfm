@@ -1,7 +1,7 @@
-object FrmCadCursos: TFrmCadCursos
+object Principal: TPrincipal
   Left = 0
   Top = 0
-  Caption = 'FrmCadCursos'
+  Caption = 'Principal'
   ClientHeight = 504
   ClientWidth = 906
   Color = clBtnFace

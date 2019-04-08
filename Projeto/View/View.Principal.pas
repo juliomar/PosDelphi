@@ -40,7 +40,7 @@ type
     procedure InsertRow(ARow: Longint);
   end;
 
-  TFrmCadCursos = class(TForm)
+  TPrincipal = class(TForm)
     STGridPessoa: TStringGrid;
     DBGridClientes: TDBGrid;
     ClientDataSetClientes: TClientDataSet;
@@ -76,7 +76,7 @@ type
   end;
 
 var
-  FrmCadCursos: TFrmCadCursos;
+  Principal: TPrincipal;
 
 implementation
 
@@ -86,7 +86,7 @@ uses
 
 {$R *.dfm}
 
-procedure TFrmCadCursos.BitBtnExportarAlunosHTMLClick(Sender: TObject);
+procedure TPrincipal.BitBtnExportarAlunosHTMLClick(Sender: TObject);
 var
   Exportador: IExportador;
 begin
@@ -98,7 +98,7 @@ begin
   end;
 end;
 
-procedure TFrmCadCursos.BitBtnExportarAlunosXLSClick(Sender: TObject);
+procedure TPrincipal.BitBtnExportarAlunosXLSClick(Sender: TObject);
 var
   Exportador: IExportador;
 begin
@@ -110,7 +110,7 @@ begin
   end;
 end;
 
-procedure TFrmCadCursos.DefinicaoStringGrid;
+procedure TPrincipal.DefinicaoStringGrid;
 var
   iFor: Integer;
 begin
@@ -129,7 +129,7 @@ begin
   STGridPessoa.Cols[7].Text := 'Sexo';
 end;
 
-procedure TFrmCadCursos.PreencherStringGrid(ALista: iIterator<TPessoa>);
+procedure TPrincipal.PreencherStringGrid(ALista: iIterator<TPessoa>);
 var
   LFor: Integer;
 begin
@@ -144,7 +144,7 @@ begin
     STGridPessoa.FixedRows := 1;
 end;
 
-function TFrmCadCursos.RetornaSexo(ASelecao: TSexo): string;
+function TPrincipal.RetornaSexo(ASelecao: TSexo): string;
 begin
 case ASelecao of
   Masculino: Result := 'Masculino';
@@ -152,7 +152,7 @@ case ASelecao of
 end;
 end;
 
-procedure TFrmCadCursos.FormCreate(Sender: TObject);
+procedure TPrincipal.FormCreate(Sender: TObject);
 var
   CaminhoAplicacao: string;
 begin
@@ -169,7 +169,7 @@ begin
   end;
 end;
 
-procedure TFrmCadCursos.AdicionarLinhaStringGrid(AObject: TPessoa);
+procedure TPrincipal.AdicionarLinhaStringGrid(AObject: TPessoa);
 begin
   STGridPessoa.Cells[0, STGridPessoa.RowCount] := inttostr(AObject.id);
   STGridPessoa.Cells[1, STGridPessoa.RowCount] := AObject.nome;

@@ -8,7 +8,7 @@ uses
   Vcl.ComCtrls;
 
 type
-  TFRMCADCURSO = class(TForm)
+  TFrmCadCursos = class(TForm)
     Edit1: TEdit;
     Label1: TLabel;
     Label2: TLabel;
@@ -42,7 +42,7 @@ type
   end;
 
 var
-  FRMCADCURSO: TFRMCADCURSO;
+  FrmCadCursos: TFrmCadCursos;
 
 implementation
 

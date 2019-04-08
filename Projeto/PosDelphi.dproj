@@ -124,7 +124,7 @@
         <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
         <DCCReference Include="View\View.CadCursos.pas">
-            <Form>FRMCADCURSO</Form>
+            <Form>FCadCursos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

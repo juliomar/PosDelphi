@@ -1,4 +1,4 @@
-object FRMCADCURSO: TFRMCADCURSO
+object FrmCadCursos: TFrmCadCursos
   Left = 0
   Top = 0
   Caption = 'Cadastro do Cursos'
@@ -120,7 +120,7 @@ object FRMCADCURSO: TFRMCADCURSO
     Width = 113
     Height = 21
     Date = 43561.000000000000000000
-    Time = 0.767652233793342100
+    Time = 0.767652233793342000
     TabOrder = 3
   end
   object ComboBox1: TComboBox
