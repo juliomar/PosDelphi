@@ -8,11 +8,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-EditorSecs=1912
-DesignerSecs=2
-InspectorSecs=1
-CompileSecs=152440
-OtherSecs=445
+EditorSecs=1929
+DesignerSecs=74
+InspectorSecs=31
+CompileSecs=155422
+OtherSecs=459
 =======
 EditorSecs=8294
 DesignerSecs=1864
@@ -27,7 +27,7 @@ InspectorSecs=1
 CompileSecs=94609
 OtherSecs=309
 >>>>>>> ebcb896b01505040d56c601d5c7cd775f91b1274
-StartTime=11/03/2019 19:18:41
+StartTime=11/03/2019 19:18:39
 RealKeys=0
 EffectiveKeys=0
 DebugSecs=1868

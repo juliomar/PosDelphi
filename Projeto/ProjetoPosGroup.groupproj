@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{EC487183-F47D-4BD5-9668-C8F0BCC59B64}</ProjectGuid>
+        <ProjectGuid>{B79B7787-40B7-4F72-98CB-6169C5563F48}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
         <Projects Include="PosDelphi.dproj">
