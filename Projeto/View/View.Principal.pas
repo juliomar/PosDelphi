@@ -1,10 +1,10 @@
-﻿{*******************************************************}
-{                                                       }
-{       Projeto Teste P�s-Delphi                        }
-{                                                       }
-{       Copyright (C) 2019 Unoesc                       }
-{                                                       }
-{*******************************************************}
+﻿{ ******************************************************* }
+{ }
+{ Projeto Teste P�s-Delphi }
+{ }
+{ Copyright (C) 2019 Unoesc }
+{ }
+{ ******************************************************* }
 unit View.Principal;
 
 interface
@@ -27,11 +27,13 @@ uses
   Entity.Pessoa,
 
   ExtCtrls,
+
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,
   Memento.Model.Interfaces,memento.model.aluno,  Controller.Interfaces,
   Controller.Cadastro.Pessoa, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids, Vcl.ComCtrls, Vcl.Imaging.pngimage;
+  Datasnap.DBClient, Vcl.DBGrids, Vcl.ComCtrls, Vcl.Imaging.pngimage,
+  Model.Iterator.Interfaces, View.Tabela.Cursos;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -99,9 +101,9 @@ var
 implementation
 
 uses
+
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
   Controller.Cadastro, View.Pagamento;
-
 
 {$R *.dfm}
 
@@ -200,6 +202,7 @@ begin
     Feminino:
       Result := 'Feminino';
   end;
+
 end;
 
 procedure TPrincipal.Timer1Timer(Sender: TObject);
