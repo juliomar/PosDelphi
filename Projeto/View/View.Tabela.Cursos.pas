@@ -31,6 +31,9 @@ type
     ClientDataSetCursoNotaEnad: TFloatField;
     ClientDataSetCursoAreaDoConhecimento: TStringField;
     ImageCursos: TImage;
+    ButnAdicionar: TButton;
+    BtnEditar: TButton;
+    BtnExcluir: TButton;
     procedure Timer1Timer(Sender: TObject);
 
   private
@@ -59,7 +62,7 @@ var
 begin
   STGridCurso.ColCount := 3;
   for iFor := 0 to pred(STGridCurso.ColCount) do
-    STGridCurso.ColWidths[iFor] := 150;
+  STGridCurso.ColWidths[iFor] := 150;
   STGridCurso.Cols[0].Text := 'ID';
   STGridCurso.Cols[1].Text := 'Descricao';
   STGridCurso.Cols[2].Text := 'Area de Conhecimento';
