@@ -74,6 +74,7 @@ type
     StatusBar1: TStatusBar;
     Timer1: TTimer;
     ImageAluno: TImage;
+    BtnFacadeAndersonFurtilho: TButton;
     procedure FormCreate(Sender: TObject);
     procedure esste1Click(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
@@ -82,6 +83,7 @@ type
     procedure ListBox1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure ExecutaFacadeAndersonFurtilho(Sender: TObject);
   private
     FAluno : iAluno;
     procedure DefinicaoStringGrid;
@@ -103,7 +105,8 @@ implementation
 uses
 
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
-  Controller.Cadastro, View.Pagamento;
+  Controller.Cadastro, View.Pagamento, Pattern.Facade.Exportar.Alunos;
+
 
 {$R *.dfm}
 
@@ -176,6 +179,18 @@ begin
     LViewPagamento.ShowModal;
   finally
     LViewPagamento.Free;
+  end;
+end;
+
+procedure TPrincipal.ExecutaFacadeAndersonFurtilho(Sender: TObject);
+var
+  F: TFacadeExportarAlunos;
+begin
+    F := TFacadeExportarAlunos.Create;
+  try
+    F.ExportaTodosAlunosTodosFormatos(ClientDataSetClientes);
+  finally
+    F.Free;
   end;
 end;
 

@@ -8,7 +8,6 @@
 program PosDelphi;
 
 uses
-<<<<<<< HEAD
   Vcl.Forms,
   View.Principal in 'View\View.Principal.pas' {Principal},
   entity.pessoa in 'Model\Entity\entity.pessoa.pas',
@@ -43,7 +42,8 @@ uses
   Login.Types in 'Model\Login\Login.Types.pas',
   Login.UsuarioLogado in 'Model\Login\Login.UsuarioLogado.pas',
   View.Tabela.Cursos in 'View\View.Tabela.Cursos.pas' {frmCurso},
-  View.Inicial in 'View\View.Inicial.pas' {frmTelaDeInicio};
+  View.Inicial in 'View\View.Inicial.pas' {frmTelaDeInicio},
+  Pattern.Facade.Exportar.Alunos in 'Model\Exportador\Pattern.Facade.Exportar.Alunos.pas';
 
 {$R *.res}
 
