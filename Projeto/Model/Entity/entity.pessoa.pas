@@ -42,7 +42,6 @@ type
     Ftelefone      : string;
     fsexo          : TSexo;
     fdatanascimento: TDate;
-    FSenha         : string;
   public
     [ Restrictions([ NoUpdate, NotNull ]) ]
     [ Column('id', ftInteger) ]
@@ -75,17 +74,35 @@ type
     property sexo: TSexo read fsexo write fsexo;
 
     [ Column('datanascimento', ftDate) ]
-    [ Dictionary('Nascimento', 'Mensagem validação', 'Date', '', '!##/##/####;1;_', tacenter) ]
+    [ Dictionary('Nascimento', 'Mensagem validação', '', '', '', tacenter) ]
     property datanascimento: TDate read fdatanascimento write fdatanascimento;
 
-    [ Column('senha', ftString, 60) ]
-    [ Dictionary('Senha', 'Mensagem validação', '', '', '', tacenter) ]
-    property senha: string read FSenha write FSenha;
+     //Padrão Prototype
+    function Clonar: TPessoa;
   end;
 
 implementation
 
 { TPessoa }
+
+{ TPessoa }
+
+function TPessoa.Clonar: TPessoa;
+var
+  ClonePessoa: TPessoa;
+begin
+  ClonePessoa := TPessoa.Create;
+
+  ClonePessoa.Id        := Self.Id;
+  ClonePessoa.Nome      := Self.Nome;
+  ClonePessoa.Matricula := Self.Matricula;
+  ClonePessoa.sobrenome := Self.sobrenome;
+  ClonePessoa.email     := Self.email;
+  ClonePessoa.telefone  := Self.telefone;
+  ClonePessoa.sexo      := Self.sexo;
+  ClonePessoa.datanascimento  := Self.datanascimento;
+  result := ClonePessoa;
+end;
 
 initialization
 TRegisterClass.RegisterEntity (TPessoa);
