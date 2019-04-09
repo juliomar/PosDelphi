@@ -2,7 +2,7 @@ object frmCurso: TfrmCurso
   Left = 0
   Top = 0
   Caption = 'Tabela Curso'
-  ClientHeight = 369
+  ClientHeight = 390
   ClientWidth = 800
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,6 +11,7 @@ object frmCurso: TfrmCurso
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -242,13 +243,37 @@ object frmCurso: TfrmCurso
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 336
+    Top = 357
     Width = 800
     Height = 33
     Panels = <
       item
         Width = 50
       end>
+  end
+  object ButnAdicionar: TButton
+    Left = 8
+    Top = 336
+    Width = 113
+    Height = 25
+    Caption = 'Adicionar'
+    TabOrder = 3
+  end
+  object BtnEditar: TButton
+    Left = 127
+    Top = 336
+    Width = 113
+    Height = 25
+    Caption = ' Editar'
+    TabOrder = 4
+  end
+  object BtnExcluir: TButton
+    Left = 263
+    Top = 336
+    Width = 113
+    Height = 25
+    Caption = ' Excluir'
+    TabOrder = 5
   end
   object DataSourceCursos: TDataSource
     DataSet = ClientDataSetCurso

@@ -50,8 +50,15 @@ uses
   Model.Builder.Product in 'Model\Builder\Model.Builder.Product.pas',
   Model.Builder.Interfaces in 'Model\Builder\Model.Builder.Interfaces.pas',
   Model.Builder.ConcretBuilder in 'Model\Builder\Model.Builder.ConcretBuilder.pas',
-  Model.Builder.Director in 'Model\Builder\Model.Builder.Director.pas';
-
+  Model.Builder.Director in 'Model\Builder\Model.Builder.Director.pas',
+  Model.AbstractFactoy.Interfaces in 'AbstractFactory\Model.AbstractFactoy.Interfaces.pas',
+  Model.NomeCurso in 'AbstractFactory\Model.NomeCurso.pas',
+  Model.Ifactoy in 'AbstractFactory\Model.Ifactoy.pas',
+  Visitor.Model.Interfaces in 'Visitor\Visitor.Model.Interfaces.pas',
+  Visitor.Model.ItemCurso in 'Visitor\Visitor.Model.ItemCurso.pas',
+  Visitor.Model.Venda.Simples in 'Visitor\Visitor.Model.Venda.Simples.pas',
+  Visitor.Model.Venda.Bolsa in 'Visitor\Visitor.Model.Venda.Bolsa.pas',
+  View.Calculo.Preco.Cursos in 'View\View.Calculo.Preco.Cursos.pas' {FrmPrecoDeCursos};
 
 {$R *.res}
 

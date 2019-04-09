@@ -7,7 +7,7 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.ComCtrls,
   Vcl.Imaging.jpeg, Vcl.StdCtrls, View.Principal, View.Tabela.Cursos,
-  Vcl.Imaging.pngimage;
+  Vcl.Imaging.pngimage, Model.Ifactoy, View.Calculo.Preco.Cursos;
 
 type
   TfrmTelaDeInicio = class(TForm)
@@ -19,10 +19,17 @@ type
     Image1: TImage;
     Image2: TImage;
     Label1: TLabel;
+    Button1: TButton;
+    BtnValorCursos: TButton;
+    Image3: TImage;
     procedure TimerTelaInicialTimer(Sender: TObject);
     procedure BtnTelaPrincipalClick(Sender: TObject);
     procedure BtnCursosClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button1Click(Sender: TObject);
+    procedure BtnValorCursosClick(Sender: TObject);
+
+
   private
     { Private declarations }
   public
@@ -58,6 +65,24 @@ begin
   end;
 end;
 
+procedure TfrmTelaDeInicio.BtnValorCursosClick(Sender: TObject);
+begin
+  begin
+    FrmPrecoDeCursos := TFrmPrecoDeCursos.Create(nil);
+    try
+      FrmPrecoDeCursos.ShowModal;
+    finally
+      FreeAndNil(FrmPrecoDeCursos);
+    end;
+  end;
+end;
+
+procedure TfrmTelaDeInicio.Button1Click(Sender: TObject);
+begin
+  ShowMessage(TModelIfactory.New.NomeDoCurso.nome);
+
+end;
+
 procedure TfrmTelaDeInicio.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
 
@@ -69,6 +94,7 @@ begin
     abort;
 
 end;
+
 
 procedure TfrmTelaDeInicio.TimerTelaInicialTimer(Sender: TObject);
 begin
