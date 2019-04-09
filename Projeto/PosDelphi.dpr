@@ -68,7 +68,8 @@ uses
   Controller.SolicitacaoMatricula.Atendente in 'Controller\Controller.SolicitacaoMatricula.Atendente.pas',
   Controller.SolicitacaoMatricula.Coordenador in 'Controller\Controller.SolicitacaoMatricula.Coordenador.pas',
   Unit1 in 'View\Unit1.pas' {Form1},
-  Unit2 in 'View\Unit2.pas';
+  Unit2 in 'View\Unit2.pas',
+  Model.Observer in 'Model\Observer\Model.Observer.pas';
 
 {$R *.res}
 

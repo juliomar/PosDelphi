@@ -42,10 +42,15 @@ uses
 
   Controller.Interfaces,
   Controller.Cadastro, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids;
-
+  Datasnap.DBClient, Vcl.DBGrids,
+  Model.Observer, DateUtils;
 
 type
+  TConcreteObserver = class(TInterfacedObject, IObserver)
+  public
+    procedure Update(ASubject: TSubject);
+  end;
+
   TStringGridHack = class(TStringGrid)
   protected
     procedure DeleteRow(ARow: Longint); reintroduce;
@@ -89,6 +94,7 @@ type
     ImageAluno: TImage;
     BtnFacadeAndersonFurtilho: TButton;
     Button1: TButton;
+    lblRelogio: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure esste1Click(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
@@ -106,8 +112,10 @@ type
     function RetornaSexo(ASelecao: TSexo): string;
     { Private declarations }
   public
-    FControllerPessoa: iControllerCadastro<TPessoa>;
-    FIterator: iIterator<TPessoa>;
+    FControllerPessoa : iControllerCadastro<TPessoa>;
+    FIterator : iIterator<TPessoa>;
+    _observavel: TSubject;
+    _observador: IObserver;
     { Public declarations }
   end;
 
@@ -297,6 +305,7 @@ end;
 procedure TPrincipal.Timer1Timer(Sender: TObject);
 begin
   StatusBar1.Panels.Items[0].Text := DateTimeToStr(now);
+  _observavel.Horario := IncSecond(_observavel.Horario, 1);
 end;
 
 procedure TPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -313,6 +322,12 @@ procedure TPrincipal.FormCreate(Sender: TObject);
 var
   CaminhoAplicacao: string;
 begin
+  _observavel:= TSubject.Create;
+  _observador:= TConcreteObserver.Create;
+
+  _observavel.Attach(_observador);
+  Timer1.Enabled := True;
+
   CaminhoAplicacao := ExtractFilePath(Application.ExeName);
   ClientDataSetClientes.LoadFromFile(CaminhoAplicacao + 'Clientes.xml');
   // FControllerPessoa := TControllerCadastroPessoa.New;
@@ -370,6 +385,13 @@ begin
     Inc(ARow);
   RowCount := RowCount + 1;
   Row := GemRow;
+end;
+
+{ TConcreteObserver }
+
+procedure TConcreteObserver.Update(ASubject: TSubject);
+begin
+  Principal.lblRelogio.Caption := FormatDateTime('hh:mm:ss', ASubject.Horario);
 end;
 
 end.
