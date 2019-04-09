@@ -43,7 +43,15 @@ uses
   Login.UsuarioLogado in 'Model\Login\Login.UsuarioLogado.pas',
   View.Tabela.Cursos in 'View\View.Tabela.Cursos.pas' {frmCurso},
   View.Inicial in 'View\View.Inicial.pas' {frmTelaDeInicio},
-  Pattern.Facade.Exportar.Alunos in 'Model\Exportador\Pattern.Facade.Exportar.Alunos.pas';
+  Pattern.Facade.Exportar.Alunos in 'Model\Exportador\Pattern.Facade.Exportar.Alunos.pas',
+  Model.Iterator in 'Model\Iterator\Model.Iterator.pas',
+  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
+  Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
+  Model.Builder.Product in 'Model\Builder\Model.Builder.Product.pas',
+  Model.Builder.Interfaces in 'Model\Builder\Model.Builder.Interfaces.pas',
+  Model.Builder.ConcretBuilder in 'Model\Builder\Model.Builder.ConcretBuilder.pas',
+  Model.Builder.Director in 'Model\Builder\Model.Builder.Director.pas';
+
 
 {$R *.res}
 
