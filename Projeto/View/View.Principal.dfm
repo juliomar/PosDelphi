@@ -223,5 +223,16 @@ object Principal: TPrincipal
       Caption = ' Formas de pagamento'
       OnClick = esste1Click
     end
+    object Financeiro1: TMenuItem
+      Caption = 'Financeiro'
+      object mnMenalidades: TMenuItem
+        Caption = 'Mensalidades'
+        OnClick = mnMenalidadesClick
+      end
+      object PagarMensalidades1: TMenuItem
+        Caption = 'Pagar Mensalidades'
+        OnClick = PagarMensalidades1Click
+      end
+    end
   end
 end

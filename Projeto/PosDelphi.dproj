@@ -125,7 +125,6 @@
         <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
         <DCCReference Include="View\View.Login.pas">
             <Form>FLogin</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Model\Login\Login.AbstractFactory.pas"/>
         <DCCReference Include="Model\Login\Login.Aluno.pas"/>
@@ -133,6 +132,21 @@
         <DCCReference Include="Model\Login\Login.ConcreteFactory.pas"/>
         <DCCReference Include="Model\Login\Login.Types.pas"/>
         <DCCReference Include="Model\Login\Login.UsuarioLogado.pas"/>
+        <DCCReference Include="Model\Mensalidade\Mensalidades.RecebimentoMensalidade.BaixarMensalidade.pas"/>
+        <DCCReference Include="Model\Mensalidade\Mensalidades.RecebimentoMensalidade.GerarRecibo.pas"/>
+        <DCCReference Include="Model\Mensalidade\Mensalidades.RecebimentoMensalidade.pas"/>
+        <DCCReference Include="Model\Mensalidade\Mensalidades.RecebimentoMensalidade.ReceberValor.pas"/>
+        <DCCReference Include="Controller\Mensalidade\Mensalidades.Interfaces.pas"/>
+        <DCCReference Include="Controller\Mensalidade\Mensalidades.RecebimentoMensalidade.Invoker.pas"/>
+        <DCCReference Include="View\View.Mensalidades.pas">
+            <Form>FMensalidades</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Model\Entity\entity.mensalidades.pas"/>
+        <DCCReference Include="View\View.Mensalidades.Pagar.pas">
+            <Form>FMensalidadePagar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -153,7 +167,10 @@
                 <Source>
                     <Source Name="MainSource">PosDelphi.dpr</Source>
                 </Source>
-                <Excluded_Packages/>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
                 <DeployFile LocalName="PosDelphi.exe" Configuration="Debug" Class="ProjectOutput">

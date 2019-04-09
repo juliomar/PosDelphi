@@ -32,7 +32,9 @@ uses
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces, Vcl.Menus,
-  Vcl.ToolWin, Vcl.ComCtrls;
+  Vcl.ToolWin, Vcl.ComCtrls,
+  View.Mensalidades
+  ;
 
 type
   TStringGridHack = class(TStringGrid)
@@ -64,10 +66,15 @@ type
     ToolBar1: TToolBar;
     MainMenu1: TMainMenu;
     esste1: TMenuItem;
+    Financeiro1: TMenuItem;
+    mnMenalidades: TMenuItem;
+    PagarMensalidades1: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
     procedure esste1Click(Sender: TObject);
+    procedure mnMenalidadesClick(Sender: TObject);
+    procedure PagarMensalidades1Click(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -87,7 +94,7 @@ implementation
 
 uses
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
-  Controller.Cadastro, View.Pagamento;
+  Controller.Cadastro, View.Mensalidades.Pagar;//, View.Pagamento;
 
 {$R *.dfm}
 
@@ -135,15 +142,32 @@ begin
 end;
 
 procedure TPrincipal.esste1Click(Sender: TObject);
-var
-  LViewPagamento: TPagamento;
+//var
+//  LViewPagamento: TPagamento;
 begin
-  LViewPagamento:= TPagamento.Create(self);
-  try
-    LViewPagamento.ShowModal;
-  finally
-    LViewPagamento.Free;
-  end;
+//  LViewPagamento:= TPagamento.Create(self);
+//  try
+//    LViewPagamento.ShowModal;
+//  finally
+//    LViewPagamento.Free;
+//  end;
+end;
+
+procedure TPrincipal.mnMenalidadesClick(Sender: TObject);
+begin
+  //TODO: Chamar tela de matricula
+  Application.CreateForm(TFMensalidades, FMensalidades);
+  FMensalidades.ShowModal;
+  FreeAndNil(FMensalidades);
+
+end;
+
+procedure TPrincipal.PagarMensalidades1Click(Sender: TObject);
+begin
+  Application.CreateForm(TFMensalidadePagar,FMensalidadePagar);
+  FMensalidadePagar.Matricula := 123;
+  FMensalidadePagar.ShowModal;
+  FreeAndNil(FMensalidadePagar);
 end;
 
 procedure TPrincipal.PreencherStringGrid(ALista: iIterator<TPessoa>);

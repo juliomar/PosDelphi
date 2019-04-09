@@ -37,7 +37,16 @@ uses
   Login.Professor in 'Model\Login\Login.Professor.pas',
   Login.ConcreteFactory in 'Model\Login\Login.ConcreteFactory.pas',
   Login.Types in 'Model\Login\Login.Types.pas',
-  Login.UsuarioLogado in 'Model\Login\Login.UsuarioLogado.pas';
+  Login.UsuarioLogado in 'Model\Login\Login.UsuarioLogado.pas',
+  Mensalidades.RecebimentoMensalidade.BaixarMensalidade in 'Model\Mensalidade\Mensalidades.RecebimentoMensalidade.BaixarMensalidade.pas',
+  Mensalidades.RecebimentoMensalidade.GerarRecibo in 'Model\Mensalidade\Mensalidades.RecebimentoMensalidade.GerarRecibo.pas',
+  Mensalidades.RecebimentoMensalidade in 'Model\Mensalidade\Mensalidades.RecebimentoMensalidade.pas',
+  Mensalidades.RecebimentoMensalidade.ReceberValor in 'Model\Mensalidade\Mensalidades.RecebimentoMensalidade.ReceberValor.pas',
+  Mensalidades.Interfaces in 'Controller\Mensalidade\Mensalidades.Interfaces.pas',
+  Mensalidades.RecebimentoMensalidade.Invoker in 'Controller\Mensalidade\Mensalidades.RecebimentoMensalidade.Invoker.pas',
+  View.Mensalidades in 'View\View.Mensalidades.pas' {FMensalidades},
+  entity.mensalidades in 'Model\Entity\entity.mensalidades.pas',
+  View.Mensalidades.Pagar in 'View\View.Mensalidades.Pagar.pas' {FMensalidadePagar};
 
 {$R *.res}
 
