@@ -4388,9 +4388,13 @@
         <DCCReference Include="Model\Iterator\Model.Lista.Factory.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
+<<<<<<< HEAD
         <DCCReference Include="Model\Adapter\Adapter.Controller.Itens.pas"/>
         <DCCReference Include="Model\Adapter\Adapter.Model.Interfaces.pas"/>
         <DCCReference Include="Model\Adapter\Adapter.Model.Itens.pas"/>
+=======
+        <DCCReference Include="Model\Log\Model.Log.Logger.pas"/>
+>>>>>>> cfa0fcf7afd7ba333b7dec4f1dc3964546896eca
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -4411,8 +4415,11 @@
                 <Source>
                     <Source Name="MainSource">PosDelphi.dpr</Source>
                 </Source>
+<<<<<<< HEAD
 =======
 >>>>>>> df883f8237e8f1177fa3a32f5794d5ce970c835a
+=======
+>>>>>>> cfa0fcf7afd7ba333b7dec4f1dc3964546896eca
                 <Excluded_Packages/>
             </Delphi.Personality>
             <Deployment Version="3">
@@ -4932,12 +4939,15 @@
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
 >>>>>>> df883f8237e8f1177fa3a32f5794d5ce970c835a
 =======
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
 >>>>>>> b3415b9fcdaaf4e9f9569e694185b753182c7f5f
+=======
+>>>>>>> cfa0fcf7afd7ba333b7dec4f1dc3964546896eca
                 <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
             </Deployment>
             <Platforms>

@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <Transactions>
     <Transaction>2019/03/25 21:10:03.546,=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
     <Transaction>2019/03/25 21:11:32.005,D:\AULAS UNOESC\PosDelphi\Projeto\Memento\memento.model.interfaces.pas=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
@@ -189,4 +190,11 @@
     <Transaction>2019/04/08 17:28:45.677,C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Model\TemplateMethod\Model.TemplateMethod.ConcreteClassInsere.pas=c:\rui\posgraduaçãodelphi\posdelphi\projeto\InsereDados.pas</Transaction>
   </Transactions>
 >>>>>>> b3415b9fcdaaf4e9f9569e694185b753182c7f5f
+=======
+  <Transactions>
+    <Transaction>2019/04/08 20:24:52.518,=C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 20:27:56.067,C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Model\Log\Model.Log.pas=C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 20:29:06.251,C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Model\Log\Model.Log.Logger.pas=C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Model\Log\Model.Log.pas</Transaction>
+  </Transactions>
+>>>>>>> cfa0fcf7afd7ba333b7dec4f1dc3964546896eca
 </BorlandProject>
