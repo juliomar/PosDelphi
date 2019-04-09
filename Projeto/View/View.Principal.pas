@@ -25,8 +25,10 @@ uses
   Vcl.Grids,
 
   Entity.Pessoa,
+
   Entity.Aluno,
   Unit1,
+  Model.Log.Logger,
 
   ExtCtrls,
 
@@ -113,6 +115,7 @@ type
     procedure btn_StateClick(Sender: TObject);
     procedure ClientDataSetClientesStatusGetText(Sender: TField;
       var Text: string; DisplayText: Boolean);
+    procedure btnEditarClick(Sender: TObject);
   private
     FAluno : iAluno;
     procedure DefinicaoStringGrid;
@@ -221,6 +224,7 @@ begin
   end;
 end;
 
+
 procedure TPrincipal.Button1Click(Sender: TObject);
 var a : integer;
   Key: string;
@@ -288,6 +292,15 @@ begin
     Text:= 'Inativo'
   else if sender.AsString = 'M' then
     Text:= 'Matrículado';
+end;
+
+procedure TPrincipal.btnEditarClick(Sender: TObject);
+var
+  Logger: TLog;
+begin
+  // obtém a instância do Singleton para registrar um log
+  Logger := TLog.ObterInstancia;
+  Logger.RegistrarLog('Registro alterado!' + DateTimeToStr(Now));
 end;
 
 procedure TPrincipal.DefinicaoStringGrid;

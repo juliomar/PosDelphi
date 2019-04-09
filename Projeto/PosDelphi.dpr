@@ -88,7 +88,8 @@ uses
   View.ModelState in 'View\View.ModelState.pas' {frm_ModelState},
   View.CadCursos in 'View\View.CadCursos.pas' {FCadCursos},
   Model.TemplateMethod.AbstractClass in 'Model\TemplateMethod\Model.TemplateMethod.AbstractClass.pas',
-  Model.TemplateMethod.ConcreteClassInsere in 'Model\TemplateMethod\Model.TemplateMethod.ConcreteClassInsere.pas';
+  Model.TemplateMethod.ConcreteClassInsere in 'Model\TemplateMethod\Model.TemplateMethod.ConcreteClassInsere.pas',
+  Model.Log.Logger in 'Model\Log\Model.Log.Logger.pas';
 
 {$R *.res}
 
@@ -96,7 +97,6 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-
   if TFLogin.SolicitarLogin then
   begin
     Application.CreateForm(TPrincipal, Principal);

@@ -156,6 +156,7 @@ object Principal: TPrincipal
       Height = 25
       Caption = 'Editar'
       TabOrder = 2
+      OnClick = btnEditarClick
     end
   end
   object ClientDataSetClientes: TClientDataSet
