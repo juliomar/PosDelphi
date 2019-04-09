@@ -8,7 +8,6 @@
 program PosDelphi;
 
 uses
-<<<<<<< HEAD
   Vcl.Forms,
   View.Principal in 'View\View.Principal.pas' {Principal},
   entity.pessoa in 'Model\Entity\entity.pessoa.pas',
@@ -67,7 +66,9 @@ uses
   Controller.SolicitacaoMatricula.Intf in 'Controller\Controller.SolicitacaoMatricula.Intf.pas',
   Controller.SolicitacaoMatricula.Aluno in 'Controller\Controller.SolicitacaoMatricula.Aluno.pas',
   Controller.SolicitacaoMatricula.Atendente in 'Controller\Controller.SolicitacaoMatricula.Atendente.pas',
-  Controller.SolicitacaoMatricula.Coordenador in 'Controller\Controller.SolicitacaoMatricula.Coordenador.pas';
+  Controller.SolicitacaoMatricula.Coordenador in 'Controller\Controller.SolicitacaoMatricula.Coordenador.pas',
+  Unit1 in 'View\Unit1.pas' {Form1},
+  Unit2 in 'View\Unit2.pas';
 
 {$R *.res}
 
