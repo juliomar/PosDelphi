@@ -30,7 +30,11 @@ uses
   Controller.Cadastro in 'Controller\Controller.Cadastro.pas',
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
-  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas';
+  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
+  Pattern.Builder in 'Model\Builder\Pattern.Builder.pas',
+  Pattern.Product in 'Model\Builder\Pattern.Product.pas',
+  Pattern.Director in 'Model\Builder\Pattern.Director.pas',
+  Pattern.ConcreteBuilder in 'Model\Builder\Pattern.ConcreteBuilder.pas';
 
 {$R *.res}
 
