@@ -1,5 +1,5 @@
 unit Pattern.Component;
-\\
+
 interface
 
 type

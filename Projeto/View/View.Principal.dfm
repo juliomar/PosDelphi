@@ -24,6 +24,7 @@ object Principal: TPrincipal
     FixedCols = 0
     RowCount = 1
     FixedRows = 0
+    GradientEndColor = 14079702
     TabOrder = 0
     Visible = False
   end
@@ -31,9 +32,10 @@ object Principal: TPrincipal
     Left = 0
     Top = 79
     Width = 906
-    Height = 309
+    Height = 290
     Align = alClient
     DataSource = DataSourceClientes
+    GradientEndColor = 14079702
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
@@ -92,6 +94,13 @@ object Principal: TPrincipal
       Width = 96
       Height = 13
       Caption = 'Op'#231#245'es de pesquisa'
+    end
+    object lblRelogio: TLabel
+      Left = 688
+      Top = 30
+      Width = 45
+      Height = 13
+      Caption = 'lblRelogio'
     end
     object cbCampo: TComboBox
       Left = 8
@@ -159,6 +168,13 @@ object Principal: TPrincipal
       OnClick = btnEditarClick
     end
   end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 369
+    Width = 906
+    Height = 19
+    Panels = <>
+  end
   object ClientDataSetClientes: TClientDataSet
     Aggregates = <>
     FieldDefs = <
@@ -207,5 +223,14 @@ object Principal: TPrincipal
     DataSet = ClientDataSetClientes
     Left = 204
     Top = 166
+  end
+  object ApplicationEvents1: TApplicationEvents
+    Left = 448
+    Top = 256
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 460
+    Top = 268
   end
 end

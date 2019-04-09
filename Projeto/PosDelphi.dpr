@@ -1,4 +1,4 @@
-{*******************************************************}
+﻿{*******************************************************}
 {                                                       }
 {       Projeto Teste Pós-Delphi                        }
 {                                                       }
@@ -89,7 +89,11 @@ uses
   View.CadCursos in 'View\View.CadCursos.pas' {FCadCursos},
   Model.TemplateMethod.AbstractClass in 'Model\TemplateMethod\Model.TemplateMethod.AbstractClass.pas',
   Model.TemplateMethod.ConcreteClassInsere in 'Model\TemplateMethod\Model.TemplateMethod.ConcreteClassInsere.pas',
-  Model.Log.Logger in 'Model\Log\Model.Log.Logger.pas';
+  Model.Log.Logger in 'Model\Log\Model.Log.Logger.pas',
+  View.Pagamento in 'View\View.Pagamento.pas' {Pagamento},
+  Tipo.Pagamento in 'Model\Pagamento\Tipo.Pagamento.pas',
+  Fabrica.Pagamento in 'Model\Pagamento\Fabrica.Pagamento.pas',
+  Interfaces.Pagamento in 'Model\Pagamento\Interfaces.Pagamento.pas';
 
 {$R *.res}
 
@@ -100,10 +104,11 @@ begin
   if TFLogin.SolicitarLogin then
   begin
     Application.CreateForm(TPrincipal, Principal);
-	  Application.CreateForm(TdmConexao, dmConexao);
-  	Application.CreateForm(TfrmTelaDeInicio, frmTelaDeInicio);
-  	Application.CreateForm(Tfrm_ModelState, frm_ModelState);
-    Application.Run;
+  Application.CreateForm(TdmConexao, dmConexao);
+  Application.CreateForm(TfrmTelaDeInicio, frmTelaDeInicio);
+  Application.CreateForm(Tfrm_ModelState, frm_ModelState);
+  Application.CreateForm(TPagamento, Pagamento);
+  Application.Run;
   end
   else
     Application.Terminate;

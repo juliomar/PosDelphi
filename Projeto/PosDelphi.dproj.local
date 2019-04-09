@@ -1,84 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <Transactions>
-    <Transaction>2019/03/25 21:10:03.546,=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/03/25 21:11:32.005,D:\AULAS UNOESC\PosDelphi\Projeto\Memento\memento.model.interfaces.pas=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/03/25 21:20:37.556,=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/03/25 21:20:53.746,D:\AULAS UNOESC\PosDelphi\Projeto\Memento\memento.model.memento.pas=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/03/25 21:24:24.684,=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/03/25 21:24:36.811,D:\AULAS UNOESC\PosDelphi\Projeto\Memento\memento.model.aluno.pas=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
-  </Transactions>
-=======
-	<Transactions>
-    <Transaction>2019/03/26 16:04:03.000.390,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/03/26 16:04:49.000.775,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/03/26 16:04:49.000.776,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.dfm</Transaction>
-    <Transaction>2019/03/27 16:33:46.000.589,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Cursos.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.dfm</Transaction>
-    <Transaction>2019/03/27 16:33:46.000.589,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Cursos.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.pas</Transaction>
-    <Transaction>2019/04/01 15:28:45.000.245,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/01 15:29:14.000.162,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Inicial.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/01 15:29:14.000.162,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Inicial.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.dfm</Transaction>
-    <Transaction>2019/04/04 12:28:37.000.181,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/04 12:31:10.000.693,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\AbstractFactory\Model.AbstractFactoy.Interfaces.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/04 12:35:48.000.399,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/04 12:36:04.000.551,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\AbstractFactory\Model.NomeCurso.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/04 12:40:35.000.522,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/04 12:40:57.000.427,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\AbstractFactory\Model.Ifactoy.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/05 08:34:34.000.770,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/05 08:35:06.000.613,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.Model.pas</Transaction>
-    <Transaction>2019/04/05 08:44:27.000.791,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/05 08:45:48.000.502,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.Model.ItemCurso.pas</Transaction>
-    <Transaction>2019/04/05 09:17:15.000.587,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/05 09:17:58.000.044,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.Model.ItemCurso.Regras.Vendas.pas</Transaction>
-    <Transaction>2019/04/05 11:12:06.000.879,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/05 11:13:21.000.673,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.Model.ItemCursos.Regras.BolsasDeEstudo.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/05 12:07:13.000.201,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/05 12:08:13.000.440,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.PrecoCursos.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/05 12:08:13.000.440,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.PrecoCursos.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.dfm</Transaction>
-    <Transaction>2019/04/06 09:14:16.000.630,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.Model.Interfaces.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.Model.pas</Transaction>
-    <Transaction>2019/04/06 09:20:51.000.613,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.Model.Venda.Simples.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.Model.ItemCurso.Regras.Vendas.pas</Transaction>
-    <Transaction>2019/04/06 09:23:54.000.298,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.Model.Venda.Bolsa.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.Model.ItemCursos.Regras.BolsasDeEstudo.pas</Transaction>
-    <Transaction>2019/04/06 09:26:30.000.886,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Calculo.Preco.Cursos.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.PrecoCursos.dfm</Transaction>
-    <Transaction>2019/04/06 09:26:30.000.886,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Calculo.Preco.Cursos.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.PrecoCursos.pas</Transaction>
-    <Transaction>2019/04/06 10:10:06.000.200,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/06 10:10:31.000.315,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.View.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/06 10:10:31.000.315,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.View.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.dfm</Transaction>
-    <Transaction>2019/04/06 10:25:37.000.749,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Visitor\Visitor.View.pas=</Transaction>
-    <Transaction>2019/04/06 14:40:17.000.909,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/06 14:41:38.000.818,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Intercaces.pas</Transaction>
-    <Transaction>2019/04/06 14:43:31.000.625,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/06 14:44:29.000.252,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Item.pas</Transaction>
-    <Transaction>2019/04/06 14:46:09.000.856,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/06 14:46:48.000.429,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Venda.pas</Transaction>
-    <Transaction>2019/04/06 14:48:07.000.668,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/06 14:48:55.000.613,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Bolsas.pas</Transaction>
-    <Transaction>2019/04/06 14:50:27.000.908,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit3.pas</Transaction>
-    <Transaction>2019/04/06 14:51:05.000.939,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit3.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Calculo.Curso.dfm</Transaction>
-    <Transaction>2019/04/06 14:51:05.000.939,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit3.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Calculo.Curso.pas</Transaction>
-    <Transaction>2019/04/06 15:17:58.000.276,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Item.pas=</Transaction>
-    <Transaction>2019/04/06 15:18:05.000.417,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Venda.pas=</Transaction>
-    <Transaction>2019/04/06 15:18:12.000.476,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\PadraoDeProjetoVisitor\Visitor.Model.Bolsas.pas=</Transaction>
-    <Transaction>2019/04/06 15:18:27.000.887,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Calculo.Curso.pas=</Transaction>
-  </Transactions>
-	<ProjectSortOrder AutoSort="0" SortType="0">
+  <ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="AbstractFactory"/>
     <File Path="AbstractFactory\Model.AbstractFactoy.Interfaces.pas"/>
     <File Path="AbstractFactory\Model.Ifactoy.pas"/>
     <File Path="AbstractFactory\Model.NomeCurso.pas"/>
-=======
-	<ProjectSortOrder AutoSort="0" SortType="0">
->>>>>>> df883f8237e8f1177fa3a32f5794d5ce970c835a
+    <File Path="Adapter"/>
+    <File Path="Adapter\uAdapter.pas"/>
+    <File Path="Adapter\uComunicador.pas"/>
+    <File Path="Adapter\uInterfaceViaCEP.pas"/>
+    <File Path="Adapter\uTela.pas"/>
+    <File Path="Adapter\uTela.dfm"/>
+    <File Path="Adapter\uWebServiceCorreios.pas"/>
+    <File Path="Adapter\uWebServiceViaCEP.pas"/>
+    <File Path="Adapter\uWSDL_Correios.pas"/>
     <File Path="Controller"/>
     <File Path="Controller\Controller.Cadastro.pas"/>
     <File Path="Controller\Controller.Interfaces.pas"/>
+    <File Path="Controller\Controller.SolicitacaoMatricula.Aluno.pas"/>
+    <File Path="Controller\Controller.SolicitacaoMatricula.Atendente.pas"/>
+    <File Path="Controller\Controller.SolicitacaoMatricula.Coordenador.pas"/>
+    <File Path="Controller\Controller.SolicitacaoMatricula.Intf.pas"/>
+    <File Path="Decorator"/>
+    <File Path="Decorator\Pattern.Component.pas"/>
+    <File Path="Decorator\Pattern.ConcreteComponent.pas"/>
+    <File Path="Decorator\Pattern.Decorator.DataHora.pas"/>
+    <File Path="Decorator\Pattern.Decorator.Executavel.pas"/>
+    <File Path="Decorator\Pattern.Decorator.NomeUsuario.pas"/>
+    <File Path="Decorator\Pattern.Decorator.pas"/>
+    <File Path="Memento"/>
+    <File Path="Memento\memento.model.aluno.pas"/>
+    <File Path="Memento\memento.model.interfaces.pas"/>
+    <File Path="Memento\memento.model.memento.pas"/>
     <File Path="Model"/>
+    <File Path="Model\Adapter"/>
+    <File Path="Model\Adapter\Adapter.Controller.Itens.pas"/>
+    <File Path="Model\Adapter\Adapter.Model.Interfaces.pas"/>
+    <File Path="Model\Adapter\Adapter.Model.Itens.pas"/>
+    <File Path="Model\Builder"/>
+    <File Path="Model\Builder\Model.Builder.ConcretBuilder.pas"/>
+    <File Path="Model\Builder\Model.Builder.Director.pas"/>
+    <File Path="Model\Builder\Model.Builder.Interfaces.pas"/>
+    <File Path="Model\Builder\Model.Builder.Product.pas"/>
     <File Path="Model\Cadastro"/>
     <File Path="Model\Cadastro\Model.Cadastro.Interfaces.pas"/>
     <File Path="Model\Cadastro\Model.Cadastro.pas"/>
@@ -98,103 +61,62 @@
     <File Path="Model\Exportador\Model.Exportador.FormatoXLS.pas"/>
     <File Path="Model\Exportador\Model.Exportador.InterfaceFormato.pas"/>
     <File Path="Model\Exportador\Model.Exportador.Interfaces.pas"/>
+    <File Path="Model\Exportador\Pattern.Facade.Exportar.Alunos.pas"/>
     <File Path="Model\Iterator"/>
     <File Path="Model\Iterator\Model.Iterator.Interfaces.pas"/>
+    <File Path="Model\Iterator\Model.Iterator.pas"/>
     <File Path="Model\Iterator\Model.Lista.Factory.pas"/>
     <File Path="Model\Iterator\Model.Lista.List.pas"/>
     <File Path="Model\Iterator\Model.Lista.ObjectList.pas"/>
-<<<<<<< HEAD
-    <File Path="Model\Model.Interfaces.pas"/>
-    <File Path="View"/>
-    <File Path="View\View.Calculo.Preco.Cursos.pas"/>
-    <File Path="View\View.Calculo.Preco.Cursos.dfm"/>
-    <File Path="View\View.Inicial.pas"/>
-    <File Path="View\View.Inicial.dfm"/>
-    <File Path="View\View.Principal.pas"/>
-    <File Path="View\View.Principal.dfm"/>
-    <File Path="View\View.Tabela.Cursos.pas"/>
-    <File Path="View\View.Tabela.Cursos.dfm"/>
-    <File Path="Visitor"/>
-    <File Path="Visitor\Visitor.Model.Interfaces.pas"/>
-    <File Path="Visitor\Visitor.Model.ItemCurso.pas"/>
-    <File Path="Visitor\Visitor.Model.Venda.Bolsa.pas"/>
-    <File Path="Visitor\Visitor.Model.Venda.Simples.pas"/>
-  </ProjectSortOrder>
->>>>>>> 4ae2abe95c1ac8b4f33a401565f46a5923444081
-=======
-	<Transactions>
-    <Transaction>2019/03/29 11:18:40.000.645,=D:\PosDelphi\Projeto\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/03/29 11:19:11.000.165,D:\PosDelphi\Projeto\PosDelphi\Projeto\Unit1.pas=D:\PosDelphi\Projeto\PosDelphi\Projeto\Model\Exportador\Pattern.Facade.Alunos.pas</Transaction>
-    <Transaction>2019/03/29 11:22:23.000.768,D:\PosDelphi\Projeto\PosDelphi\Projeto\Model\Exportador\Pattern.Facade.Alunos.pas=D:\PosDelphi\Projeto\PosDelphi\Projeto\Model\Exportador\Pattern.Facade.Exportar.Alunos.pas</Transaction>
-  </Transactions>
->>>>>>> 61d1ea28c1380d3acd85e48f6795618ed294a27e
-=======
-	<Transactions>
-    <Transaction>2019/04/07 11:39:56.000.423,=C:\Users\mathe\Desktop\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/07 11:58:00.000.545,C:\Users\mathe\Desktop\PosDelphi\Projeto\View\Unit1.dfm=C:\Users\mathe\Desktop\PosDelphi\Projeto\Unit1.dfm</Transaction>
-    <Transaction>2019/04/07 11:58:00.000.545,C:\Users\mathe\Desktop\PosDelphi\Projeto\View\Unit1.pas=C:\Users\mathe\Desktop\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/07 12:00:03.000.937,=C:\Users\mathe\Desktop\PosDelphi\Projeto\Unit2.pas</Transaction>
-    <Transaction>2019/04/07 12:58:46.000.610,C:\Users\mathe\Desktop\PosDelphi\Projeto\View\Unit2.pas=C:\Users\mathe\Desktop\PosDelphi\Projeto\Unit2.pas</Transaction>
-  </Transactions>
->>>>>>> b0b9edb328a4e7b1373603e0735d573d0b8dd116
-=======
-  <Transactions>
-    <Transaction>2019/04/08 00:54:09.626,=C:\Unoesc\posDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 00:54:44.309,C:\Unoesc\posDelphi\Projeto\Model\Observer\Model.Observer.pas=C:\Unoesc\posDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 00:54:56.142,=C:\Unoesc\posDelphi\Projeto\ModelSupport_PosDelphi\default.txaPackage</Transaction>
-    <Transaction>2019/04/08 00:55:01.713,=C:\Unoesc\posDelphi\Projeto\ModelSupport_PosDelphi\default.txvpck</Transaction>
-    <Transaction>2019/04/08 00:55:10.179,=C:\Unoesc\posDelphi\Projeto\ModelSupport_PosDelphi\Model\default.txvpck</Transaction>
-    <Transaction>2019/04/08 00:55:10.307,=C:\Unoesc\posDelphi\Projeto\ModelSupport_PosDelphi\PosDelphi\default.txvpck</Transaction>
-  </Transactions>
->>>>>>> fb5d20e4ff789d3c2c1fd48fc05bf32ef436f7ed
-=======
+    <File Path="Model\Log"/>
+    <File Path="Model\Log\Model.Log.Logger.pas"/>
+    <File Path="Model\Login"/>
+    <File Path="Model\Login\Login.AbstractFactory.pas"/>
+    <File Path="Model\Login\Login.Aluno.pas"/>
+    <File Path="Model\Login\Login.ConcreteFactory.pas"/>
+    <File Path="Model\Login\Login.Professor.pas"/>
+    <File Path="Model\Login\Login.Types.pas"/>
+    <File Path="Model\Login\Login.UsuarioLogado.pas"/>
+    <File Path="Model\Observer"/>
+    <File Path="Model\Observer\Model.Observer.pas"/>
     <File Path="Model\State"/>
     <File Path="Model\State\Model.State.Aluno.Ativo.pas"/>
     <File Path="Model\State\Model.State.Aluno.Inativo.pas"/>
     <File Path="Model\State\Model.State.Aluno.Interfaces.pas"/>
     <File Path="Model\State\Model.State.Aluno.Matriculado.pas"/>
     <File Path="Model\State\Model.State.Aluno.pas"/>
+    <File Path="Model\TemplateMethod"/>
+    <File Path="Model\TemplateMethod\Model.TemplateMethod.AbstractClass.pas"/>
+    <File Path="Model\TemplateMethod\Model.TemplateMethod.ConcreteClassInsere.pas"/>
     <File Path="Model\Model.Interfaces.pas"/>
+    <File Path="Model\Pagamento"/>
+    <File Path="Model\Pagamento\Tipo.Pagamento.pas"/>
+    <File Path="Model\Pagamento\Fabrica.Pagamento.pas"/>
+    <File Path="Model\Pagamento\Interfaces.Pagamento.pas"/>
     <File Path="View"/>
+    <File Path="View\Unit1.pas"/>
+    <File Path="View\Unit1.dfm"/>
+    <File Path="View\Unit2.pas"/>
+    <File Path="View\View.CadCursos.pas"/>
+    <File Path="View\View.CadCursos.dfm"/>
+    <File Path="View\View.Calculo.Preco.Cursos.pas"/>
+    <File Path="View\View.Calculo.Preco.Cursos.dfm"/>
+    <File Path="View\View.Inicial.pas"/>
+    <File Path="View\View.Inicial.dfm"/>
+    <File Path="View\View.Login.pas"/>
+    <File Path="View\View.Login.dfm"/>
+    <File Path="View\View.ModelState.pas"/>
+    <File Path="View\View.ModelState.dfm"/>
     <File Path="View\View.Principal.pas"/>
     <File Path="View\View.Principal.dfm"/>
+    <File Path="View\View.Tabela.Cursos.pas"/>
+    <File Path="View\View.Tabela.Cursos.dfm"/>
+    <File Path="View\View.Pagamento.pas"/>
+    <File Path="View\View.Pagamento.dfm"/>
+    <File Path="Visitor"/>
+    <File Path="Visitor\Visitor.Model.Interfaces.pas"/>
+    <File Path="Visitor\Visitor.Model.ItemCurso.pas"/>
+    <File Path="Visitor\Visitor.Model.Venda.Bolsa.pas"/>
+    <File Path="Visitor\Visitor.Model.Venda.Simples.pas"/>
   </ProjectSortOrder>
->>>>>>> df883f8237e8f1177fa3a32f5794d5ce970c835a
-=======
-	<Transactions>
-    <Transaction>2019/04/07 22:32:56.000.685,=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\UCadCursos.pas</Transaction>
-    <Transaction>2019/04/07 22:33:27.000.748,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.dfm=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\UCadCursos.dfm</Transaction>
-    <Transaction>2019/04/07 22:33:27.000.748,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.pas=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\UCadCursos.pas</Transaction>
-    <Transaction>2019/04/07 22:34:24.000.283,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.CadCursos.dfm=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.dfm</Transaction>
-    <Transaction>2019/04/07 22:34:24.000.283,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.CadCursos.CadCursos=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.CadCursos</Transaction>
-    <Transaction>2019/04/08 17:10:14.507,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 17:10:21.257,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\default.txaPackage</Transaction>
-    <Transaction>2019/04/08 17:10:26.842,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\default.txvpck</Transaction>
-    <Transaction>2019/04/08 17:10:33.656,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\Unit1\default.txvpck</Transaction>
-    <Transaction>2019/04/08 17:10:33.716,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\PosDelphi\default.txvpck</Transaction>
-    <Transaction>2019/04/08 17:10:51.839,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\Unit1\default.txaPackage</Transaction>
-    <Transaction>2019/04/08 17:13:43.518,C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Model\TemplateMethod\Model.TemplateMethod.AbstractClass.pas=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 17:25:42.568,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 17:25:52.549,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\Model\TemplateMethod\default.txaPackage</Transaction>
-    <Transaction>2019/04/08 17:25:52.576,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\Model\TemplateMethod\AbstractClass\default.txaPackage</Transaction>
-    <Transaction>2019/04/08 17:26:16.981,c:\rui\posgraduaçãodelphi\posdelphi\projeto\AbstractClass.pas=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 17:26:17.131,c:\rui\posgraduaçãodelphi\posdelphi\projeto\modelsupport_posdelphi\unit1\default.txapackage=</Transaction>
-    <Transaction>2019/04/08 17:26:17.165,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\AbstractClass\default.txaPackage</Transaction>
-    <Transaction>2019/04/08 17:26:17.169,c:\rui\posgraduaçãodelphi\posdelphi\projeto\modelsupport_posdelphi\unit1\default.txvpck=</Transaction>
-    <Transaction>2019/04/08 17:26:17.201,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\AbstractClass\default.txvpck</Transaction>
-    <Transaction>2019/04/08 17:26:35.801,c:\rui\posgraduaçãodelphi\posdelphi\projeto\InsereDados.pas=c:\rui\posgraduaçãodelphi\posdelphi\projeto\AbstractClass.pas</Transaction>
-    <Transaction>2019/04/08 17:26:35.918,c:\rui\posgraduaçãodelphi\posdelphi\projeto\modelsupport_posdelphi\abstractclass\default.txapackage=</Transaction>
-    <Transaction>2019/04/08 17:26:35.951,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\InsereDados\default.txaPackage</Transaction>
-    <Transaction>2019/04/08 17:26:35.956,c:\rui\posgraduaçãodelphi\posdelphi\projeto\modelsupport_posdelphi\abstractclass\default.txvpck=</Transaction>
-    <Transaction>2019/04/08 17:26:35.986,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\InsereDados\default.txvpck</Transaction>
-    <Transaction>2019/04/08 17:28:45.677,C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Model\TemplateMethod\Model.TemplateMethod.ConcreteClassInsere.pas=c:\rui\posgraduaçãodelphi\posdelphi\projeto\InsereDados.pas</Transaction>
-  </Transactions>
->>>>>>> b3415b9fcdaaf4e9f9569e694185b753182c7f5f
-=======
-  <Transactions>
-    <Transaction>2019/04/08 20:24:52.518,=C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 20:27:56.067,C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Model\Log\Model.Log.pas=C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 20:29:06.251,C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Model\Log\Model.Log.Logger.pas=C:\Users\uteif\OneDrive\Documentos\PosDelphi\PosDelphi\Projeto\Model\Log\Model.Log.pas</Transaction>
-  </Transactions>
->>>>>>> cfa0fcf7afd7ba333b7dec4f1dc3964546896eca
 </BorlandProject>
