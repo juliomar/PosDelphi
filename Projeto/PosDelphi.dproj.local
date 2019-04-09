@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
+<<<<<<< HEAD
   <Transactions>
     <Transaction>2019/03/25 21:10:03.546,=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
     <Transaction>2019/03/25 21:11:32.005,D:\AULAS UNOESC\PosDelphi\Projeto\Memento\memento.model.interfaces.pas=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
@@ -8,4 +9,54 @@
     <Transaction>2019/03/25 21:24:24.684,=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
     <Transaction>2019/03/25 21:24:36.811,D:\AULAS UNOESC\PosDelphi\Projeto\Memento\memento.model.aluno.pas=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
   </Transactions>
+=======
+	<Transactions>
+    <Transaction>2019/03/26 16:04:03.000.390,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/03/26 16:04:49.000.776,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.dfm</Transaction>
+    <Transaction>2019/03/26 16:04:49.000.775,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.pas</Transaction>
+    <Transaction>2019/03/27 16:33:46.000.589,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Cursos.dfm</Transaction>
+    <Transaction>2019/03/27 16:33:46.000.589,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Professor.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Tabela.Cursos.pas</Transaction>
+    <Transaction>2019/04/01 15:28:45.000.245,=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/01 15:29:14.000.162,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.dfm=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Inicial.dfm</Transaction>
+    <Transaction>2019/04/01 15:29:14.000.162,C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\Unit1.pas=C:\Users\regia\Documents\PosGraduacaoDelphi\Nova pasta\PosDelphi\Projeto\View\View.Inicial.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Controller"/>
+    <File Path="Controller\Controller.Cadastro.pas"/>
+    <File Path="Controller\Controller.Interfaces.pas"/>
+    <File Path="Model"/>
+    <File Path="Model\Cadastro"/>
+    <File Path="Model\Cadastro\Model.Cadastro.Interfaces.pas"/>
+    <File Path="Model\Cadastro\Model.Cadastro.pas"/>
+    <File Path="Model\Conexao"/>
+    <File Path="Model\Conexao\Model.Conexao.pas"/>
+    <File Path="Model\Conexao\Model.Conexao.dfm"/>
+    <File Path="Model\Entity"/>
+    <File Path="Model\Entity\entity.aluno.pas"/>
+    <File Path="Model\Entity\entity.curso.pas"/>
+    <File Path="Model\Entity\entity.formacao.pas"/>
+    <File Path="Model\Entity\entity.pessoa.pas"/>
+    <File Path="Model\Entity\entity.professor.pas"/>
+    <File Path="Model\Entity\entity.titulo.pas"/>
+    <File Path="Model\Exportador"/>
+    <File Path="Model\Exportador\Model.Exportador.Alunos.pas"/>
+    <File Path="Model\Exportador\Model.Exportador.FormatoHTML.pas"/>
+    <File Path="Model\Exportador\Model.Exportador.FormatoXLS.pas"/>
+    <File Path="Model\Exportador\Model.Exportador.InterfaceFormato.pas"/>
+    <File Path="Model\Exportador\Model.Exportador.Interfaces.pas"/>
+    <File Path="Model\Iterator"/>
+    <File Path="Model\Iterator\Model.Iterator.Interfaces.pas"/>
+    <File Path="Model\Iterator\Model.Lista.Factory.pas"/>
+    <File Path="Model\Iterator\Model.Lista.List.pas"/>
+    <File Path="Model\Iterator\Model.Lista.ObjectList.pas"/>
+    <File Path="Model\Model.Interfaces.pas"/>
+    <File Path="View"/>
+    <File Path="View\View.Principal.pas"/>
+    <File Path="View\View.Principal.dfm"/>
+    <File Path="View\View.Tabela.Cursos.pas"/>
+    <File Path="View\View.Tabela.Cursos.dfm"/>
+    <File Path="View\View.Inicial.pas"/>
+    <File Path="View\View.Inicial.dfm"/>
+  </ProjectSortOrder>
+>>>>>>> 4ae2abe95c1ac8b4f33a401565f46a5923444081
 </BorlandProject>

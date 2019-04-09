@@ -8,6 +8,7 @@
 program PosDelphi;
 
 uses
+<<<<<<< HEAD
   Vcl.Forms,
   View.Principal in 'View\View.Principal.pas' {Principal},
   entity.pessoa in 'Model\Entity\entity.pessoa.pas',
@@ -40,7 +41,9 @@ uses
   Login.Professor in 'Model\Login\Login.Professor.pas',
   Login.ConcreteFactory in 'Model\Login\Login.ConcreteFactory.pas',
   Login.Types in 'Model\Login\Login.Types.pas',
-  Login.UsuarioLogado in 'Model\Login\Login.UsuarioLogado.pas';
+  Login.UsuarioLogado in 'Model\Login\Login.UsuarioLogado.pas',
+  View.Tabela.Cursos in 'View\View.Tabela.Cursos.pas' {frmCurso},
+  View.Inicial in 'View\View.Inicial.pas' {frmTelaDeInicio};
 
 {$R *.res}
 
@@ -48,9 +51,12 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+
   if TFLogin.SolicitarLogin then
   begin
     Application.CreateForm(TPrincipal, Principal);
+	  Application.CreateForm(TdmConexao, dmConexao);
+  	Application.CreateForm(TfrmTelaDeInicio, frmTelaDeInicio);
     Application.Run;
   end
   else
