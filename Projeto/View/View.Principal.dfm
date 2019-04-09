@@ -93,19 +93,6 @@ object Principal: TPrincipal
       Height = 13
       Caption = 'Op'#231#245'es de pesquisa'
     end
-    object lblRelogio: TLabel
-      Left = 824
-      Top = 0
-      Width = 66
-      Height = 19
-      Caption = '00:00:00'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
     object cbCampo: TComboBox
       Left = 8
       Top = 39
@@ -134,6 +121,15 @@ object Principal: TPrincipal
       Height = 25
       Caption = 'Pesquisar'
       TabOrder = 3
+    end
+    object Button1: TButton
+      Left = 607
+      Top = 37
+      Width = 75
+      Height = 25
+      Caption = 'Consulta CEP'
+      TabOrder = 4
+      OnClick = Button1Click
     end
   end
   object pnAcoes: TPanel
@@ -219,10 +215,5 @@ object Principal: TPrincipal
     DataSet = ClientDataSetClientes
     Left = 204
     Top = 166
-  end
-  object Timer1: TTimer
-    OnTimer = Timer1Timer
-    Left = 851
-    Top = 27
   end
 end

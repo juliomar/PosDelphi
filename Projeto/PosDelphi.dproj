@@ -135,6 +135,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
 =======
@@ -3669,6 +3670,20 @@
         <None Include="ModelSupport_PosDelphi\default.txvpck"/>
         <None Include="ModelSupport_PosDelphi\Model\default.txvpck"/>
         <None Include="ModelSupport_PosDelphi\PosDelphi\default.txvpck"/>
+=======
+        <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
+        <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
+        <DCCReference Include="Adapter\uAdapter.pas"/>
+        <DCCReference Include="Adapter\uComunicador.pas"/>
+        <DCCReference Include="Adapter\uInterfaceViaCEP.pas"/>
+        <DCCReference Include="Adapter\uTela.pas">
+            <Form>fTela</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Adapter\uWebServiceCorreios.pas"/>
+        <DCCReference Include="Adapter\uWebServiceViaCEP.pas"/>
+        <DCCReference Include="Adapter\uWSDL_Correios.pas"/>
+>>>>>>> 4d55c95a30e9058fa8a06bdb859d3804f7838b56
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -4188,7 +4203,10 @@
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+<<<<<<< HEAD
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
+=======
+>>>>>>> 4d55c95a30e9058fa8a06bdb859d3804f7838b56
                 <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
             </Deployment>
             <Platforms>

@@ -131,6 +131,7 @@ uses
   Model.Exportador.Alunos,
   Model.Exportador.FormatoXLS,
   Model.Exportador.FormatoHTML,
+  Controller.Cadastro, uTela,
 
   Model.Builder.Interfaces,
   Model.Builder.Product,
@@ -231,6 +232,13 @@ begin
 
   Form1 := TForm1.Create(Application);
   Form1.Show;
+
+  fTela := TfTela.Create(application);
+  try
+    fTela.ShowModal;
+  finally
+    FreeAndNil(fTela);
+  end;
 end;
 
 procedure TPrincipal.DefinicaoStringGrid;
