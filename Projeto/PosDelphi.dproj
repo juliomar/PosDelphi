@@ -132,6 +132,7 @@
         <DCCReference Include="Controller\Controller.Cadastro.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.Factory.pas"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
 =======
@@ -143,6 +144,14 @@
         <DCCReference Include="Model\Builder\Model.Builder.ConcretBuilder.pas"/>
         <DCCReference Include="Model\Builder\Model.Builder.Director.pas"/>
 >>>>>>> 2a721c920341658c2a07c6c3ddfd8d7e8a5b65f7
+=======
+        <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
+        <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
+        <DCCReference Include="Controller\Controller.SolicitacaoMatricula.Intf.pas"/>
+        <DCCReference Include="Controller\Controller.SolicitacaoMatricula.Aluno.pas"/>
+        <DCCReference Include="Controller\Controller.SolicitacaoMatricula.Atendente.pas"/>
+        <DCCReference Include="Controller\Controller.SolicitacaoMatricula.Coordenador.pas"/>
+>>>>>>> 07424dc3b3f6b753b6c7becaf5c19adf5285e93d
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -163,6 +172,7 @@
                 <Source>
                     <Source Name="MainSource">PosDelphi.dpr</Source>
                 </Source>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Excluded_Packages/>
 =======
@@ -3017,6 +3027,8 @@
                 <Source>
                     <Source Name="MainSource">PosDelphi.dpr</Source>
                 </Source>
+=======
+>>>>>>> 07424dc3b3f6b753b6c7becaf5c19adf5285e93d
                 <Excluded_Packages/>
             </Delphi.Personality>
             <Deployment Version="3">
@@ -3463,6 +3475,9 @@
             <Platforms>
                 <Platform value="Win32">True</Platform>
             </Platforms>
+            <UnitTesting>
+                <TestProjectName>D:\PosDelphi\Projeto\Test\PosDelphiTests.dproj</TestProjectName>
+            </UnitTesting>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>
