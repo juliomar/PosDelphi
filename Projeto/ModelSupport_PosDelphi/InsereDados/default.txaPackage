@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <node uin="6gdh10inag976pozh_n">
+    <property name="$metaclass" value="Pattern" />
+    <property name="$name" value="Template Method" />
+    <property name="PatternUPID" value="{2004-11-30-7-31-41-548-68842}" />
+    <link uin="fj0x089ubg92c01ci_l">
+      <property name="$metaclass" value="DesignPatternLink" />
+      <property name="$name" value="TAbstractClass" />
+      <property name="@supplierRole" value="_TemplateContext" />
+      <participant referencedUin="design:node:::6gdh10inag976pozh_n" role="Client" />
+    </link>
+    <link uin="tfwwqrhtdh92744ph_l">
+      <property name="$metaclass" value="DesignPatternLink" />
+      <property name="$name" value="TConcreteClass" />
+      <property name="@supplierRole" value="_Implementor" />
+      <participant referencedUin="design:node:::6gdh10inag976pozh_n" role="Client" />
+    </link>
+  </node>
+</nodeSet>

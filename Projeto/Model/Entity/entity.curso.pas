@@ -25,6 +25,15 @@ uses
   ormbr.mapping.attributes;
 
 type
+//  [Enumeration(etChar, 'A,S,B')]
+//  TRegime = (Anual, Semestral, Bimestral);
+//
+//  [Enumeration(etChar, 'P,A')]
+//  TSituacao= (Parado, Andamento);
+//
+//  [Enumeration(etChar,'A,I')]
+//  TStatus = (Ativo, Inativo);
+
   [ Entity ]
   [ Table('Curso', 'Tipo de cursos') ]
   [ PrimaryKey('id', AutoInc, Ascending, True, 'Chave prim�ria') ]
@@ -38,6 +47,13 @@ type
     fid              : integer;
     fnotaenad        : double;
     fareaconhecimento: string;
+//    fdatainicio      : TDateTime;
+//    fdatafinal       : TDateTime;
+//    fregimeletivo    : TRegime;
+//    fsituacaocurso   : TSituacao;
+//    fturma           : string;
+//    fstatuscurso     : TStatus;
+//    fvalorcurso      : Double;
   public
 
 

@@ -85,7 +85,10 @@ uses
   Model.State.Aluno.Interfaces in 'Model\State\Model.State.Aluno.Interfaces.pas',
   Model.State.Aluno.Matriculado in 'Model\State\Model.State.Aluno.Matriculado.pas',
   Model.State.Aluno in 'Model\State\Model.State.Aluno.pas',
-  View.ModelState in 'View\View.ModelState.pas' {frm_ModelState};
+  View.ModelState in 'View\View.ModelState.pas' {frm_ModelState},
+  View.CadCursos in 'View\View.CadCursos.pas' {FCadCursos},
+  Model.TemplateMethod.AbstractClass in 'Model\TemplateMethod\Model.TemplateMethod.AbstractClass.pas',
+  Model.TemplateMethod.ConcreteClassInsere in 'Model\TemplateMethod\Model.TemplateMethod.ConcreteClassInsere.pas';
 
 {$R *.res}
 
@@ -93,7 +96,6 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-
 
   if TFLogin.SolicitarLogin then
   begin
@@ -105,4 +107,5 @@ begin
   end
   else
     Application.Terminate;
+
 end.

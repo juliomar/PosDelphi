@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <Transactions>
     <Transaction>2019/03/25 21:10:03.546,=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
     <Transaction>2019/03/25 21:11:32.005,D:\AULAS UNOESC\PosDelphi\Projeto\Memento\memento.model.interfaces.pas=D:\AULAS UNOESC\PosDelphi\Projeto\Unit1.pas</Transaction>
@@ -158,4 +159,34 @@
     <File Path="View\View.Principal.dfm"/>
   </ProjectSortOrder>
 >>>>>>> df883f8237e8f1177fa3a32f5794d5ce970c835a
+=======
+	<Transactions>
+    <Transaction>2019/04/07 22:32:56.000.685,=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\UCadCursos.pas</Transaction>
+    <Transaction>2019/04/07 22:33:27.000.748,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.dfm=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\UCadCursos.dfm</Transaction>
+    <Transaction>2019/04/07 22:33:27.000.748,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.pas=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\UCadCursos.pas</Transaction>
+    <Transaction>2019/04/07 22:34:24.000.283,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.CadCursos.dfm=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.dfm</Transaction>
+    <Transaction>2019/04/07 22:34:24.000.283,F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.CadCursos.CadCursos=F:\Dados Rui\Pos Graduação Delphi\PosDelphi\Projeto\View\View.CadCursos</Transaction>
+    <Transaction>2019/04/08 17:10:14.507,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 17:10:21.257,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\default.txaPackage</Transaction>
+    <Transaction>2019/04/08 17:10:26.842,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\default.txvpck</Transaction>
+    <Transaction>2019/04/08 17:10:33.656,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\Unit1\default.txvpck</Transaction>
+    <Transaction>2019/04/08 17:10:33.716,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\PosDelphi\default.txvpck</Transaction>
+    <Transaction>2019/04/08 17:10:51.839,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\Unit1\default.txaPackage</Transaction>
+    <Transaction>2019/04/08 17:13:43.518,C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Model\TemplateMethod\Model.TemplateMethod.AbstractClass.pas=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 17:25:42.568,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 17:25:52.549,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\Model\TemplateMethod\default.txaPackage</Transaction>
+    <Transaction>2019/04/08 17:25:52.576,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\Model\TemplateMethod\AbstractClass\default.txaPackage</Transaction>
+    <Transaction>2019/04/08 17:26:16.981,c:\rui\posgraduaçãodelphi\posdelphi\projeto\AbstractClass.pas=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 17:26:17.131,c:\rui\posgraduaçãodelphi\posdelphi\projeto\modelsupport_posdelphi\unit1\default.txapackage=</Transaction>
+    <Transaction>2019/04/08 17:26:17.165,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\AbstractClass\default.txaPackage</Transaction>
+    <Transaction>2019/04/08 17:26:17.169,c:\rui\posgraduaçãodelphi\posdelphi\projeto\modelsupport_posdelphi\unit1\default.txvpck=</Transaction>
+    <Transaction>2019/04/08 17:26:17.201,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\AbstractClass\default.txvpck</Transaction>
+    <Transaction>2019/04/08 17:26:35.801,c:\rui\posgraduaçãodelphi\posdelphi\projeto\InsereDados.pas=c:\rui\posgraduaçãodelphi\posdelphi\projeto\AbstractClass.pas</Transaction>
+    <Transaction>2019/04/08 17:26:35.918,c:\rui\posgraduaçãodelphi\posdelphi\projeto\modelsupport_posdelphi\abstractclass\default.txapackage=</Transaction>
+    <Transaction>2019/04/08 17:26:35.951,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\InsereDados\default.txaPackage</Transaction>
+    <Transaction>2019/04/08 17:26:35.956,c:\rui\posgraduaçãodelphi\posdelphi\projeto\modelsupport_posdelphi\abstractclass\default.txvpck=</Transaction>
+    <Transaction>2019/04/08 17:26:35.986,=C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\ModelSupport_PosDelphi\InsereDados\default.txvpck</Transaction>
+    <Transaction>2019/04/08 17:28:45.677,C:\Rui\PosGraduaçãoDelphi\PosDelphi\Projeto\Model\TemplateMethod\Model.TemplateMethod.ConcreteClassInsere.pas=c:\rui\posgraduaçãodelphi\posdelphi\projeto\InsereDados.pas</Transaction>
+  </Transactions>
+>>>>>>> b3415b9fcdaaf4e9f9569e694185b753182c7f5f
 </BorlandProject>
