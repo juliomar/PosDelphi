@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="ku5xi4oh4w6gvfack_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:PosDelphi:InsereDados.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="design:node:::6gdh10inag976pozh_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="220,60,270,94" />
+    </reference>
+  </view>
+</nodeSet>

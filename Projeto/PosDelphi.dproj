@@ -107,7 +107,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="View\View.Principal.pas">
-            <Form>Principal</Form>
+            <Form>FrmCadCursos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Model\Entity\entity.pessoa.pas"/>
@@ -133,6 +133,7 @@
         <DCCReference Include="Model\Iterator\Model.Iterator.Interfaces.pas"/>
         <DCCReference Include="Controller\Controller.Cadastro.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.Factory.pas"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,6 +180,23 @@
             <FormType>dfm</FormType>
         </DCCReference>
 >>>>>>> df883f8237e8f1177fa3a32f5794d5ce970c835a
+=======
+        <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
+        <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
+        <DCCReference Include="View\View.CadCursos.pas">
+            <Form>FCadCursos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Model\TemplateMethod\Model.TemplateMethod.AbstractClass.pas"/>
+        <DCCReference Include="Model\TemplateMethod\Model.TemplateMethod.ConcreteClassInsere.pas"/>
+        <None Include="ModelSupport_PosDelphi\default.txaPackage"/>
+        <None Include="ModelSupport_PosDelphi\default.txvpck"/>
+        <None Include="ModelSupport_PosDelphi\PosDelphi\default.txvpck"/>
+        <None Include="ModelSupport_PosDelphi\Model\TemplateMethod\default.txaPackage"/>
+        <None Include="ModelSupport_PosDelphi\Model\TemplateMethod\AbstractClass\default.txaPackage"/>
+        <None Include="ModelSupport_PosDelphi\InsereDados\default.txaPackage"/>
+        <None Include="ModelSupport_PosDelphi\InsereDados\default.txvpck"/>
+>>>>>>> b3415b9fcdaaf4e9f9569e694185b753182c7f5f
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -206,8 +224,15 @@
                 <Excluded_Packages/>
 =======
                 <Excluded_Packages>
+<<<<<<< HEAD
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+=======
+                    <Excluded_Packages Name="$(BDSBIN)\DataExplorerDBXPluginEnt260.bpl">DBExpress Enterprise Data Explorer Integration</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="F:\Dados Rui\Softwares\isaquepinheiro-ormbr-02ff75255464\isaquepinheiro-ormbr-02ff75255464\Lib\Delphi\LibD26\ORMBrLibrary.bpl">ORMBr - Library</Excluded_Packages>
+>>>>>>> b3415b9fcdaaf4e9f9569e694185b753182c7f5f
                 </Excluded_Packages>
 >>>>>>> 2a721c920341658c2a07c6c3ddfd8d7e8a5b65f7
             </Delphi.Personality>
@@ -4391,9 +4416,51 @@
                 <Excluded_Packages/>
             </Delphi.Personality>
             <Deployment Version="3">
+                <DeployFile LocalName="ModelSupport_PosDelphi\InsereDados\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_PosDelphi\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="PosDelphi.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>PosDelphi.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_PosDelphi\InsereDados\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_PosDelphi\PosDelphi\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_PosDelphi\Model\TemplateMethod\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_PosDelphi\Model\TemplateMethod\AbstractClass\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_PosDelphi\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -4406,7 +4473,6 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>0</Operation>
                     </Platform>
                 </DeployClass>
@@ -4542,6 +4608,11 @@
                         <Operation>1</Operation>
                         <Extensions>.framework</Extensions>
                     </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
                     <Platform Name="Win32">
                         <Operation>0</Operation>
                     </Platform>
@@ -4560,6 +4631,11 @@
                         <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
                         <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
@@ -4587,6 +4663,11 @@
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
                     </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
                     <Platform Name="Win32">
                         <Operation>0</Operation>
                         <Extensions>.bpl</Extensions>
@@ -4606,6 +4687,10 @@
                         <Operation>0</Operation>
                     </Platform>
                     <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
                         <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
                         <Operation>0</Operation>
                     </Platform>
@@ -4756,15 +4841,27 @@
                         <RemoteDir>..\</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXInfoPList">
                     <Platform Name="OSX32">
                         <RemoteDir>Contents</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
                     <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
                         <RemoteDir>Contents\Resources</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
@@ -4787,6 +4884,10 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
                         <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
@@ -4830,15 +4931,23 @@
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
 >>>>>>> df883f8237e8f1177fa3a32f5794d5ce970c835a
+=======
+                <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
+>>>>>>> b3415b9fcdaaf4e9f9569e694185b753182c7f5f
                 <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
             </Deployment>
             <Platforms>
                 <Platform value="Win32">True</Platform>
             </Platforms>
+<<<<<<< HEAD
             <ModelSupport>False</ModelSupport>
+=======
+            <ModelSupport>True</ModelSupport>
+>>>>>>> b3415b9fcdaaf4e9f9569e694185b753182c7f5f
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

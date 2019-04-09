@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <nodeSet version="1.0">
   <view uin="r8p3wg37ctr_v">
@@ -5,4 +6,13 @@
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
   </view>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="gzkn9hf3qw5ms2xxi_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+  </view>
+>>>>>>> b3415b9fcdaaf4e9f9569e694185b753182c7f5f
 </nodeSet>
