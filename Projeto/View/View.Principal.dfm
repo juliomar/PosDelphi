@@ -2,7 +2,7 @@ object Principal: TPrincipal
   Left = 0
   Top = 0
   Caption = 'Principal'
-  ClientHeight = 504
+  ClientHeight = 484
   ClientWidth = 906
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,12 +11,13 @@ object Principal: TPrincipal
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object STGridPessoa: TStringGrid
     Left = 0
-    Top = 422
+    Top = 402
     Width = 906
     Height = 82
     Align = alBottom
@@ -31,7 +32,7 @@ object Principal: TPrincipal
     Left = 0
     Top = 79
     Width = 906
-    Height = 309
+    Height = 289
     Align = alClient
     DataSource = DataSourceClientes
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -55,11 +56,18 @@ object Principal: TPrincipal
       item
         Expanded = False
         FieldName = 'Sobrenome'
+        Width = 243
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Matricula'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Status'
+        Width = 120
         Visible = True
       end>
   end
@@ -122,26 +130,18 @@ object Principal: TPrincipal
       Caption = 'Pesquisar'
       TabOrder = 3
     end
-    object Button1: TButton
-      Left = 607
-      Top = 37
-      Width = 75
-      Height = 25
-      Caption = 'Consulta CEP'
-      TabOrder = 4
-      OnClick = Button1Click
-    end
   end
   object pnAcoes: TPanel
     Left = 0
-    Top = 388
+    Top = 368
     Width = 906
     Height = 34
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitTop = 362
     object BitBtnExportarAlunosXLS: TBitBtn
-      Left = 77
+      Left = 80
       Top = 4
       Width = 120
       Height = 25
@@ -150,8 +150,8 @@ object Principal: TPrincipal
       OnClick = BitBtnExportarAlunosXLSClick
     end
     object BitBtnExportarAlunosHTML: TBitBtn
-      Left = 197
-      Top = 3
+      Left = 203
+      Top = 4
       Width = 120
       Height = 25
       Caption = 'Exportar para HTML'
@@ -166,14 +166,29 @@ object Principal: TPrincipal
       Caption = 'Editar'
       TabOrder = 2
     end
+    object btn_State: TButton
+      Left = 327
+      Top = 4
+      Width = 170
+      Height = 25
+      Caption = 'Padr'#227'o de Projeto - State '
+      TabOrder = 3
+      OnClick = btn_StateClick
+    end
   end
   object ClientDataSetClientes: TClientDataSet
+    PersistDataPacket.Data = {
+      950000009619E0BD010000001800000005000000000003000000950002496404
+      00010000000000044E6F6D650100490000000100055749445448020002003200
+      09536F6272656E6F6D650100490000000100055749445448020002003200094D
+      6174726963756C61010049000000010005574944544802000200140006537461
+      74757301004900000001000557494454480200020001000000}
+    Active = True
     Aggregates = <>
     FieldDefs = <
       item
         Name = 'Id'
-        DataType = ftString
-        Size = 20
+        DataType = ftInteger
       end
       item
         Name = 'Nome'
@@ -189,6 +204,11 @@ object Principal: TPrincipal
         Name = 'Matricula'
         DataType = ftString
         Size = 20
+      end
+      item
+        Name = 'Status'
+        DataType = ftString
+        Size = 1
       end>
     IndexDefs = <>
     IndexFieldNames = 'Id'
@@ -209,6 +229,11 @@ object Principal: TPrincipal
     end
     object ClientDataSetClientesMatricula: TStringField
       FieldName = 'Matricula'
+    end
+    object ClientDataSetClientesStatus: TStringField
+      FieldName = 'Status'
+      OnGetText = ClientDataSetClientesStatusGetText
+      Size = 1
     end
   end
   object DataSourceClientes: TDataSource

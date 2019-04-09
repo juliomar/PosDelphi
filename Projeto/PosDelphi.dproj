@@ -137,6 +137,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
 =======
@@ -165,6 +166,19 @@
         </DCCReference>
         <DCCReference Include="View\Unit2.pas"/>
 >>>>>>> b0b9edb328a4e7b1373603e0735d573d0b8dd116
+=======
+        <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
+        <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
+        <DCCReference Include="Model\State\Model.State.Aluno.Ativo.pas"/>
+        <DCCReference Include="Model\State\Model.State.Aluno.Inativo.pas"/>
+        <DCCReference Include="Model\State\Model.State.Aluno.Interfaces.pas"/>
+        <DCCReference Include="Model\State\Model.State.Aluno.Matriculado.pas"/>
+        <DCCReference Include="Model\State\Model.State.Aluno.pas"/>
+        <DCCReference Include="View\View.ModelState.pas">
+            <Form>frm_ModelState</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+>>>>>>> df883f8237e8f1177fa3a32f5794d5ce970c835a
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -185,6 +199,7 @@
                 <Source>
                     <Source Name="MainSource">PosDelphi.dpr</Source>
                 </Source>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4371,6 +4386,8 @@
                 <Source>
                     <Source Name="MainSource">PosDelphi.dpr</Source>
                 </Source>
+=======
+>>>>>>> df883f8237e8f1177fa3a32f5794d5ce970c835a
                 <Excluded_Packages/>
             </Delphi.Personality>
             <Deployment Version="3">
@@ -4812,11 +4829,16 @@
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+<<<<<<< HEAD
+=======
+                <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
+>>>>>>> df883f8237e8f1177fa3a32f5794d5ce970c835a
                 <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
             </Deployment>
             <Platforms>
                 <Platform value="Win32">True</Platform>
             </Platforms>
+            <ModelSupport>False</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

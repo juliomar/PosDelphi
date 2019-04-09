@@ -33,6 +33,7 @@ uses
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,
+
   Memento.Model.Interfaces,memento.model.aluno,  Controller.Interfaces,
   Controller.Cadastro.Pessoa, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids, Vcl.ComCtrls, Vcl.Imaging.pngimage,
@@ -43,7 +44,8 @@ uses
   Controller.Interfaces,
   Controller.Cadastro, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids,
-  Model.Observer, DateUtils;
+  Model.Observer, DateUtils,
+  Model.State.Aluno.Interfaces;
 
 type
   TConcreteObserver = class(TInterfacedObject, IObserver)
@@ -95,6 +97,8 @@ type
     BtnFacadeAndersonFurtilho: TButton;
     Button1: TButton;
     lblRelogio: TLabel;
+    btn_State: TButton;
+    ClientDataSetClientesStatus: TStringField;
     procedure FormCreate(Sender: TObject);
     procedure esste1Click(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
@@ -104,12 +108,18 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ExecutaFacadeAndersonFurtilho(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure btn_StateClick(Sender: TObject);
+    procedure ClientDataSetClientesStatusGetText(Sender: TField;
+      var Text: string; DisplayText: Boolean);
   private
     FAluno : iAluno;
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
     procedure AdicionarLinhaStringGrid(AObject: TPessoa);
-    function RetornaSexo(ASelecao: TSexo): string;
+    function RetornaSexo(ASelecao : TSexo): string;
+    function RetornaStatus(AStatus : TStatus): string;
     { Private declarations }
   public
     FControllerPessoa : iControllerCadastro<TPessoa>;
@@ -117,6 +127,7 @@ type
     _observavel: TSubject;
     _observador: IObserver;
     { Public declarations }
+    FState: iAlunoStatus;
   end;
 
 var
@@ -126,18 +137,21 @@ implementation
 
 uses
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
+
   Controller.Cadastro, View.Pagamento, Pattern.Facade.Exportar.Alunos,
   Model.Exportador.Interfaces,
   Model.Exportador.Alunos,
   Model.Exportador.FormatoXLS,
   Model.Exportador.FormatoHTML,
   Controller.Cadastro, uTela,
+ Model.State.Aluno, View.ModelState,
 
   Model.Builder.Interfaces,
   Model.Builder.Product,
   Model.Builder.Director,
   Model.Builder.ConcretBuilder;
 {$R *.dfm}
+
 
 
 
@@ -167,6 +181,20 @@ begin
   Except
     CloseFile(Arquivo);
   end;
+end;
+
+procedure TPrincipal.BitBtn1Click(Sender: TObject);
+begin
+  ShowMessage(FState.Operacoes.Value);
+  FState.Operacoes.Matricular;
+  ShowMessage(FState.Operacoes.Value);
+end;
+
+procedure TPrincipal.BitBtn2Click(Sender: TObject);
+begin
+  ShowMessage(FState.Operacoes.Value);
+  FState.Operacoes.Ativar;
+  ShowMessage(FState.Operacoes.Value);
 end;
 
 procedure TPrincipal.BitBtnExportarAlunosHTMLClick(Sender: TObject);
@@ -241,11 +269,32 @@ begin
   end;
 end;
 
+procedure TPrincipal.btn_StateClick(Sender: TObject);
+var
+  sAux: string;
+begin
+  sAux:= Tfrm_ModelState.ShowModelState(ClientDataSetClientesStatus.AsString);
+  if not (ClientDataSetClientes.State in dsEditModes) then
+    ClientDataSetClientes.Edit;
+  ClientDataSetClientesStatus.AsString := sAux;
+end;
+
+procedure TPrincipal.ClientDataSetClientesStatusGetText(Sender: TField;
+  var Text: string; DisplayText: Boolean);
+begin
+  if sender.AsString = 'A'  then
+    Text:= 'Ativo'
+  else if sender.AsString = 'I' then
+    Text:= 'Inativo'
+  else if sender.AsString = 'M' then
+    Text:= 'Matrículado';
+end;
+
 procedure TPrincipal.DefinicaoStringGrid;
 var
   iFor: Integer;
 begin
-  STGridPessoa.ColCount := 8;
+  STGridPessoa.ColCount := 9;
 
   for iFor := 0 to pred(STGridPessoa.ColCount) do
     STGridPessoa.ColWidths[iFor] := 150;
@@ -258,6 +307,7 @@ begin
   STGridPessoa.Cols[5].Text := 'Matricula';
   STGridPessoa.Cols[6].Text := 'Nascimento';
   STGridPessoa.Cols[7].Text := 'Sexo';
+  STGridPessoa.Cols[8].Text := 'Status';
 end;
 
 procedure TPrincipal.esste1Click(Sender: TObject);
@@ -326,6 +376,15 @@ else
 abort;
 end;
 
+function TPrincipal.RetornaStatus(AStatus: TStatus): string;
+begin
+  case AStatus of
+    Ativo       : Result:= 'A';
+    Inativo     : Result:= 'I';
+    Matriculado : Result:= 'M';
+  end;
+end;
+
 procedure TPrincipal.FormCreate(Sender: TObject);
 var
   CaminhoAplicacao: string;
@@ -369,6 +428,7 @@ begin
   STGridPessoa.Cells[6, STGridPessoa.RowCount] :=
     DateToStr(AObject.datanascimento);
   STGridPessoa.Cells[7, STGridPessoa.RowCount] := RetornaSexo(AObject.sexo);
+  STGridPessoa.Cells[8, STGridPessoa.RowCount] := RetornaStatus(AObject.status);
 end;
 
 procedure TStringGridHack.DeleteRow(ARow: Longint);

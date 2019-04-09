@@ -27,6 +27,8 @@ uses
 type
   [Enumeration(etChar,'M,F')]
   TSexo = (Masculino, Feminino);
+  [Enumeration(etString,'A,I,M')] {Ativo, Inativo, Matrículado}
+  TStatus = (Ativo, Inativo, Matriculado);
 
   [ Entity ]
   [ PrimaryKey('id',AutoInc, nosort,true, 'chave primaria') ]
@@ -42,6 +44,7 @@ type
     Ftelefone      : string;
     fsexo          : TSexo;
     fdatanascimento: TDate;
+    fStatus        : TStatus;
   public
     [ Restrictions([ NoUpdate, NotNull ]) ]
     [ Column('id', ftInteger) ]
@@ -77,13 +80,15 @@ type
     [ Dictionary('Nascimento', 'Mensagem validação', '', '', '', tacenter) ]
     property datanascimento: TDate read fdatanascimento write fdatanascimento;
 
-     //Padrão Prototype
+    [ Column('status', ftString,1) ]
+    [ Dictionary('Status', 'Mensagem validação', '', '', '', tacenter) ]
+    property status: TStatus read fStatus write fStatus;
+
     function Clonar: TPessoa;
-  end;
+ end;
+
 
 implementation
-
-{ TPessoa }
 
 { TPessoa }
 
