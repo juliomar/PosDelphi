@@ -1,0 +1,7 @@
+unit memento.model.memento;
+
+interface
+
+implementation
+
+end.

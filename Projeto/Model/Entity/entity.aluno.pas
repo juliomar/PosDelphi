@@ -25,7 +25,8 @@ uses
   ormbr.mapping.attributes,
 
   entity.pessoa,
-  entity.curso;
+  entity.curso,
+  Model.State.Aluno.Interfaces;
 
 type
   // teste do GIT
@@ -36,6 +37,8 @@ type
     TPessoa)
   private
     fCursos: TObjectList<TCurso>;
+    fStatus: TObjectList<TPessoa>;
+    FState: iAlunoStatus;
   public
     constructor Create;
     destructor Destroy; override;
@@ -43,15 +46,22 @@ type
     [Association(OneToMany, 'aluno_id', 'curso', 'curso_id')]
     [CascadeActions([CascadeAutoInc, CascadeInsert, CascadeUpdate, CascadeDelete])]
     property Cursos: TObjectList<TCurso> read fCursos write fCursos;
+    property Status: TObjectList<TPessoa> read fStatus write fStatus;
+    property State: iAlunoStatus read FState write FState;
   end;
 
 implementation
+
+uses
+  Model.State.Aluno;
 
 { TAluno }
 
 constructor TAluno.Create;
 begin
   fCursos := TObjectList<TCurso>.Create;
+  fStatus := TObjectList<TPessoa>.Create;
+//  FState := TModelAlunoStatus.New(fStatus.);
 end;
 
 destructor TAluno.Destroy;
@@ -60,8 +70,8 @@ begin
   inherited;
 end;
 
-//initialization
-//
-//TRegisterClass.RegisterEntity (TAluno);
+initialization
+
+TRegisterClass.RegisterEntity (TAluno);
 
 end.

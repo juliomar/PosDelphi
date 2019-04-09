@@ -1,4 +1,4 @@
-{*******************************************************}
+﻿{*******************************************************}
 {                                                       }
 {       Projeto Teste P�s-Delphi                        }
 {                                                       }
@@ -25,6 +25,15 @@ uses
   ormbr.mapping.attributes;
 
 type
+//  [Enumeration(etChar, 'A,S,B')]
+//  TRegime = (Anual, Semestral, Bimestral);
+//
+//  [Enumeration(etChar, 'P,A')]
+//  TSituacao= (Parado, Andamento);
+//
+//  [Enumeration(etChar,'A,I')]
+//  TStatus = (Ativo, Inativo);
+
   [ Entity ]
   [ Table('Curso', 'Tipo de cursos') ]
   [ PrimaryKey('id', AutoInc, Ascending, True, 'Chave prim�ria') ]
@@ -38,6 +47,13 @@ type
     fid              : integer;
     fnotaenad        : double;
     fareaconhecimento: string;
+//    fdatainicio      : TDateTime;
+//    fdatafinal       : TDateTime;
+//    fregimeletivo    : TRegime;
+//    fsituacaocurso   : TSituacao;
+//    fturma           : string;
+//    fstatuscurso     : TStatus;
+//    fvalorcurso      : Double;
   public
 
 
@@ -53,7 +69,7 @@ type
 
     [ Column('areaconhecimento', ftString, 60) ]
     [ Dictionary('�rea de Conhecimento', 'Mensagem valida��o', '', '', '', tacenter) ]
-    property areaconhecimento: string read fareaconhecimento write fareaconhecimento;
+    property areaconhecimento : string read fareaconhecimento write fareaconhecimento;
 
     [ Column('notaenad', ftFloat, 2,2) ]
     [ Dictionary('Nota ENAD', 'Mensagem valida��o', '', '', '', tacenter) ]

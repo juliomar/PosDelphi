@@ -10,7 +10,6 @@ object Principal: TPrincipal
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  Menu = MainMenu1
   OldCreateOrder = False
   OnCreate = FormCreate
   PixelsPerInch = 96
@@ -30,9 +29,9 @@ object Principal: TPrincipal
   end
   object DBGridClientes: TDBGrid
     Left = 0
-    Top = 108
+    Top = 79
     Width = 906
-    Height = 280
+    Height = 309
     Align = alClient
     DataSource = DataSourceClientes
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -67,7 +66,7 @@ object Principal: TPrincipal
   object pnConsulta: TPanel
     AlignWithMargins = True
     Left = 3
-    Top = 32
+    Top = 3
     Width = 900
     Height = 73
     Align = alTop
@@ -157,16 +156,8 @@ object Principal: TPrincipal
       Height = 25
       Caption = 'Editar'
       TabOrder = 2
+      OnClick = btnEditarClick
     end
-  end
-  object ToolBar1: TToolBar
-    Left = 0
-    Top = 0
-    Width = 906
-    Height = 29
-    ButtonWidth = 273
-    Caption = 'ToolBar1'
-    TabOrder = 4
   end
   object ClientDataSetClientes: TClientDataSet
     Aggregates = <>
@@ -222,17 +213,6 @@ object Principal: TPrincipal
     object esste1: TMenuItem
       Caption = ' Formas de pagamento'
       OnClick = esste1Click
-    end
-    object Financeiro1: TMenuItem
-      Caption = 'Financeiro'
-      object mnMenalidades: TMenuItem
-        Caption = 'Mensalidades'
-        OnClick = mnMenalidadesClick
-      end
-      object PagarMensalidades1: TMenuItem
-        Caption = 'Pagar Mensalidades'
-        OnClick = PagarMensalidades1Click
-      end
     end
   end
 end

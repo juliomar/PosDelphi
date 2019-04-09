@@ -1,0 +1,14 @@
+unit memento.model.interfaces;
+
+interface
+
+type
+
+  iMemento<t> = interface
+    function Save ( Key : String ) : iMemento<t>;
+    function Restore ( Key : String ) : t;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,107 @@
+unit memento.model.aluno;
+
+interface
+
+uses Memento.Model.Interfaces, Memento.Model.Memento;
+
+Type
+  TModelCliente = class(TInterfacedObject, iAluno, iMemento<iAluno>)
+    private
+      FNome : String;
+      FSobrenome : String;
+      FMatricula : String;
+      FMemento : iMementoZelador<iAluno>;
+      function GetNome : String;
+      function GetSobrenome : String;
+      function GetMatricula : String;
+      procedure SetNome(const Value : String);
+      procedure SetSobrenome(const Value : String);
+      procedure SetMatricula(const Value : String);
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iAluno;
+      property Nome : String read GetNome write SetNome;
+      property Sobrenome : String read GetSobrenome write SetSobrenome;
+      property Matricula : String read GetMatricula write SetMatricula;
+      function Memento : iMemento<iAluno>;
+      function Save(Key : String) : iMemento<iAluno>;
+      function Restore(Key : String) : iAluno;
+  end;
+
+implementation
+
+{ TModelCliente }
+
+constructor TModelCliente.Create;
+begin
+  FMemento := TModelMemento.New;
+end;
+
+destructor TModelCliente.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelCliente.GetNome: String;
+begin
+  Result := FNome;
+end;
+
+function TModelCliente.GetSobrenome: String;
+begin
+  Result := FSobrenome;
+end;
+
+function TModelCliente.GetMatricula: String;
+begin
+  Result := FMatricula;
+end;
+
+function TModelCliente.Memento: iMemento<iAluno>;
+begin
+  Result := Self;
+end;
+
+class function TModelCliente.New: iAluno;
+begin
+  Result := Self.Create;
+end;
+
+function TModelCliente.Restore(Key: String): iAluno;
+var
+  OldState : iAluno;
+begin
+  OldState := FMemento.Restore(Key);
+  Self.Nome := OldState.Nome;
+  Result := Self;
+end;
+
+function TModelCliente.Save(Key: String): iMemento<iAluno>;
+var
+  NewCliente : iAluno;
+begin
+  Result := Self;
+  NewCliente := TModelCliente.New;
+  NewCliente.Nome := Self.Nome;
+  FMemento.SaveState(Key, NewCliente);
+end;
+
+procedure TModelCliente.SetNome(const Value: String);
+begin
+  FNome := Value;
+end;
+
+procedure TModelCliente.SetSobrenome(const Value: String);
+begin
+  FSobrenome := Value;
+end;
+
+procedure TModelCliente.SetMatricula(const Value: String);
+begin
+  FMatricula := Value;
+end;
+
+
+end.

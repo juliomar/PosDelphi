@@ -1,10 +1,10 @@
-﻿{*******************************************************}
-{                                                       }
-{       Projeto Teste P�s-Delphi                        }
-{                                                       }
-{       Copyright (C) 2019 Unoesc                       }
-{                                                       }
-{*******************************************************}
+﻿{ ******************************************************* }
+{ }
+{ Projeto Teste P�s-Delphi }
+{ }
+{ Copyright (C) 2019 Unoesc }
+{ }
+{ ******************************************************* }
 unit View.Principal;
 
 interface
@@ -26,17 +26,36 @@ uses
 
   Entity.Pessoa,
 
+  Entity.Aluno,
+  Unit1,
+  Model.Log.Logger,
 
- ExtCtrls,
+  ExtCtrls,
 
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces, Vcl.Menus,
-  Vcl.ToolWin, Vcl.ComCtrls,
-  View.Mensalidades
-  ;
+  Vcl.ToolWin, Vcl.ComCtrls;
+
+  Memento.Model.Interfaces,memento.model.aluno,  Controller.Interfaces,
+  Controller.Cadastro.Pessoa, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Datasnap.DBClient, Vcl.DBGrids, Vcl.ComCtrls, Vcl.Imaging.pngimage,
+  Model.Iterator.Interfaces, View.Tabela.Cursos,
+
+  Model.Iterator.Interfaces,
+
+  Controller.Interfaces,
+  Controller.Cadastro, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Datasnap.DBClient, Vcl.DBGrids,
+  Model.Observer, DateUtils,
+  Model.State.Aluno.Interfaces;
 
 type
+  TConcreteObserver = class(TInterfacedObject, IObserver)
+  public
+    procedure Update(ASubject: TSubject);
+  end;
+
   TStringGridHack = class(TStringGrid)
   protected
     procedure DeleteRow(ARow: Longint); reintroduce;
@@ -45,6 +64,9 @@ type
 
   TPrincipal = class(TForm)
     STGridPessoa: TStringGrid;
+    BitBtnExportarAlunosXLS: TBitBtn;
+    BitBtnExportarAlunosHTML: TBitBtn;
+    LabelClientes: TLabel;
     DBGridClientes: TDBGrid;
     ClientDataSetClientes: TClientDataSet;
     ClientDataSetClientesId: TIntegerField;
@@ -63,28 +85,34 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
+    edtNome: TLabeledEdit;
+    edtSobrenome: TLabeledEdit;
+    EdtMatricula: TLabeledEdit;
+    Button1: TButton;
+    ListBox1: TListBox;
     ToolBar1: TToolBar;
     MainMenu1: TMainMenu;
     esste1: TMenuItem;
-    Financeiro1: TMenuItem;
-    mnMenalidades: TMenuItem;
-    PagarMensalidades1: TMenuItem;
     procedure FormCreate(Sender: TObject);
+    procedure esste1Click(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
     procedure esste1Click(Sender: TObject);
-    procedure mnMenalidadesClick(Sender: TObject);
-    procedure PagarMensalidades1Click(Sender: TObject);
   private
+    FAluno : iAluno;
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
     procedure AdicionarLinhaStringGrid(AObject: TPessoa);
     function RetornaSexo(ASelecao : TSexo): string;
+    function RetornaStatus(AStatus : TStatus): string;
     { Private declarations }
   public
     FControllerPessoa : iControllerCadastro<TPessoa>;
     FIterator : iIterator<TPessoa>;
+    _observavel: TSubject;
+    _observador: IObserver;
     { Public declarations }
+    FState: iAlunoStatus;
   end;
 
 var
@@ -94,9 +122,66 @@ implementation
 
 uses
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
-  Controller.Cadastro, View.Mensalidades.Pagar;//, View.Pagamento;
+  Controller.Cadastro, View.Pagamento;
 
+  Controller.Cadastro, View.Pagamento, Pattern.Facade.Exportar.Alunos,
+  Model.Exportador.Interfaces,
+  Model.Exportador.Alunos,
+  Model.Exportador.FormatoXLS,
+  Model.Exportador.FormatoHTML,
+  Controller.Cadastro, uTela,
+ Model.State.Aluno, View.ModelState,
+
+  Model.Builder.Interfaces,
+  Model.Builder.Product,
+  Model.Builder.Director,
+  Model.Builder.ConcretBuilder;
 {$R *.dfm}
+
+
+
+
+procedure TPrincipal.ApplicationEventsException(Sender: TObject; E: Exception);
+var
+  LogExcecao: ILogExcecao;
+  Arquivo   : TextFile;
+  CamArq    : String;
+begin
+  LogExcecao := TLogExcecao.Create(E);
+  LogExcecao := TDataHoraDecorator.Create(LogExcecao);
+  LogExcecao := TNomeUsuarioDecorator.Create(LogExcecao);
+  LogExcecao := TExecutavelDecorator.Create(LogExcecao);
+
+
+  CamArq := ExtractFilePath(Application.ExeName) + 'LogErros.txt';
+  AssignFile(Arquivo,CamArq);
+  try
+    if not FileExists(CamArq) then
+      Rewrite(Arquivo);
+
+    Append(Arquivo);
+
+    WriteLn(Arquivo, LogExcecao.ObterDadosExcecao);
+
+    CloseFile(Arquivo);
+  Except
+    CloseFile(Arquivo);
+  end;
+end;
+
+procedure TPrincipal.BitBtn1Click(Sender: TObject);
+begin
+  ShowMessage(FState.Operacoes.Value);
+  FState.Operacoes.Matricular;
+  ShowMessage(FState.Operacoes.Value);
+end;
+
+procedure TPrincipal.BitBtn2Click(Sender: TObject);
+begin
+  ShowMessage(FState.Operacoes.Value);
+  FState.Operacoes.Ativar;
+  ShowMessage(FState.Operacoes.Value);
+end;
 
 procedure TPrincipal.BitBtnExportarAlunosHTMLClick(Sender: TObject);
 var
@@ -122,11 +207,90 @@ begin
   end;
 end;
 
+
+procedure TPrincipal.Button1Click(Sender: TObject);
+var a : integer;
+  Key: string;
+begin
+  FAluno.Nome      := edtNome.Text;
+  FAluno.Sobrenome := edtSobrenome.Text;
+  FAluno.Matricula := edtMatricula.Text;
+  Key := 'Backup - '+datetimetostr(now);
+  FAluno.Memento.Save(Key);
+  ListBox1.Items.Add(Key);
+  edtNome.Text:='';
+  edtSobrenome.Text:='';
+  edtMatricula.Text:='';
+
+
+
+  Director : TDirector;
+  ConcretBuilder : TConcretBuilder;
+  Product : TProduct;
+
+  Director := TDirector.Create;
+
+  ConcretBuilder := TConcretBuilder.Create(STGridPessoa);
+
+  try
+    Director.Construct(ConcretBuilder);
+
+    Product := ConcretBuilder.getRelatorio;
+
+    Product.SalvarArquivo;
+  finally
+    FreeAndNil(Director);
+    FreeAndNil(Product);
+  end;
+
+  a := strtoint('1.5')
+
+  Form1 := TForm1.Create(Application);
+  Form1.Show;
+
+  fTela := TfTela.Create(application);
+  try
+    fTela.ShowModal;
+  finally
+    FreeAndNil(fTela);
+  end;
+end;
+
+procedure TPrincipal.btn_StateClick(Sender: TObject);
+var
+  sAux: string;
+begin
+  sAux:= Tfrm_ModelState.ShowModelState(ClientDataSetClientesStatus.AsString);
+  if not (ClientDataSetClientes.State in dsEditModes) then
+    ClientDataSetClientes.Edit;
+  ClientDataSetClientesStatus.AsString := sAux;
+end;
+
+procedure TPrincipal.ClientDataSetClientesStatusGetText(Sender: TField;
+  var Text: string; DisplayText: Boolean);
+begin
+  if sender.AsString = 'A'  then
+    Text:= 'Ativo'
+  else if sender.AsString = 'I' then
+    Text:= 'Inativo'
+  else if sender.AsString = 'M' then
+    Text:= 'Matrículado';
+end;
+
+procedure TPrincipal.btnEditarClick(Sender: TObject);
+var
+  Logger: TLog;
+begin
+  // obtém a instância do Singleton para registrar um log
+  Logger := TLog.ObterInstancia;
+  Logger.RegistrarLog('Registro alterado!' + DateTimeToStr(Now));
+end;
+
 procedure TPrincipal.DefinicaoStringGrid;
 var
   iFor: Integer;
 begin
-  STGridPessoa.ColCount := 8;
+  STGridPessoa.ColCount := 9;
 
   for iFor := 0 to pred(STGridPessoa.ColCount) do
     STGridPessoa.ColWidths[iFor] := 150;
@@ -139,6 +303,7 @@ begin
   STGridPessoa.Cols[5].Text := 'Matricula';
   STGridPessoa.Cols[6].Text := 'Nascimento';
   STGridPessoa.Cols[7].Text := 'Sexo';
+  STGridPessoa.Cols[8].Text := 'Status';
 end;
 
 procedure TPrincipal.esste1Click(Sender: TObject);
@@ -153,28 +318,11 @@ begin
 //  end;
 end;
 
-procedure TPrincipal.mnMenalidadesClick(Sender: TObject);
-begin
-  //TODO: Chamar tela de matricula
-  Application.CreateForm(TFMensalidades, FMensalidades);
-  FMensalidades.ShowModal;
-  FreeAndNil(FMensalidades);
-
-end;
-
-procedure TPrincipal.PagarMensalidades1Click(Sender: TObject);
-begin
-  Application.CreateForm(TFMensalidadePagar,FMensalidadePagar);
-  FMensalidadePagar.Matricula := 123;
-  FMensalidadePagar.ShowModal;
-  FreeAndNil(FMensalidadePagar);
-end;
-
 procedure TPrincipal.PreencherStringGrid(ALista: iIterator<TPessoa>);
 var
   LFor: Integer;
 begin
-  //for LFor := AIndex to ALista.Count -1 do
+  // for LFor := AIndex to ALista.Count -1 do
   while ALista.temProximo do
   begin
     // Adiciona a lista de objetos geral.
@@ -187,27 +335,70 @@ end;
 
 function TPrincipal.RetornaSexo(ASelecao: TSexo): string;
 begin
-case ASelecao of
-  Masculino: Result := 'Masculino';
-  Feminino: Result := 'Feminino';
+  case ASelecao of
+    Masculino:
+      Result := 'Masculino';
+    Feminino:
+      Result := 'Feminino';
+  end;
+
 end;
+
+procedure TPrincipal.Timer1Timer(Sender: TObject);
+begin
+  StatusBar1.Panels.Items[0].Text := DateTimeToStr(now);
+  _observavel.Horario := IncSecond(_observavel.Horario, 1);
+end;
+
+procedure TPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+if Application.MessageBox('Deseja Relamente Sair','informação', MB_YESNO+MB_ICONQUESTION) =mrYes then
+
+
+Application.Terminate
+else
+abort;
+end;
+
+function TPrincipal.RetornaStatus(AStatus: TStatus): string;
+begin
+  case AStatus of
+    Ativo       : Result:= 'A';
+    Inativo     : Result:= 'I';
+    Matriculado : Result:= 'M';
+  end;
 end;
 
 procedure TPrincipal.FormCreate(Sender: TObject);
 var
   CaminhoAplicacao: string;
 begin
+  _observavel:= TSubject.Create;
+  _observador:= TConcreteObserver.Create;
+
+  _observavel.Attach(_observador);
+  Timer1.Enabled := True;
+
   CaminhoAplicacao := ExtractFilePath(Application.ExeName);
   ClientDataSetClientes.LoadFromFile(CaminhoAplicacao + 'Clientes.xml');
-  //FControllerPessoa := TControllerCadastroPessoa.New;
+  // FControllerPessoa := TControllerCadastroPessoa.New;
   FControllerPessoa := TControllerCadastro<TPessoa>.New;
   if Assigned(FControllerPessoa) then
   begin
-    FIterator  := FControllerPessoa.Entidade.getLista;
+    FIterator := FControllerPessoa.Entidade.getLista;
     DefinicaoStringGrid;
     if Assigned(FControllerPessoa.Entidade) then
       PreencherStringGrid(FIterator);
   end;
+  FAluno := TModelAluno.new;
+end;
+
+procedure TPrincipal.ListBox1Click(Sender: TObject);
+begin
+  FAluno := FAluno.Memento.Restore(ListBox1.Items[ListBox1.ItemIndex]);
+  edtNome.Text      := FAluno.Nome;
+  edtSobrenome.Text := FAluno.Sobrenome;
+  edtMatricula.Text := FAluno.Matricula;
 end;
 
 procedure TPrincipal.AdicionarLinhaStringGrid(AObject: TPessoa);
@@ -217,9 +408,11 @@ begin
   STGridPessoa.Cells[2, STGridPessoa.RowCount] := AObject.sobrenome;
   STGridPessoa.Cells[3, STGridPessoa.RowCount] := AObject.telefone;
   STGridPessoa.Cells[4, STGridPessoa.RowCount] := AObject.email;
-  STGridPessoa.Cells[5, STGridPessoa.RowCount] := IntToStr(AObject.matricula);
-  STGridPessoa.Cells[6, STGridPessoa.RowCount] := DateToStr(AObject.datanascimento);
+  STGridPessoa.Cells[5, STGridPessoa.RowCount] := inttostr(AObject.matricula);
+  STGridPessoa.Cells[6, STGridPessoa.RowCount] :=
+    DateToStr(AObject.datanascimento);
   STGridPessoa.Cells[7, STGridPessoa.RowCount] := RetornaSexo(AObject.sexo);
+  STGridPessoa.Cells[8, STGridPessoa.RowCount] := RetornaStatus(AObject.status);
 end;
 
 procedure TStringGridHack.DeleteRow(ARow: Longint);
@@ -246,7 +439,11 @@ begin
   Row := GemRow;
 end;
 
+{ TConcreteObserver }
+
+procedure TConcreteObserver.Update(ASubject: TSubject);
+begin
+  Principal.lblRelogio.Caption := FormatDateTime('hh:mm:ss', ASubject.Horario);
+end;
+
 end.
-
-
-
