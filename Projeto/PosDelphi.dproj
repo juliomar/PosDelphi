@@ -133,6 +133,7 @@
         <DCCReference Include="Model\Iterator\Model.Lista.Factory.pas"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
         <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
 =======
@@ -152,6 +153,15 @@
         <DCCReference Include="Controller\Controller.SolicitacaoMatricula.Atendente.pas"/>
         <DCCReference Include="Controller\Controller.SolicitacaoMatricula.Coordenador.pas"/>
 >>>>>>> 07424dc3b3f6b753b6c7becaf5c19adf5285e93d
+=======
+        <DCCReference Include="Model\Iterator\Model.Lista.ObjectList.pas"/>
+        <DCCReference Include="Model\Iterator\Model.Lista.List.pas"/>
+        <DCCReference Include="View\Unit1.pas">
+            <Form>Form1</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\Unit2.pas"/>
+>>>>>>> b0b9edb328a4e7b1373603e0735d573d0b8dd116
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -172,6 +182,7 @@
                 <Source>
                     <Source Name="MainSource">PosDelphi.dpr</Source>
                 </Source>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <Excluded_Packages/>
@@ -3029,6 +3040,8 @@
                 </Source>
 =======
 >>>>>>> 07424dc3b3f6b753b6c7becaf5c19adf5285e93d
+=======
+>>>>>>> b0b9edb328a4e7b1373603e0735d573d0b8dd116
                 <Excluded_Packages/>
             </Delphi.Personality>
             <Deployment Version="3">
@@ -3047,7 +3060,6 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>0</Operation>
                     </Platform>
                 </DeployClass>
@@ -3183,6 +3195,11 @@
                         <Operation>1</Operation>
                         <Extensions>.framework</Extensions>
                     </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
                     <Platform Name="Win32">
                         <Operation>0</Operation>
                     </Platform>
@@ -3201,6 +3218,11 @@
                         <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
                         <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
@@ -3228,6 +3250,11 @@
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
                     </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
                     <Platform Name="Win32">
                         <Operation>0</Operation>
                         <Extensions>.bpl</Extensions>
@@ -3247,6 +3274,10 @@
                         <Operation>0</Operation>
                     </Platform>
                     <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
                         <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
                         <Operation>0</Operation>
                     </Platform>
@@ -3397,15 +3428,27 @@
                         <RemoteDir>..\</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXInfoPList">
                     <Platform Name="OSX32">
                         <RemoteDir>Contents</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
                     <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
                         <RemoteDir>Contents\Resources</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
@@ -3428,6 +3471,10 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
                         <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
@@ -3470,6 +3517,10 @@
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+<<<<<<< HEAD
+=======
+                <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
+>>>>>>> b0b9edb328a4e7b1373603e0735d573d0b8dd116
                 <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
             </Deployment>
             <Platforms>
