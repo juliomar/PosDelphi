@@ -31,7 +31,8 @@ uses
   ExtCtrls,
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
-  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,
+  Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces, Vcl.Menus,
+  Vcl.ToolWin, Vcl.ComCtrls;
 
   Memento.Model.Interfaces, memento.model.aluno,
   Vcl.ComCtrls, Vcl.Imaging.pngimage,
@@ -125,6 +126,17 @@ uses
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
   Pattern.Component, View.Pagamento, Pattern.Facade.Exportar.Alunos,
   uTela, Model.State.Aluno, View.ModelState,
+
+  Controller.Cadastro, View.Pagamento;
+
+  Controller.Cadastro, View.Pagamento, Pattern.Facade.Exportar.Alunos,
+  Model.Exportador.Interfaces,
+  Model.Exportador.Alunos,
+  Model.Exportador.FormatoXLS,
+  Model.Exportador.FormatoHTML,
+  Controller.Cadastro, uTela,
+ Model.State.Aluno, View.ModelState,
+
 
   Model.Builder.Interfaces,
   Model.Builder.Product,
@@ -303,6 +315,7 @@ begin
   STGridPessoa.Cols[ 8 ].Text := 'Status';
 end;
 
+
 procedure TPrincipal.esste1Click (Sender: TObject);
 var
   LViewPagamento: TPagamento;
@@ -325,6 +338,7 @@ begin
   finally
     F.Free;
   end;
+
 end;
 
 procedure TPrincipal.PreencherStringGrid (ALista: iIterator<TPessoa>);
