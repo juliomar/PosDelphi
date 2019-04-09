@@ -1,4 +1,4 @@
-unit Pattern.Director;
+ï»¿unit Pattern.Director;
 
 interface
 
@@ -9,8 +9,8 @@ type
   { Director }
   TDirector = class
   public
-    // Método responsável por construir o objeto complexo por partes
-    procedure Construct(Builder: IBuilder);
+	 // Metodo responsavel por construir o objeto complexo por partes
+	 procedure Construct(Builder: IBuilder);
   end;
 
 implementation
@@ -19,10 +19,11 @@ implementation
 
 procedure TDirector.Construct(Builder: IBuilder);
 begin
-  // Sequência de passos para construir o objeto complexo
+  // Sequencia de passos para construir o objeto complexo
   Builder.BuildCabecalho;
   Builder.BuildDetalhes;
   Builder.BuildRodape;
 end;
 
 end.
+

@@ -21,7 +21,7 @@ type
     procedure BuildDetalhes;
     procedure BuildRodape;
 
-    // Função que retorna o "produto" pronto
+    // Funcao que retorna o "produto" pronto
     function GetRelatorio: TProduct;
   end;
 
@@ -43,7 +43,7 @@ begin
   FProduct.Adicionar('<div class="container">');
   FProduct.Adicionar('<div class="panel panel-default">');
   FProduct.Adicionar('<div class="panel-heading">');
-  FProduct.Adicionar('<h4>Relatório de Fornecedores</h4>');
+  FProduct.Adicionar('<h4>Relatório de Alunos</h4>');
   FProduct.Adicionar('<h4>' + FormatDateTime('dd/mm/yyyy hh:nn:ss', Now) + '</h4>');
   FProduct.Adicionar('</div>');
 end;
@@ -56,8 +56,8 @@ begin
   FProduct.Adicionar('<table class="table table-fixed">');
   FProduct.Adicionar('<thead><tr>');
   FProduct.Adicionar('<th class="col-xs-2">Código</th>');
-  FProduct.Adicionar('<th class="col-xs-4">Nome</th>');
-  FProduct.Adicionar('<th class="col-xs-4">Sobrenome</th>');
+  FProduct.Adicionar('<th class="col-xs-8">Nome</th>');
+  FProduct.Adicionar('<th class="col-xs-8">Sobrenome</th>');
   FProduct.Adicionar('<th class="col-xs-3">Matricula</th>');
   FProduct.Adicionar('</tr></thead><tbody>');
 

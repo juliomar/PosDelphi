@@ -31,10 +31,10 @@ uses
   Model.Lista.Factory in 'Model\Iterator\Model.Lista.Factory.pas',
   Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
   Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
-  Pattern.Builder in 'Model\Builder\Pattern.Builder.pas',
-  Pattern.Product in 'Model\Builder\Pattern.Product.pas',
-  Pattern.Director in 'Model\Builder\Pattern.Director.pas',
-  Pattern.ConcreteBuilder in 'Model\Builder\Pattern.ConcreteBuilder.pas';
+  Pattern.Product in 'Model\Builders\Pattern.Product.pas',
+  Pattern.ConcreteBuilder in 'Model\Builders\Pattern.ConcreteBuilder.pas',
+  Pattern.Director in 'Model\Builders\Pattern.Director.pas',
+  Pattern.Builder in 'Model\Builders\Pattern.Builder.pas';
 
 {$R *.res}
 

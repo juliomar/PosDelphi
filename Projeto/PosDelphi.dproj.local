@@ -1,13 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2019/04/08 23:51:08.621,=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 23:51:56.988,D:\Google Drive\Unoesc\PosDelphi\Projeto\Model\Builder\Pattern.Builder.pas=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 23:55:08.904,=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 23:58:49.139,D:\Google Drive\Unoesc\PosDelphi\Projeto\Model\Builder\Pattern.Product.pas=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 23:59:03.338,=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 23:59:36.012,D:\Google Drive\Unoesc\PosDelphi\Projeto\Model\Builder\Pattern.Director.pas=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/08 23:59:54.304,=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
-    <Transaction>2019/04/09 00:00:14.622,D:\Google Drive\Unoesc\PosDelphi\Projeto\Model\Builder\Pattern.ConcreteBuilder.pas=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
+	<Transactions>
+    <Transaction>2019/04/08 23:51:08.000.621,=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 23:51:56.000.988,D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas=D:\Google Drive\Unoesc\PosDelphi\Projeto\Model\Builder\Pattern.Builder.pas</Transaction>
+    <Transaction>2019/04/08 23:55:08.000.904,=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 23:58:49.000.139,D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas=D:\Google Drive\Unoesc\PosDelphi\Projeto\Model\Builder\Pattern.Product.pas</Transaction>
+    <Transaction>2019/04/08 23:59:03.000.338,=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/08 23:59:36.000.012,D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas=D:\Google Drive\Unoesc\PosDelphi\Projeto\Model\Builder\Pattern.Director.pas</Transaction>
+    <Transaction>2019/04/08 23:59:54.000.304,=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/09 00:00:14.000.622,D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas=D:\Google Drive\Unoesc\PosDelphi\Projeto\Model\Builder\Pattern.ConcreteBuilder.pas</Transaction>
+    <Transaction>2019/04/09 01:23:54.000.090,=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/09 01:24:34.000.436,D:\Google Drive\Unoesc\PosDelphi\Projeto\Model\Pattern.Builder.pas=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/09 01:38:15.000.445,=D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas</Transaction>
+    <Transaction>2019/04/09 01:40:38.000.889,=D:\Google Drive\Unoesc\PosDelphi\Projeto\Model\Builder\Pattern.Builder.pas</Transaction>
+    <Transaction>2019/04/09 01:41:56.000.048,D:\Google Drive\Unoesc\PosDelphi\Projeto\Unit1.pas=D:\Google Drive\Unoesc\PosDelphi\Projeto\Model\Builder\Pattern.Director.pas</Transaction>
   </Transactions>
 </BorlandProject>
