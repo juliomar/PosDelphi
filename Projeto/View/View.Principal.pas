@@ -30,6 +30,7 @@ uses
   ExtCtrls,
 
 
+<<<<<<< HEAD
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,
   Memento.Model.Interfaces,memento.model.aluno,  Controller.Interfaces,
@@ -43,6 +44,14 @@ uses
   Controller.Cadastro, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids;
 
+=======
+  Controller.Interfaces,
+//  Controller.Cadastro.Pessoa,
+  Controller.Cadastro,
+  Model.Iterator.Interfaces,
+  Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Datasnap.DBClient, Vcl.DBGrids;
+>>>>>>> ea44d3cd38f0593779d498c216d0e07ea972eb24
 
 type
   TStringGridHack = class(TStringGrid)
@@ -62,6 +71,7 @@ type
     ClientDataSetClientesNome: TStringField;
     ClientDataSetClientesMatricula: TStringField;
     DataSourceClientes: TDataSource;
+<<<<<<< HEAD
 <<<<<<< HEAD
     pnConsulta: TPanel;
     cbCampo: TComboBox;
@@ -89,6 +99,8 @@ type
     ImageAluno: TImage;
     BtnFacadeAndersonFurtilho: TButton;
     Button1: TButton;
+=======
+>>>>>>> ea44d3cd38f0593779d498c216d0e07ea972eb24
     procedure FormCreate(Sender: TObject);
     procedure esste1Click(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
@@ -117,6 +129,7 @@ var
 implementation
 
 uses
+<<<<<<< HEAD
 
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
   Controller.Cadastro, View.Pagamento, Pattern.Facade.Exportar.Alunos,
@@ -129,8 +142,41 @@ uses
   Model.Builder.Product,
   Model.Builder.Director,
   Model.Builder.ConcretBuilder;
+=======
+  Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML;
+>>>>>>> ea44d3cd38f0593779d498c216d0e07ea972eb24
 
 {$R *.dfm}
+
+
+
+procedure TPrincipal.ApplicationEventsException(Sender: TObject; E: Exception);
+var
+  LogExcecao: ILogExcecao;
+  Arquivo   : TextFile;
+  CamArq    : String;
+begin
+  LogExcecao := TLogExcecao.Create(E);
+  LogExcecao := TDataHoraDecorator.Create(LogExcecao);
+  LogExcecao := TNomeUsuarioDecorator.Create(LogExcecao);
+  LogExcecao := TExecutavelDecorator.Create(LogExcecao);
+
+
+  CamArq := ExtractFilePath(Application.ExeName) + 'LogErros.txt';
+  AssignFile(Arquivo,CamArq);
+  try
+    if not FileExists(CamArq) then
+      Rewrite(Arquivo);
+
+    Append(Arquivo);
+
+    WriteLn(Arquivo, LogExcecao.ObterDadosExcecao);
+
+    CloseFile(Arquivo);
+  Except
+    CloseFile(Arquivo);
+  end;
+end;
 
 procedure TPrincipal.BitBtnExportarAlunosHTMLClick(Sender: TObject);
 var
@@ -157,6 +203,7 @@ begin
 end;
 
 procedure TPrincipal.Button1Click(Sender: TObject);
+<<<<<<< HEAD
 var
   Key: string;
 begin
@@ -190,6 +237,11 @@ begin
     FreeAndNil(Director);
     FreeAndNil(Product);
   end;
+=======
+var a : integer;
+begin
+  a := strtoint('1.5')
+>>>>>>> ea44d3cd38f0593779d498c216d0e07ea972eb24
 end;
 
 procedure TPrincipal.DefinicaoStringGrid;
@@ -211,6 +263,7 @@ begin
   STGridPessoa.Cols[7].Text := 'Sexo';
 end;
 
+<<<<<<< HEAD
 procedure TPrincipal.esste1Click(Sender: TObject);
 var
   LViewPagamento: TPagamento;
@@ -223,6 +276,8 @@ begin
   end;
 end;
 
+=======
+>>>>>>> ea44d3cd38f0593779d498c216d0e07ea972eb24
 procedure TPrincipal.ExecutaFacadeAndersonFurtilho(Sender: TObject);
 var
   F: TFacadeExportarAlunos;
@@ -340,3 +395,23 @@ begin
 end;
 
 end.
+<<<<<<< HEAD
+=======
+
+
+
+
+  Controller.Interfaces,
+//  Controller.Cadastro.Pessoa,
+  Controller.Cadastro,
+  Model.Iterator.Interfaces,
+  Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Datasnap.DBClient, Vcl.DBGrids, Vcl.AppEvnts;
+    Button1: TButton;
+    ApplicationEvents: TApplicationEvents;
+    procedure Button1Click(Sender: TObject);
+    procedure ApplicationEventsException(Sender: TObject; E: Exception);
+  Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
+  Pattern.Component, Pattern.ConcreteComponent, Pattern.Decorator.DataHora,
+  Pattern.Decorator.NomeUsuario, Pattern.Decorator.Executavel;
+>>>>>>> ea44d3cd38f0593779d498c216d0e07ea972eb24

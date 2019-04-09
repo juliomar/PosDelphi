@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 EditorSecs=1912
 DesignerSecs=2
 InspectorSecs=1
@@ -40,3 +41,14 @@ RealKeys=0
 EffectiveKeys=0
 DebugSecs=502
 >>>>>>> adc0b540bfaadd875dd899cdbab2b6510b7fc58d
+=======
+EditorSecs=34
+DesignerSecs=1
+InspectorSecs=1
+CompileSecs=7685
+OtherSecs=26
+StartTime=31/03/2019 15:35:40
+RealKeys=0
+EffectiveKeys=0
+DebugSecs=1
+>>>>>>> ea44d3cd38f0593779d498c216d0e07ea972eb24

@@ -45,8 +45,6 @@ uses
   View.Inicial in 'View\View.Inicial.pas' {frmTelaDeInicio},
   Pattern.Facade.Exportar.Alunos in 'Model\Exportador\Pattern.Facade.Exportar.Alunos.pas',
   Model.Iterator in 'Model\Iterator\Model.Iterator.pas',
-  Model.Lista.List in 'Model\Iterator\Model.Lista.List.pas',
-  Model.Lista.ObjectList in 'Model\Iterator\Model.Lista.ObjectList.pas',
   Model.Builder.Product in 'Model\Builder\Model.Builder.Product.pas',
   Model.Builder.Interfaces in 'Model\Builder\Model.Builder.Interfaces.pas',
   Model.Builder.ConcretBuilder in 'Model\Builder\Model.Builder.ConcretBuilder.pas',
@@ -58,7 +56,13 @@ uses
   Visitor.Model.ItemCurso in 'Visitor\Visitor.Model.ItemCurso.pas',
   Visitor.Model.Venda.Simples in 'Visitor\Visitor.Model.Venda.Simples.pas',
   Visitor.Model.Venda.Bolsa in 'Visitor\Visitor.Model.Venda.Bolsa.pas',
-  View.Calculo.Preco.Cursos in 'View\View.Calculo.Preco.Cursos.pas' {FrmPrecoDeCursos};
+  View.Calculo.Preco.Cursos in 'View\View.Calculo.Preco.Cursos.pas' {FrmPrecoDeCursos},
+  Pattern.Component in 'Decorator\Pattern.Component.pas',
+  Pattern.Decorator in 'Decorator\Pattern.Decorator.pas',
+  Pattern.ConcreteComponent in 'Decorator\Pattern.ConcreteComponent.pas',
+  Pattern.Decorator.DataHora in 'Decorator\Pattern.Decorator.DataHora.pas',
+  Pattern.Decorator.NomeUsuario in 'Decorator\Pattern.Decorator.NomeUsuario.pas',
+  Pattern.Decorator.Executavel in 'Decorator\Pattern.Decorator.Executavel.pas';
 
 {$R *.res}
 
@@ -66,7 +70,6 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-
   if TFLogin.SolicitarLogin then
   begin
     Application.CreateForm(TPrincipal, Principal);
