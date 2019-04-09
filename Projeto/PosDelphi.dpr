@@ -8,6 +8,7 @@
 program PosDelphi;
 
 uses
+<<<<<<< HEAD
   Vcl.Forms,
   View.Principal in 'View\View.Principal.pas' {Principal},
   entity.pessoa in 'Model\Entity\entity.pessoa.pas',
@@ -62,7 +63,11 @@ uses
   Pattern.ConcreteComponent in 'Decorator\Pattern.ConcreteComponent.pas',
   Pattern.Decorator.DataHora in 'Decorator\Pattern.Decorator.DataHora.pas',
   Pattern.Decorator.NomeUsuario in 'Decorator\Pattern.Decorator.NomeUsuario.pas',
-  Pattern.Decorator.Executavel in 'Decorator\Pattern.Decorator.Executavel.pas';
+  Pattern.Decorator.Executavel in 'Decorator\Pattern.Decorator.Executavel.pas',
+  Controller.SolicitacaoMatricula.Intf in 'Controller\Controller.SolicitacaoMatricula.Intf.pas',
+  Controller.SolicitacaoMatricula.Aluno in 'Controller\Controller.SolicitacaoMatricula.Aluno.pas',
+  Controller.SolicitacaoMatricula.Atendente in 'Controller\Controller.SolicitacaoMatricula.Atendente.pas',
+  Controller.SolicitacaoMatricula.Coordenador in 'Controller\Controller.SolicitacaoMatricula.Coordenador.pas';
 
 {$R *.res}
 
@@ -70,6 +75,7 @@ begin
   ReportMemoryLeaksOnShutdown := true;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+
   if TFLogin.SolicitarLogin then
   begin
     Application.CreateForm(TPrincipal, Principal);
@@ -79,5 +85,4 @@ begin
   end
   else
     Application.Terminate;
-
 end.
