@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <BorlandProject>
   <ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="AbstractFactory"/>
@@ -120,3 +121,6 @@
     <File Path="Visitor\Visitor.Model.Venda.Simples.pas"/>
   </ProjectSortOrder>
 </BorlandProject>
+=======
+<BorlandProject/>
+>>>>>>> 89d16b170a06e9ebfd01bc01a00ce5191ae6f7a9
