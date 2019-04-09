@@ -32,10 +32,10 @@ uses
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces, Vcl.Menus,
-  Vcl.ToolWin, Vcl.ComCtrls;
+  Vcl.ToolWin, Vcl.ComCtrls,
 
   Memento.Model.Interfaces, memento.model.aluno,
-  Vcl.ComCtrls, Vcl.Imaging.pngimage,
+  Vcl.Imaging.pngimage,
   View.Tabela.Cursos,
 
   Controller.Cadastro,
@@ -81,8 +81,8 @@ type
     // BitBtnExportarAlunosXLS: TBitBtn;
     // BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
-    ApplicationEvents1: TApplicationEvents;
     StatusBar1: TStatusBar;
+    ApplicationEvents: TApplicationEvents;
     Timer1: TTimer;
     lblRelogio: TLabel;
     procedure FormCreate (Sender: TObject);
@@ -127,24 +127,13 @@ uses
   Pattern.Component, View.Pagamento, Pattern.Facade.Exportar.Alunos,
   uTela, Model.State.Aluno, View.ModelState,
 
-  Controller.Cadastro, View.Pagamento;
-
-  Controller.Cadastro, View.Pagamento, Pattern.Facade.Exportar.Alunos,
-  Model.Exportador.Interfaces,
-  Model.Exportador.Alunos,
-  Model.Exportador.FormatoXLS,
-  Model.Exportador.FormatoHTML,
-  Controller.Cadastro, uTela,
- Model.State.Aluno, View.ModelState,
-
-
   Model.Builder.Interfaces,
   Model.Builder.Product,
   Model.Builder.Director,
   Model.Builder.ConcretBuilder,
   Pattern.ConcreteComponent,
   Pattern.Decorator.DataHora,
-  Pattern.Decorator.NomeUsuario,Pattern.Decorator.Executavel;
+  Pattern.Decorator.NomeUsuario, Pattern.Decorator.Executavel;
 
 {$R *.dfm}
 
@@ -215,26 +204,22 @@ end;
 
 procedure TPrincipal.Button1Click (Sender: TObject);
 var
-  a  : integer;
-  Key: string;
-Director:
-  TDirector;
-ConcretBuilder:
-  TConcretBuilder;
-Product:
-  TProduct;
+  a             : integer;
+  Key           : string;
+  Director      : TDirector;
+  ConcretBuilder: TConcretBuilder;
+  Product       : TProduct;
 
 begin
-//  FAluno.Nome      := edtNome.Text;
-//  FAluno.Sobrenome := edtSobrenome.Text;
-//  FAluno.Matricula := edtMatricula.Text;
-  Key              := 'Backup - ' + datetimetostr (now);
+  // FAluno.Nome      := edtNome.Text;
+  // FAluno.Sobrenome := edtSobrenome.Text;
+  // FAluno.Matricula := edtMatricula.Text;
+  Key := 'Backup - ' + datetimetostr (now);
   FAluno.Memento.Save (Key);
-//  ListBox1.Items.Add (Key);
-//  edtNome.Text      := '';
-//  edtSobrenome.Text := '';
-//  edtMatricula.Text := '';
-
+  // ListBox1.Items.Add (Key);
+  // edtNome.Text      := '';
+  // edtSobrenome.Text := '';
+  // edtMatricula.Text := '';
 
   Director := TDirector.Create;
 
@@ -268,10 +253,10 @@ procedure TPrincipal.btn_StateClick (Sender: TObject);
 var
   sAux: string;
 begin
-//  sAux := Tfrm_ModelState.ShowModelState (ClientDataSetClientesStatus.AsString);
+  // sAux := Tfrm_ModelState.ShowModelState (ClientDataSetClientesStatus.AsString);
   if not(ClientDataSetClientes.State in dsEditModes) then
     ClientDataSetClientes.Edit;
-//  ClientDataSetClientesStatus.AsString := sAux;
+  // ClientDataSetClientesStatus.AsString := sAux;
 end;
 
 procedure TPrincipal.ClientDataSetClientesStatusGetText (Sender: TField; var Text: string; DisplayText: Boolean);
@@ -314,7 +299,6 @@ begin
   STGridPessoa.Cols[ 7 ].Text := 'Sexo';
   STGridPessoa.Cols[ 8 ].Text := 'Status';
 end;
-
 
 procedure TPrincipal.esste1Click (Sender: TObject);
 var
@@ -420,10 +404,10 @@ end;
 
 procedure TPrincipal.ListBox1Click (Sender: TObject);
 begin
-//  FAluno            := FAluno.Memento.Restore (ListBox1.Items[ ListBox1.ItemIndex ]);
-//  edtNome.Text      := FAluno.Nome;
-//  edtSobrenome.Text := FAluno.Sobrenome;
-//  edtMatricula.Text := FAluno.Matricula;
+  // FAluno            := FAluno.Memento.Restore (ListBox1.Items[ ListBox1.ItemIndex ]);
+  // edtNome.Text      := FAluno.Nome;
+  // edtSobrenome.Text := FAluno.Sobrenome;
+  // edtMatricula.Text := FAluno.Matricula;
 end;
 
 procedure TPrincipal.AdicionarLinhaStringGrid (AObject: TPessoa);

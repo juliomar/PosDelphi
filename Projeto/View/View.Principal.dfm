@@ -31,7 +31,7 @@ object Principal: TPrincipal
     Left = 0
     Top = 79
     Width = 906
-    Height = 309
+    Height = 290
     Align = alClient
     DataSource = DataSourceClientes
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -92,6 +92,13 @@ object Principal: TPrincipal
       Width = 96
       Height = 13
       Caption = 'Op'#231#245'es de pesquisa'
+    end
+    object lblRelogio: TLabel
+      Left = 624
+      Top = 42
+      Width = 45
+      Height = 13
+      Caption = 'lblRelogio'
     end
     object cbCampo: TComboBox
       Left = 8
@@ -159,6 +166,13 @@ object Principal: TPrincipal
       OnClick = btnEditarClick
     end
   end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 369
+    Width = 906
+    Height = 19
+    Panels = <>
+  end
   object ClientDataSetClientes: TClientDataSet
     Aggregates = <>
     FieldDefs = <
@@ -214,5 +228,15 @@ object Principal: TPrincipal
       Caption = ' Formas de pagamento'
       OnClick = esste1Click
     end
+  end
+  object ApplicationEvents: TApplicationEvents
+    OnException = ApplicationEventsException
+    Left = 448
+    Top = 256
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 460
+    Top = 268
   end
 end

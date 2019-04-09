@@ -3,10 +3,10 @@
         <ProjectGuid>{B79B7787-40B7-4F72-98CB-6169C5563F48}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="PosDelphi.dproj">
+        <Projects Include="Test\PosDelphiTests.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Test\PosDelphiTests.dproj">
+        <Projects Include="PosDelphi.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -17,15 +17,6 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="PosDelphi">
-        <MSBuild Projects="PosDelphi.dproj"/>
-    </Target>
-    <Target Name="PosDelphi:Clean">
-        <MSBuild Projects="PosDelphi.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="PosDelphi:Make">
-        <MSBuild Projects="PosDelphi.dproj" Targets="Make"/>
-    </Target>
     <Target Name="PosDelphiTests">
         <MSBuild Projects="Test\PosDelphiTests.dproj"/>
     </Target>
@@ -35,14 +26,23 @@
     <Target Name="PosDelphiTests:Make">
         <MSBuild Projects="Test\PosDelphiTests.dproj" Targets="Make"/>
     </Target>
+    <Target Name="PosDelphi">
+        <MSBuild Projects="PosDelphi.dproj"/>
+    </Target>
+    <Target Name="PosDelphi:Clean">
+        <MSBuild Projects="PosDelphi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PosDelphi:Make">
+        <MSBuild Projects="PosDelphi.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="PosDelphi;PosDelphiTests"/>
+        <CallTarget Targets="PosDelphiTests;PosDelphi"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="PosDelphi:Clean;PosDelphiTests:Clean"/>
+        <CallTarget Targets="PosDelphiTests:Clean;PosDelphi:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="PosDelphi:Make;PosDelphiTests:Make"/>
+        <CallTarget Targets="PosDelphiTests:Make;PosDelphi:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
