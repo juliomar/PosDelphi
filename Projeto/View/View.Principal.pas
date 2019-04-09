@@ -60,9 +60,11 @@ type
     BitBtnExportarAlunosXLS: TBitBtn;
     BitBtnExportarAlunosHTML: TBitBtn;
     btnEditar: TButton;
+    btnBuilder: TBitBtn;
     procedure FormCreate(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
     procedure BitBtnExportarAlunosHTMLClick(Sender: TObject);
+    procedure btnBuilderClick(Sender: TObject);
   private
     procedure DefinicaoStringGrid;
     procedure PreencherStringGrid(ALista: iIterator<TPessoa>);
@@ -82,9 +84,36 @@ implementation
 
 uses
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
-  Controller.Cadastro;
+  Controller.Cadastro,
+  Pattern.Director, Pattern.Builder, Pattern.ConcreteBuilder, Pattern.Product;
 
 {$R *.dfm}
+
+procedure TPrincipal.btnBuilderClick(Sender: TObject);
+var
+  Director: TDirector;
+  ConcreteBuilder: IBuilder;
+  Product: TProduct;
+begin
+  // Cria uma instância do Director
+  Director := TDirector.Create;
+
+  // Cria uma instância do Concrete Builder, informando os dados como parâmetro
+  ConcreteBuilder := TConcreteBuilder.Create(ClientDataSetClientes.Data);
+  try
+    // Solicita a construção do objeto ao Director
+    Director.Construct(ConcreteBuilder);
+
+    // Recebe o produto pronto ("constrúido")
+    Product := ConcreteBuilder.GetRelatorio;
+
+    // Chama o método para salvar o arquivo em disco
+    Product.SalvarArquivo;
+  finally
+    // Libera o Director da memória
+    FreeAndNil(Director);
+  end;
+end;
 
 procedure TPrincipal.BitBtnExportarAlunosHTMLClick(Sender: TObject);
 var
