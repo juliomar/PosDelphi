@@ -18,17 +18,17 @@ type
     class function New(aTipoLista : TTipoLista): iIterator<T>;
     function temProximo: boolean;
     function Proximo: T;
-    function Adicionar(Value: TList<T>): iIterator<T>;
+    function Adicionar(Value : TObject): iIterator<T>;
   end;
 
 implementation
 
 { TModelIterator }
 
-function TModelIterator<T>.Adicionar(Value: TList<T>): iIterator<T>;
+function TModelIterator<T>.Adicionar(Value : TObject): iIterator<T>;
 begin
   Result := Self;
-  FLista := Value;
+  FLista := TList<T>(Value);
   FIndice := 0;
 end;
 
@@ -36,8 +36,8 @@ constructor TModelIterator<T>.Create(aTipoLista : TTipoLista);
 begin
   FIndice := 0;
   case aTipoLista of
-    tpLista: ;
-    tpListaObjetos: ;
+    tpLista: TList<T>.Create;
+    tpListaObjetos: TObjectList<T>.Create;
   end;
 end;
 

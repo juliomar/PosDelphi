@@ -25,15 +25,24 @@ uses
   Vcl.Grids,
 
   Entity.Pessoa,
+  Entity.Aluno,
 
   ExtCtrls,
+
 
   Controller.Interfaces, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids, Model.Iterator.Interfaces,
   Memento.Model.Interfaces,memento.model.aluno,  Controller.Interfaces,
   Controller.Cadastro.Pessoa, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.DBGrids, Vcl.ComCtrls, Vcl.Imaging.pngimage,
-  Model.Iterator.Interfaces, View.Tabela.Cursos;
+  Model.Iterator.Interfaces, View.Tabela.Cursos,
+
+  Model.Iterator.Interfaces,
+
+  Controller.Interfaces,
+  Controller.Cadastro, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Datasnap.DBClient, Vcl.DBGrids;
+
 
 type
   TStringGridHack = class(TStringGrid)
@@ -44,12 +53,16 @@ type
 
   TPrincipal = class(TForm)
     STGridPessoa: TStringGrid;
+    BitBtnExportarAlunosXLS: TBitBtn;
+    BitBtnExportarAlunosHTML: TBitBtn;
+    LabelClientes: TLabel;
     DBGridClientes: TDBGrid;
     ClientDataSetClientes: TClientDataSet;
     ClientDataSetClientesId: TIntegerField;
     ClientDataSetClientesNome: TStringField;
     ClientDataSetClientesMatricula: TStringField;
     DataSourceClientes: TDataSource;
+<<<<<<< HEAD
     pnConsulta: TPanel;
     cbCampo: TComboBox;
     editTextoPesquisa: TEdit;
@@ -75,6 +88,7 @@ type
     Timer1: TTimer;
     ImageAluno: TImage;
     BtnFacadeAndersonFurtilho: TButton;
+    Button1: TButton;
     procedure FormCreate(Sender: TObject);
     procedure esste1Click(Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick(Sender: TObject);
@@ -105,8 +119,16 @@ implementation
 uses
 
   Model.Exportador.Interfaces, Model.Exportador.Alunos, Model.Exportador.FormatoXLS, Model.Exportador.FormatoHTML,
-  Controller.Cadastro, View.Pagamento, Pattern.Facade.Exportar.Alunos;
+  Controller.Cadastro, View.Pagamento, Pattern.Facade.Exportar.Alunos,
+  Model.Exportador.Interfaces,
+  Model.Exportador.Alunos,
+  Model.Exportador.FormatoXLS,
+  Model.Exportador.FormatoHTML,
 
+  Model.Builder.Interfaces,
+  Model.Builder.Product,
+  Model.Builder.Director,
+  Model.Builder.ConcretBuilder;
 
 {$R *.dfm}
 
@@ -148,8 +170,27 @@ begin
   edtSobrenome.Text:='';
   edtMatricula.Text:='';
 
-end;
 
+
+  Director : TDirector;
+  ConcretBuilder : TConcretBuilder;
+  Product : TProduct;
+
+  Director := TDirector.Create;
+
+  ConcretBuilder := TConcretBuilder.Create(STGridPessoa);
+
+  try
+    Director.Construct(ConcretBuilder);
+
+    Product := ConcretBuilder.getRelatorio;
+
+    Product.SalvarArquivo;
+  finally
+    FreeAndNil(Director);
+    FreeAndNil(Product);
+  end;
+end;
 
 procedure TPrincipal.DefinicaoStringGrid;
 var
