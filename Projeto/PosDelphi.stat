@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 EditorSecs=1929
 DesignerSecs=74
 InspectorSecs=31
@@ -104,3 +105,14 @@ RealKeys=0
 EffectiveKeys=0
 DebugSecs=62
 >>>>>>> b3415b9fcdaaf4e9f9569e694185b753182c7f5f
+=======
+EditorSecs=1774
+DesignerSecs=297
+InspectorSecs=102
+CompileSecs=170873
+OtherSecs=957
+StartTime=11/03/2019 19:18:41
+RealKeys=0
+EffectiveKeys=0
+DebugSecs=531
+>>>>>>> 2a1f59f7d4d547d0cc4d8aeb8b13d24618628429

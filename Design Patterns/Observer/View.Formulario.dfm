@@ -38,6 +38,9 @@ object fFormulario: TfFormulario
     Height = 364
     TabOrder = 0
     ExplicitHeight = 364
+    inherited BitBtnGravar: TBitBtn
+      OnClick = FrameCadastroOperacoesBitBtnGravarClick
+    end
   end
   inline FrameSaldo: TFrameSaldo
     Left = 334

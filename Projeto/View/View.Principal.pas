@@ -85,6 +85,8 @@ type
     ApplicationEvents: TApplicationEvents;
     Timer1: TTimer;
     lblRelogio: TLabel;
+    btnBuilder: TBitBtn;
+		procedure btnBuilderClick(Sender: TObject);
     procedure FormCreate (Sender: TObject);
     procedure esste1Click (Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick (Sender: TObject);
@@ -133,7 +135,8 @@ uses
   Model.Builder.ConcretBuilder,
   Pattern.ConcreteComponent,
   Pattern.Decorator.DataHora,
-  Pattern.Decorator.NomeUsuario, Pattern.Decorator.Executavel;
+  Pattern.Decorator.NomeUsuario, Pattern.Decorator.Executavel,
+  Pattern.Director, Pattern.Builder, Pattern.ConcreteBuilder, Pattern.Product;
 
 {$R *.dfm}
 
@@ -178,7 +181,33 @@ begin
   ShowMessage (FState.Operacoes.Value);
 end;
 
-procedure TPrincipal.BitBtnExportarAlunosHTMLClick (Sender: TObject);
+procedure TPrincipal.btnBuilderClick(Sender: TObject);
+var
+  Director: TDirector;
+  ConcreteBuilder: IBuilder;
+  Product: TProduct;
+begin
+  // Cria uma instância do Director
+  Director := TDirector.Create;
+
+  // Cria uma instância do Concrete Builder, informando os dados como parâmetro
+  ConcreteBuilder := TConcreteBuilder.Create(ClientDataSetClientes.Data);
+  try
+    // Solicita a construção do objeto ao Director
+    Director.Construct(ConcreteBuilder);
+
+    // Recebe o produto pronto ("constrúido")
+    Product := ConcreteBuilder.GetRelatorio;
+
+    // Chama o método para salvar o arquivo em disco
+    Product.SalvarArquivo;
+  finally
+    // Libera o Director da memória
+    FreeAndNil(Director);
+  end;
+end;
+
+procedure TPrincipal.BitBtnExportarAlunosHTMLClick(Sender: TObject);
 var
   Exportador: IExportador;
 begin

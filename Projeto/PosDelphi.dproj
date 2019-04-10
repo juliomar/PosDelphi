@@ -1,4 +1,4 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{08E4FDA0-CAD7-4DCF-9CC1-067B35D53478}</ProjectGuid>
         <MainSource>PosDelphi.dpr</MainSource>

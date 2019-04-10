@@ -23,6 +23,7 @@ type
     Bevel1: TBevel;
     Bevel2: TBevel;
     procedure FormCreate(Sender: TObject);
+    procedure FrameCadastroOperacoesBitBtnGravarClick(Sender: TObject);
   end;
 
 var
@@ -39,6 +40,13 @@ begin
   FrameCadastroOperacoes.AdicionarObserver(FrameSaldo);
   FrameCadastroOperacoes.AdicionarObserver(FrameAgrupamento);
   FrameCadastroOperacoes.AdicionarObserver(FrameLog);
+end;
+
+procedure TfFormulario.FrameCadastroOperacoesBitBtnGravarClick(
+  Sender: TObject);
+begin
+  FrameCadastroOperacoes.BitBtnGravarClick(Sender);
+
 end;
 
 initialization
