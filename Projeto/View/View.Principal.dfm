@@ -165,6 +165,15 @@ object Principal: TPrincipal
       TabOrder = 2
       OnClick = btnEditarClick
     end
+    object btnBuilder: TBitBtn
+      Left = 317
+      Top = 4
+      Width = 120
+      Height = 25
+      Caption = 'Builder'
+      TabOrder = 3
+      OnClick = btnBuilderClick
+    end    
   end
   object StatusBar1: TStatusBar
     Left = 0

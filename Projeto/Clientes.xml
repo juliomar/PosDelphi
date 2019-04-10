@@ -1,2 +1,22 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="ISO-8859-1"?><DATAPACKET Version="2.0"><METADATA><FIELDS><FIELD fieldtype="i4" attrname="Id"/><FIELD fieldtype="string" attrname="Nome" WIDTH="50"/><FIELD fieldtype="string" attrname="Sobrenome" WIDTH="50"/><FIELD fieldtype="string" attrname="Matricula" WIDTH="50"/><FIELD fieldtype="string" attrname="Status" WIDTH="1"/></FIELDS><PARAMS/></METADATA><ROWDATA><ROW Matricula="123" Sobrenome="Washington" Nome="Frank Underwood" Id="1" Status="A"/><ROW Matricula="345" Sobrenome="Delphia" Nome="Annalise Keating" Id="2" Status="A"/>
 <ROW Matricula="567" Sobrenome="Washington" Nome="Frank Underwood" Id="4" Status="A"/></ROWDATA></DATAPACKET>
+=======
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<DATAPACKET Version="2.0">
+	<METADATA>
+		<FIELDS>
+			<FIELD fieldtype="i4" attrname="Id"/>
+			<FIELD fieldtype="string" attrname="Nome" WIDTH="50"/>
+			<FIELD fieldtype="string" attrname="Sobrenome" WIDTH="50"/>
+			<FIELD fieldtype="string" attrname="Matricula" WIDTH="50"/>
+		</FIELDS>
+		<PARAMS/>
+	</METADATA>
+	<ROWDATA>
+		<ROW Matricula="123" Sobrenome="Washington" Nome="Frank Underwood" Id="1"/>
+		<ROW Matricula="345" Sobrenome="Delphia" Nome="Annalise Keating" Id="2"/>
+		<ROW Matricula="678" Sobrenome="Gambstation" Nome="Felipe Pucci" Id="3"/>
+	</ROWDATA>
+</DATAPACKET>
+>>>>>>> 2a1f59f7d4d547d0cc4d8aeb8b13d24618628429
