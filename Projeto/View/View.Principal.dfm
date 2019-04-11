@@ -29,9 +29,9 @@ object Principal: TPrincipal
   end
   object DBGridClientes: TDBGrid
     Left = 0
-    Top = 79
+    Top = 100
     Width = 906
-    Height = 290
+    Height = 269
     Align = alClient
     DataSource = DataSourceClientes
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -68,10 +68,12 @@ object Principal: TPrincipal
     Left = 3
     Top = 3
     Width = 900
-    Height = 73
+    Height = 94
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitLeft = 8
+    ExplicitTop = 0
     object Label1: TLabel
       Left = 8
       Top = 21
@@ -99,6 +101,13 @@ object Principal: TPrincipal
       Width = 45
       Height = 13
       Caption = 'lblRelogio'
+    end
+    object Label4: TLabel
+      Left = 58
+      Top = 73
+      Width = 95
+      Height = 13
+      Caption = 'Pesquisa inteligente'
     end
     object cbCampo: TComboBox
       Left = 8
@@ -128,6 +137,24 @@ object Principal: TPrincipal
       Height = 25
       Caption = 'Pesquisar'
       TabOrder = 3
+      OnClick = btnPesquisarClick
+    end
+    object edBuscaInteligente: TEdit
+      Left = 159
+      Top = 70
+      Width = 210
+      Height = 21
+      TabOrder = 4
+      Text = 'Selecionar cliente com nome Rennan'
+    end
+    object btPesquisaInteligente: TButton
+      Left = 375
+      Top = 68
+      Width = 75
+      Height = 25
+      Caption = 'Buscar'
+      TabOrder = 5
+      OnClick = btPesquisaInteligenteClick
     end
   end
   object pnAcoes: TPanel
@@ -165,15 +192,6 @@ object Principal: TPrincipal
       TabOrder = 2
       OnClick = btnEditarClick
     end
-    object btnBuilder: TBitBtn
-      Left = 317
-      Top = 4
-      Width = 120
-      Height = 25
-      Caption = 'Builder'
-      TabOrder = 3
-      OnClick = btnBuilderClick
-    end    
   end
   object StatusBar1: TStatusBar
     Left = 0

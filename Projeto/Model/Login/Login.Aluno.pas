@@ -42,7 +42,7 @@ begin
       Result.Valido := False;
       Result.Mensagem := 'Aluno não cadastrado.';
     end
-    else
+   else
     if oContainerPess.DataSet.FieldByName('senha').AsString <> aSenha then
     begin
       Result.Valido := False;
