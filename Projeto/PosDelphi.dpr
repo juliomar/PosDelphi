@@ -8,7 +8,6 @@
 program PosDelphi;
 
 uses
-<<<<<<< HEAD
   Vcl.Forms,
   View.Principal in 'View\View.Principal.pas' {Principal},
   entity.pessoa in 'Model\Entity\entity.pessoa.pas',
@@ -98,7 +97,8 @@ uses
   Pattern.Product in 'Model\Builders\Pattern.Product.pas',
   Pattern.ConcreteBuilder in 'Model\Builders\Pattern.ConcreteBuilder.pas',
   Pattern.Director in 'Model\Builders\Pattern.Director.pas',
-  Pattern.Builder in 'Model\Builders\Pattern.Builder.pas';
+  Pattern.Builder in 'Model\Builders\Pattern.Builder.pas',
+  obser in 'obser.pas' {Form3};
 
 {$R *.res}
 
@@ -114,6 +114,7 @@ begin
   Application.CreateForm(TfrmTelaDeInicio, frmTelaDeInicio);
   Application.CreateForm(Tfrm_ModelState, frm_ModelState);
   Application.CreateForm(TPagamento, Pagamento);
+  Application.CreateForm(TForm3, Form3);
   Application.Run;
   end
   else
