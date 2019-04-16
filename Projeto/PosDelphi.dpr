@@ -8,8 +8,8 @@
 program PosDelphi;
 
 uses
-<<<<<<< HEAD
   Vcl.Forms,
+  Vcl.Controls,
   View.Principal in 'View\View.Principal.pas' {Principal},
   entity.pessoa in 'Model\Entity\entity.pessoa.pas',
   entity.aluno in 'Model\Entity\entity.aluno.pas',
@@ -108,13 +108,9 @@ begin
   Application.MainFormOnTaskbar := True;
 
   if TFLogin.SolicitarLogin then
-  begin
+  begin   
     Application.CreateForm(TPrincipal, Principal);
-  Application.CreateForm(TdmConexao, dmConexao);
-  Application.CreateForm(TfrmTelaDeInicio, frmTelaDeInicio);
-  Application.CreateForm(Tfrm_ModelState, frm_ModelState);
-  Application.CreateForm(TPagamento, Pagamento);
-  Application.Run;
+    Application.Run;
   end
   else
     Application.Terminate;

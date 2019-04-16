@@ -11,6 +11,7 @@ object FLogin: TFLogin
   Font.Height = -20
   Font.Name = 'Calibri'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate

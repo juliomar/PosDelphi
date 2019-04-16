@@ -173,7 +173,7 @@ object Principal: TPrincipal
       Caption = 'Builder'
       TabOrder = 3
       OnClick = btnBuilderClick
-    end    
+    end
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -245,7 +245,7 @@ object Principal: TPrincipal
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 460
-    Top = 268
+    Left = 620
+    Top = 196
   end
 end

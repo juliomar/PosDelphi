@@ -27,7 +27,7 @@ uses
 type
   [Enumeration(etChar,'M,F')]
   TSexo = (Masculino, Feminino);
-  [Enumeration(etString,'A,I,M')] {Ativo, Inativo, Matrículado}
+  [Enumeration(etChar,'A,I,M')] {Ativo, Inativo, Matrículado}
   TStatus = (Ativo, Inativo, Matriculado);
 
   [ Entity ]
@@ -44,6 +44,7 @@ type
     Ftelefone      : string;
     fsexo          : TSexo;
     fdatanascimento: TDate;
+    fsenha         : string;
     fStatus        : TStatus;
   public
     [ Restrictions([ NoUpdate, NotNull ]) ]
@@ -80,6 +81,10 @@ type
     [ Dictionary('Nascimento', 'Mensagem validação', '', '', '', tacenter) ]
     property datanascimento: TDate read fdatanascimento write fdatanascimento;
 
+    [ Column('senha', ftString) ]
+    [ Dictionary('Senha', 'Mensagem validação', '', '', '', tacenter) ]
+    property senha: string read fsenha write fsenha;
+
     [ Column('status', ftString,1) ]
     [ Dictionary('Status', 'Mensagem validação', '', '', '', tacenter) ]
     property status: TStatus read fStatus write fStatus;
@@ -94,19 +99,20 @@ implementation
 
 function TPessoa.Clonar: TPessoa;
 var
-  ClonePessoa: TPessoa;
+  Albieri: TPessoa;
 begin
-  ClonePessoa := TPessoa.Create;
+  Albieri := TPessoa.Create;
 
-  ClonePessoa.Id        := Self.Id;
-  ClonePessoa.Nome      := Self.Nome;
-  ClonePessoa.Matricula := Self.Matricula;
-  ClonePessoa.sobrenome := Self.sobrenome;
-  ClonePessoa.email     := Self.email;
-  ClonePessoa.telefone  := Self.telefone;
-  ClonePessoa.sexo      := Self.sexo;
-  ClonePessoa.datanascimento  := Self.datanascimento;
-  result := ClonePessoa;
+  Albieri.Id              := Self.Id;
+  Albieri.Nome            := Self.Nome;
+  Albieri.Matricula       := Self.Matricula;
+  Albieri.sobrenome       := Self.sobrenome;
+  Albieri.email           := Self.email;
+  Albieri.telefone        := Self.telefone;
+  Albieri.sexo            := Self.sexo;
+  Albieri.datanascimento  := Self.datanascimento;
+  Albieri.status          := Self.status;
+  result := Albieri;
 end;
 
 initialization

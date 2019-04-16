@@ -86,6 +86,7 @@ type
     Timer1: TTimer;
     lblRelogio: TLabel;
     btnBuilder: TBitBtn;
+    MainMenu1: TMainMenu;
 		procedure btnBuilderClick(Sender: TObject);
     procedure FormCreate (Sender: TObject);
     procedure esste1Click (Sender: TObject);
@@ -255,14 +256,14 @@ begin
   ConcretBuilder := TConcretBuilder.Create (STGridPessoa);
 
   try
-    Director.Construct (ConcretBuilder);
+    //Director.Construct (ConcretBuilder);
 
-    Product := ConcretBuilder.getRelatorio;
+    //Product := ConcretBuilder.getRelatorio;
 
     Product.SalvarArquivo;
   finally
-    FreeAndNil (Director);
-    FreeAndNil (Product);
+   //FreeAndNil (Director);
+   //FreeAndNil (Product);
   end;
 
   a := strtoint ('1.5');

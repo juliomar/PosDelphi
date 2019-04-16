@@ -109,6 +109,7 @@ end;
 procedure TFLogin.FormCreate(Sender: TObject);
 begin
   CriarFormFundo;
+  edtNroMatricula.Text := '123';
 end;
 
 procedure TFLogin.FormDestroy(Sender: TObject);
