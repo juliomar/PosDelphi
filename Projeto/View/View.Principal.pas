@@ -73,7 +73,6 @@ type
     cbCampo: TComboBox;
     editTextoPesquisa: TEdit;
     ComboBox1: TComboBox;
-    btnPesquisar: TButton;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -85,8 +84,10 @@ type
     ApplicationEvents: TApplicationEvents;
     Timer1: TTimer;
     lblRelogio: TLabel;
-    btnBuilder: TBitBtn;
-		procedure btnBuilderClick(Sender: TObject);
+    btnPesquisar: TButton;
+    Label4: TLabel;
+    edBuscaInteligente: TEdit;
+    btPesquisaInteligente: TButton;
     procedure FormCreate (Sender: TObject);
     procedure esste1Click (Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick (Sender: TObject);
@@ -101,6 +102,8 @@ type
     procedure btn_StateClick (Sender: TObject);
     procedure ClientDataSetClientesStatusGetText (Sender: TField; var Text: string; DisplayText: Boolean);
     procedure btnEditarClick (Sender: TObject);
+    procedure btPesquisaInteligenteClick(Sender: TObject);
+    procedure btnPesquisarClick(Sender: TObject);
   private
     FAluno: iAluno;
     procedure DefinicaoStringGrid;
@@ -135,8 +138,8 @@ uses
   Model.Builder.ConcretBuilder,
   Pattern.ConcreteComponent,
   Pattern.Decorator.DataHora,
-  Pattern.Decorator.NomeUsuario, Pattern.Decorator.Executavel,
-  Pattern.Director, Pattern.Builder, Pattern.ConcreteBuilder, Pattern.Product;
+  Pattern.Decorator.NomeUsuario, Pattern.Decorator.Executavel, System.Contnrs,
+  uContext, TerminalExpression, AbstractExpression;
 
 {$R *.dfm}
 
@@ -181,33 +184,7 @@ begin
   ShowMessage (FState.Operacoes.Value);
 end;
 
-procedure TPrincipal.btnBuilderClick(Sender: TObject);
-var
-  Director: TDirector;
-  ConcreteBuilder: IBuilder;
-  Product: TProduct;
-begin
-  // Cria uma instância do Director
-  Director := TDirector.Create;
-
-  // Cria uma instância do Concrete Builder, informando os dados como parâmetro
-  ConcreteBuilder := TConcreteBuilder.Create(ClientDataSetClientes.Data);
-  try
-    // Solicita a construção do objeto ao Director
-    Director.Construct(ConcreteBuilder);
-
-    // Recebe o produto pronto ("constrúido")
-    Product := ConcreteBuilder.GetRelatorio;
-
-    // Chama o método para salvar o arquivo em disco
-    Product.SalvarArquivo;
-  finally
-    // Libera o Director da memória
-    FreeAndNil(Director);
-  end;
-end;
-
-procedure TPrincipal.BitBtnExportarAlunosHTMLClick(Sender: TObject);
+procedure TPrincipal.BitBtnExportarAlunosHTMLClick (Sender: TObject);
 var
   Exportador: IExportador;
 begin
@@ -288,6 +265,34 @@ begin
   // ClientDataSetClientesStatus.AsString := sAux;
 end;
 
+procedure TPrincipal.btPesquisaInteligenteClick(Sender: TObject);
+var
+  Contexto: TContext;
+  ArvoreSintatica: TObjectList;
+  Contador: integer;
+begin
+  Contexto := TContext.Create;
+
+  ArvoreSintatica := TObjectList.Create;
+  try
+    Contexto.Entrada := edBuscaInteligente.Text;
+
+    ArvoreSintatica.Add(TComandoExpression.Create);
+    ArvoreSintatica.Add(TColunasExpression.Create);
+    ArvoreSintatica.Add(TTabelaExpression.Create);
+    ArvoreSintatica.Add(TCondicaoExpression.Create);
+
+    for Contador := 0 to Pred(ArvoreSintatica.Count) do
+      TAbstractExpression(ArvoreSintatica[Contador]).Interpretar(Contexto);
+
+    showmessage( Contexto.Saida);
+  finally
+    FreeAndNil(ArvoreSintatica);
+    FreeAndNil(Contexto);
+  end;
+
+end;
+
 procedure TPrincipal.ClientDataSetClientesStatusGetText (Sender: TField; var Text: string; DisplayText: Boolean);
 begin
   if sender.AsString = 'A' then
@@ -307,6 +312,11 @@ begin
   // obtém a instância do Singleton para registrar um log
   Logger := TLog.ObterInstancia;
   Logger.RegistrarLog ('Registro alterado!' + DateTimeToStr(Now));
+end;
+
+procedure TPrincipal.btnPesquisarClick(Sender: TObject);
+begin
+//
 end;
 
 procedure TPrincipal.DefinicaoStringGrid;

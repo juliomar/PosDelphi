@@ -3,8 +3,8 @@ object FLogin: TFLogin
   Top = 0
   BorderStyle = bsNone
   Caption = 'Acessar o sistema'
-  ClientHeight = 367
-  ClientWidth = 650
+  ClientHeight = 368
+  ClientWidth = 667
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,8 +21,8 @@ object FLogin: TFLogin
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 644
-    Height = 361
+    Width = 661
+    Height = 362
     Align = alClient
     Picture.Data = {
       0A544A504547496D616765FEC10100FFD8FFE000104A46494600010100000100
@@ -3631,6 +3631,7 @@ object FLogin: TFLogin
     ExplicitLeft = -2
     ExplicitTop = 8
     ExplicitWidth = 683
+    ExplicitHeight = 361
   end
   object labNroMatricula: TLabel
     Left = 175
