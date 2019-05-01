@@ -96,7 +96,12 @@ uses
   Interfaces.Pagamento in 'Model\Pagamento\Interfaces.Pagamento.pas',
   uContext in 'Model\Interpreter\uContext.pas',
   AbstractExpression in 'Model\Interpreter\AbstractExpression.pas',
-  TerminalExpression in 'Model\Interpreter\TerminalExpression.pas';
+  TerminalExpression in 'Model\Interpreter\TerminalExpression.pas',
+  Pattern.Product in 'Model\Builders\Pattern.Product.pas',
+  Pattern.ConcreteBuilder in 'Model\Builders\Pattern.ConcreteBuilder.pas',
+  Pattern.Director in 'Model\Builders\Pattern.Director.pas',
+  Pattern.Builder in 'Model\Builders\Pattern.Builder.pas',
+  obser in 'obser.pas' {Form3};
 
 {$R *.res}
 
@@ -107,11 +112,12 @@ begin
   if TFLogin.SolicitarLogin then
   begin
     Application.CreateForm(TPrincipal, Principal);
-    Application.CreateForm(TdmConexao, dmConexao);
-    Application.CreateForm(TfrmTelaDeInicio, frmTelaDeInicio);
-    Application.CreateForm(Tfrm_ModelState, frm_ModelState);
-    Application.CreateForm(TPagamento, Pagamento);
-    Application.Run;
+  Application.CreateForm(TdmConexao, dmConexao);
+  Application.CreateForm(TfrmTelaDeInicio, frmTelaDeInicio);
+  Application.CreateForm(Tfrm_ModelState, frm_ModelState);
+  Application.CreateForm(TPagamento, Pagamento);
+  Application.CreateForm(TForm3, Form3);
+  Application.Run;
   end
   else
     Application.Terminate;
