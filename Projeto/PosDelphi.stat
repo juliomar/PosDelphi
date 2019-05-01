@@ -9,11 +9,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-EditorSecs=1929
-DesignerSecs=74
+EditorSecs=2070
+DesignerSecs=77
 InspectorSecs=31
-CompileSecs=155422
-OtherSecs=459
+CompileSecs=207161
+OtherSecs=504
 =======
 EditorSecs=8294
 DesignerSecs=1864
@@ -31,7 +31,7 @@ OtherSecs=309
 StartTime=11/03/2019 19:18:39
 RealKeys=0
 EffectiveKeys=0
-DebugSecs=1868
+DebugSecs=1978
 =======
 EditorSecs=1211
 DesignerSecs=78

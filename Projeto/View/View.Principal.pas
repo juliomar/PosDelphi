@@ -84,10 +84,9 @@ type
     ApplicationEvents: TApplicationEvents;
     Timer1: TTimer;
     lblRelogio: TLabel;
-    btnPesquisar: TButton;
-    Label4: TLabel;
-    edBuscaInteligente: TEdit;
-    btPesquisaInteligente: TButton;
+    btnBuilder: TBitBtn;
+    MainMenu1: TMainMenu;
+//		procedure btnBuilderClick(Sender: TObject);
     procedure FormCreate (Sender: TObject);
     procedure esste1Click (Sender: TObject);
     procedure BitBtnExportarAlunosXLSClick (Sender: TObject);
@@ -232,14 +231,14 @@ begin
   ConcretBuilder := TConcretBuilder.Create (STGridPessoa);
 
   try
-    Director.Construct (ConcretBuilder);
+    //Director.Construct (ConcretBuilder);
 
-    Product := ConcretBuilder.getRelatorio;
+    //Product := ConcretBuilder.getRelatorio;
 
     Product.SalvarArquivo;
   finally
-    FreeAndNil (Director);
-    FreeAndNil (Product);
+   //FreeAndNil (Director);
+   //FreeAndNil (Product);
   end;
 
   a := strtoint ('1.5');
@@ -275,7 +274,7 @@ begin
 
   ArvoreSintatica := TObjectList.Create;
   try
-    Contexto.Entrada := edBuscaInteligente.Text;
+//    Contexto.Entrada := edBuscaInteligente.Text;
 
     ArvoreSintatica.Add(TComandoExpression.Create);
     ArvoreSintatica.Add(TColunasExpression.Create);

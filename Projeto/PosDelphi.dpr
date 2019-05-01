@@ -110,8 +110,9 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   if TFLogin.SolicitarLogin then
-  begin
+  begin   
     Application.CreateForm(TPrincipal, Principal);
+
   Application.CreateForm(TdmConexao, dmConexao);
   Application.CreateForm(TfrmTelaDeInicio, frmTelaDeInicio);
   Application.CreateForm(Tfrm_ModelState, frm_ModelState);
